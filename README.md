@@ -55,6 +55,12 @@ Comprehensive guide covering four key strategies:
 - **Compress Context**: Retaining only necessary tokens
 - **Isolate Context**: Splitting context across different spaces
 
+### Claude Code Best Practices
+**Claude Code Best Practices**
+- 📄 Original: [Anthropic Engineering](https://www.anthropic.com/engineering/claude-code-best-practices)
+- 🇨🇳 Chinese Translation: [docs/claudecode/claude-code-best-practices-zh.md](docs/claudecode/claude-code-best-practices-zh.md)
+
+
 ## 📑 Research Papers
 
 ### Survey Papers

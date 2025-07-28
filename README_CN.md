@@ -55,6 +55,12 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **压缩Context**：仅保留必要的token
 - **隔离Context**：在不同空间中分割context
 
+### Claude Code 最佳实践
+**Claude Code 最佳实践指南**
+- 📄 原文：[Anthropic 官方文档](https://www.anthropic.com/engineering/claude-code-best-practices)
+- 🇨🇳 中文翻译：[docs/claudecode/claude-code-best-practices-zh.md](docs/claudecode/claude-code-best-practices-zh.md)
+
+
 ## 📑 研究论文
 
 ### 综述论文
