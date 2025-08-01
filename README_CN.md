@@ -60,6 +60,17 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - 📄 原文：[Anthropic 官方文档](https://www.anthropic.com/engineering/claude-code-best-practices)
 - 🇨🇳 中文翻译：[docs/claudecode/claude-code-best-practices-zh.md](docs/claudecode/claude-code-best-practices-zh.md)
 
+### dbreunig Context工程系列
+**长Context的失效原理和解决方案**
+- 📄 原文 Part 1：[长Context如何失效](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)
+- 🇨🇳 中文翻译：[docs/dbreunig/长上下文的失效原理及解决方案.md](docs/dbreunig/长上下文的失效原理及解决方案.md)
+- 📄 原文 Part 2：[如何修复你的Context](https://www.dbreunig.com/2025/06/26/how-to-fix-your-context.html)
+- 🇨🇳 中文翻译：[docs/dbreunig/上下文修复的实用指南.md](docs/dbreunig/上下文修复的实用指南.md)
+
+深入探讨context失效模式和管理策略：
+- Context污染、分散、混乱和冲突模式分析
+- RAG、工具配置、context隔离、修剪、总结和卸载技术
+
 
 ## 📑 研究论文
 

@@ -60,6 +60,17 @@ Comprehensive guide covering four key strategies:
 - 📄 Original: [Anthropic Engineering](https://www.anthropic.com/engineering/claude-code-best-practices)
 - 🇨🇳 Chinese Translation: [docs/claudecode/claude-code-best-practices-zh.md](docs/claudecode/claude-code-best-practices-zh.md)
 
+### dbreunig Context Engineering Series
+**How Long Contexts Fail and How to Fix Them**
+- 📄 Original Part 1: [How Long Contexts Fail](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)
+- 🇨🇳 Chinese Translation: [docs/dbreunig/长上下文的失效原理及解决方案.md](docs/dbreunig/长上下文的失效原理及解决方案.md)
+- 📄 Original Part 2: [How to Fix Your Context](https://www.dbreunig.com/2025/06/26/how-to-fix-your-context.html)
+- 🇨🇳 Chinese Translation: [docs/dbreunig/上下文修复的实用指南.md](docs/dbreunig/上下文修复的实用指南.md)
+
+Deep dive into context failure modes and management strategies:
+- Context poisoning, distraction, confusion, and clash patterns
+- RAG, tool loadout, context quarantine, pruning, summarization, and offloading techniques
+
 
 ## 📑 Research Papers
 
