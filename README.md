@@ -33,6 +33,9 @@ Context Engineering is the systematic optimization of information payloads for L
 
 ## 📖 Featured Articles
 
+### Context Rot: How Increasing Input Tokens Impacts LLM Performance
+- https://research.trychroma.com/context-rot
+
 ### Manus Context Engineering
 **Context Engineering for AI Agents: Lessons from Building Manus**
 - 📄 Original: [Manus Blog](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)
