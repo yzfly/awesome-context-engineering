@@ -74,6 +74,12 @@ Deep dive into context failure modes and management strategies:
 - Context poisoning, distraction, confusion, and clash patterns
 - RAG, tool loadout, context quarantine, pruning, summarization, and offloading techniques
 
+### Advanced Context Engineering for Coding Agents
+
+- [GitHub](https://github.com/humanlayer/humanlayer)
+- [YouTube](https://humanlayer.dev/youtube)
+
+Guide for using AI to solve hard problems in complex codebases.
 
 ## 📑 Research Papers
 
