@@ -47,10 +47,21 @@ Key insights from building a production AI agent:
 - Use file system as external context memory
 - Manipulate attention through recitation techniques
 
+### Claude Code Best Practices
+**Claude Code Best Practices**
+- 📄 Original: [Anthropic Engineering](https://www.anthropic.com/engineering/claude-code-best-practices)
+- 🇨🇳 Chinese Translation: [docs/claudecode/claude-code-best-practices-zh.md](docs/claudecode/claude-code-best-practices-zh.md)
+
+### Claude 
+
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [AI智能体的有效上下文工程](docs/claudecode/effective-context-engineering-for-ai-agents.md)
+
+
 ### LangChain Context Engineering
 **Context Engineering for Agents**
 - 📄 Original: [LangChain Blog](https://blog.langchain.com/context-engineering-for-agents/)
-- 🇨🇳 Chinese Translation: [docs/langchain/智能体的Context工程-中文版.md](docs/langchain/智能体的Context工程-中文版.md)
+- 🇨🇳 Chinese Translation: [智能体的Context工程-中文版](docs/langchain/智能体的Context工程-中文版.md)
 
 Comprehensive guide covering four key strategies:
 - **Write Context**: Saving information outside context window
@@ -58,17 +69,12 @@ Comprehensive guide covering four key strategies:
 - **Compress Context**: Retaining only necessary tokens
 - **Isolate Context**: Splitting context across different spaces
 
-### Claude Code Best Practices
-**Claude Code Best Practices**
-- 📄 Original: [Anthropic Engineering](https://www.anthropic.com/engineering/claude-code-best-practices)
-- 🇨🇳 Chinese Translation: [docs/claudecode/claude-code-best-practices-zh.md](docs/claudecode/claude-code-best-practices-zh.md)
-
 ### dbreunig Context Engineering Series
 **How Long Contexts Fail and How to Fix Them**
 - 📄 Original Part 1: [How Long Contexts Fail](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)
-- 🇨🇳 Chinese Translation: [docs/dbreunig/长上下文的失效原理及解决方案.md](docs/dbreunig/长上下文的失效原理及解决方案.md)
+- 🇨🇳 Chinese Translation: [长上下文的失效原理及解决方案](docs/dbreunig/长上下文的失效原理及解决方案.md)
 - 📄 Original Part 2: [How to Fix Your Context](https://www.dbreunig.com/2025/06/26/how-to-fix-your-context.html)
-- 🇨🇳 Chinese Translation: [docs/dbreunig/上下文修复的实用指南.md](docs/dbreunig/上下文修复的实用指南.md)
+- 🇨🇳 Chinese Translation: [上下文修复的实用指南](docs/dbreunig/上下文修复的实用指南.md)
 
 Deep dive into context failure modes and management strategies:
 - Context poisoning, distraction, confusion, and clash patterns
