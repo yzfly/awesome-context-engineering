@@ -124,6 +124,7 @@ Guide for using AI to solve hard problems in complex codebases.
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**: Low-level orchestration framework for context management
 - **[LangSmith](https://docs.smith.langchain.com/)**: Agent tracing and evaluation platform
 - **[LangMem](https://langchain-ai.github.io/langmem/)**: Memory management abstractions
+- **[context-engine-ai](https://github.com/Quinnod345/context-engine)**: Event-based context engine for AI agents — ingest events, query with natural language, get ranked results with temporal decay and deduplication. Zero config (SQLite + local TF-IDF), scales to pgvector.
 
 ### Production Tools
 
