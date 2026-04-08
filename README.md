@@ -129,6 +129,7 @@ Guide for using AI to solve hard problems in complex codebases.
 
 - **Claude Code**: Auto-compact context management
 - **Cursor**: Rules-based context engineering
+- **[nv:context](https://skills.nichevlabs.com)**: Claude Code skill for context engineering — auto-detects tools, scans for landmines, generates tailored CLAUDE.md/AGENTS.md configs. 3-min install.
 
 ## 💡 Expert Insights
 
