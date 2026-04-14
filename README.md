@@ -129,6 +129,7 @@ Guide for using AI to solve hard problems in complex codebases.
 
 - **Claude Code**: Auto-compact context management
 - **Cursor**: Rules-based context engineering
+- **[Agentic Legibility Score](https://github.com/LatencyTDH/agentic-legibility)**: Repository audit tool that scores setup, commands, docs, tests, and governance for coding-agent readiness.
 
 ## 💡 Expert Insights
 
