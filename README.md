@@ -128,6 +128,7 @@ Guide for using AI to solve hard problems in complex codebases.
 ### Production Tools
 
 - **Claude Code**: Auto-compact context management
+- **[Puppyone](https://github.com/puppyone-ai/puppyone)**: File-system-based context storage for agents
 - **Cursor**: Rules-based context engineering
 
 ## 💡 Expert Insights
@@ -208,4 +209,3 @@ Special thanks to all contributors and the research community advancing the fiel
 **Maintained by**: [yzfly](https://github.com/yzfly) | **云中江树**
 
 *If you find this repository helpful, please consider giving it a ⭐!*
-
