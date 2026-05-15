@@ -127,6 +127,7 @@ Guide for using AI to solve hard problems in complex codebases.
 
 ### Production Tools
 
+- **[Akephalos](https://github.com/sunnja69/akephalos)**: Local-first, markdown-first `.akephalos` passport for portable agent preferences, tool notes, rules, project context, and durable memories across agents, MCP clients, and machines via plain files/Git.
 - **Claude Code**: Auto-compact context management
 - **Cursor**: Rules-based context engineering
 
