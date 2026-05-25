@@ -129,6 +129,7 @@ Guide for using AI to solve hard problems in complex codebases.
 
 - **Claude Code**: Auto-compact context management
 - **Cursor**: Rules-based context engineering
+- **[Pluribus](https://github.com/caioribeiroclw-pixel/pluribus)**: Privacy-safe context receipts for AI coding agents, proving which instructions, tools, skills, memory, compactions, and subagent boundaries crossed context without logging raw content.
 
 ## 💡 Expert Insights
 
