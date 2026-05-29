@@ -52,10 +52,11 @@ Key insights from building a production AI agent:
 - 📄 Original: [Anthropic Engineering](https://www.anthropic.com/engineering/claude-code-best-practices)
 - 🇨🇳 Chinese Translation: [docs/claudecode/claude-code-best-practices-zh.md](docs/claudecode/claude-code-best-practices-zh.md)
 
-### Claude 
+### Anthropic / Claude
 
 - [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 - [AI智能体的有效上下文工程](docs/claudecode/effective-context-engineering-for-ai-agents.md)
+- [Context editing and the memory tool](https://www.anthropic.com/news/context-management)
 
 
 ### LangChain Context Engineering
@@ -87,6 +88,12 @@ Deep dive into context failure modes and management strategies:
 
 Guide for using AI to solve hard problems in complex codebases.
 
+### Don't Build Multi-Agents (Cognition)
+
+- 📄 Original: [Cognition Blog](https://cognition.ai/blog/dont-build-multi-agents)
+
+Principles for building reliable agents: share full context and avoid fragile parallel multi-agent architectures.
+
 ## 📑 Research Papers
 
 ### Survey Papers
@@ -104,6 +111,7 @@ Guide for using AI to solve hard problems in complex codebases.
 - **Retrieval-Augmented Generation**: [RAG Survey](https://github.com/langchain-ai/rag-from-scratch)
 - **Tool Integration**: [Tool Selection](https://arxiv.org/abs/2410.14594), [BigTool](https://arxiv.org/abs/2505.03275)
 - **Context Compression**: [Recursive Summarization](https://arxiv.org/pdf/2308.15022), [Context Pruning](https://arxiv.org/abs/2501.16214)
+- **Long-Context Limitations**: [Lost in the Middle](https://arxiv.org/abs/2307.03172)
 
 ## 🛠️ Tools & Projects
 
@@ -125,10 +133,18 @@ Guide for using AI to solve hard problems in complex codebases.
 - **[LangSmith](https://docs.smith.langchain.com/)**: Agent tracing and evaluation platform
 - **[LangMem](https://langchain-ai.github.io/langmem/)**: Memory management abstractions
 
+### Memory & Compression
+
+- **[Letta (MemGPT)](https://github.com/letta-ai/letta)**: Framework for building stateful agents with long-term memory
+- **[Mem0](https://github.com/mem0ai/mem0)**: Memory layer for AI agents and assistants
+- **[LLMLingua](https://github.com/microsoft/LLMLingua)**: Prompt compression for accelerated and cost-efficient LLM inference
+
 ### Production Tools
 
 - **Claude Code**: Auto-compact context management
+- **ChatGPT**: Long-term cross-session memory
 - **Cursor**: Rules-based context engineering
+- **Windsurf**: Advanced code context retrieval
 
 ## 💡 Expert Insights
 
@@ -197,7 +213,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [CC0 1.0](LICENSE).
 
 ## 🙏 Acknowledgments
 
@@ -205,7 +221,7 @@ Special thanks to all contributors and the research community advancing the fiel
 
 ---
 
-**Maintained by**: [yzfly](https://github.com/yzfly) | **云中江树**
+**Maintained by**: [yzfly](https://github.com/yzfly) | **云中江树（微信公众号: 云中江树）**
 
 *If you find this repository helpful, please consider giving it a ⭐!*
 
