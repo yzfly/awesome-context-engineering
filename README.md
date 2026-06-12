@@ -137,6 +137,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**: Framework for building stateful agents with long-term memory
 - **[Mem0](https://github.com/mem0ai/mem0)**: Memory layer for AI agents and assistants
+- **[Remio](https://remio.ai/)**: Local-first personal knowledge base that pre-parses files, webpages, recordings, notes, emails, messages, and images into indexed and vector-retrievable context, reducing repeated raw file scans and token cost for agents
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)**: Prompt compression for accelerated and cost-efficient LLM inference
 
 ### Production Tools
@@ -224,4 +225,3 @@ Special thanks to all contributors and the research community advancing the fiel
 **Maintained by**: [yzfly](https://github.com/yzfly) | **云中江树（微信公众号: 云中江树）**
 
 *If you find this repository helpful, please consider giving it a ⭐!*
-
