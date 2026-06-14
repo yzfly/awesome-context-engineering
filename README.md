@@ -140,6 +140,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)**: Evolving language agents through agentic context engineering
 - **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)**: A toolkit for context engineering
 - **[MineContext](https://github.com/volcengine/MineContext)**: Volcengine's proactive, context-aware AI companion
+- **[gcontext](https://github.com/bleak-ai/gcontext)**: Version-controlled context modules your coding agent navigates itself — folders of markdown + an llms.txt index, loaded per task. Plain files, no RAG or vector DB.
 
 ### Development Frameworks
 
