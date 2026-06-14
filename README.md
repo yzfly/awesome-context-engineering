@@ -127,6 +127,20 @@ Principles for building reliable agents: share full context and avoid fragile pa
    - Claude Code centered approach
    - Hands-on implementation strategies
 
+3. **[Context-Engineering (davidkimai)](https://github.com/davidkimai/Context-Engineering)**
+   - First-principles handbook for context engineering
+   - From foundations to advanced techniques
+
+### Context Engineering Systems & Kits
+
+- **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)**: Meta-prompting and spec-driven development / context engineering system for Claude Code
+- **[GSD-2](https://github.com/gsd-build/gsd-2)**: Meta-prompting / context engineering system enabling long-running autonomous agent work
+- **[Agent Skills for Context Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)**: Collection of Agent Skills for context engineering and multi-agent architectures
+- **[Advanced Context Engineering for Coding Agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents)**: Advanced context engineering techniques for coding agents
+- **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)**: Evolving language agents through agentic context engineering
+- **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)**: A toolkit for context engineering
+- **[MineContext](https://github.com/volcengine/MineContext)**: Volcengine's proactive, context-aware AI companion
+
 ### Development Frameworks
 
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**: Low-level orchestration framework for context management
