@@ -117,17 +117,22 @@ Principles for building reliable agents: share full context and avoid fragile pa
 
 ### Comprehensive Resources
 
-1. **[Awesome Context Engineering Survey](https://github.com/Meirtz/Awesome-Context-Engineering)**
+1. **[Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)**
+   - Comprehensive guide to prompt engineering, context engineering, RAG, and AI agents
+   - Covers techniques, papers, tools, and best practices
+   - Widely-used educational resource
+
+2. **[Awesome Context Engineering Survey](https://github.com/Meirtz/Awesome-Context-Engineering)**
    - Comprehensive survey of context engineering techniques
    - Methodologies and applications overview
    - Academic research focus
 
-2. **[Context Engineering Intro](https://github.com/coleam00/context-engineering-intro)**
+3. **[Context Engineering Intro](https://github.com/coleam00/context-engineering-intro)**
    - Practical guide for AI coding assistants
    - Claude Code centered approach
    - Hands-on implementation strategies
 
-3. **[Context-Engineering (davidkimai)](https://github.com/davidkimai/Context-Engineering)**
+4. **[Context-Engineering (davidkimai)](https://github.com/davidkimai/Context-Engineering)**
    - First-principles handbook for context engineering
    - From foundations to advanced techniques
 
@@ -135,6 +140,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 
 - **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)**: Meta-prompting and spec-driven development / context engineering system for Claude Code
 - **[GSD-2](https://github.com/gsd-build/gsd-2)**: Meta-prompting / context engineering system enabling long-running autonomous agent work
+- **[how-claude-code-works](https://github.com/Windy3f3f3f3f/how-claude-code-works)**: Deep dive into Claude Code source: architecture, agent loop, and context engineering
 - **[Agent Skills for Context Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)**: Collection of Agent Skills for context engineering and multi-agent architectures
 - **[Advanced Context Engineering for Coding Agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents)**: Advanced context engineering techniques for coding agents
 - **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)**: Evolving language agents through agentic context engineering
@@ -149,6 +155,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 
 ### Memory & Compression
 
+- **[headroom](https://github.com/chopratejas/headroom)**: Compresses tool outputs/logs before they reach the LLM, saving 60-95% of tokens
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**: Framework for building stateful agents with long-term memory
 - **[Mem0](https://github.com/mem0ai/mem0)**: Memory layer for AI agents and assistants
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)**: Prompt compression for accelerated and cost-efficient LLM inference
