@@ -149,6 +149,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 
 ### Memory & Compression
 
+- **[AccInt](https://github.com/maxbaluev/accreted-intelligence)**: Local Work Model memory for coding agents, with MCP retrieval/action verbs and lifecycle hooks that preserve context across sessions
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**: Framework for building stateful agents with long-term memory
 - **[Mem0](https://github.com/mem0ai/mem0)**: Memory layer for AI agents and assistants
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)**: Prompt compression for accelerated and cost-efficient LLM inference
@@ -238,4 +239,3 @@ Special thanks to all contributors and the research community advancing the fiel
 **Maintained by**: [yzfly](https://github.com/yzfly) | **云中江树（微信公众号: 云中江树）**
 
 *If you find this repository helpful, please consider giving it a ⭐!*
-
