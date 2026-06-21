@@ -145,6 +145,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **[Advanced Context Engineering for Coding Agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents)**: Advanced context engineering techniques for coding agents
 - **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)**: Evolving language agents through agentic context engineering
 - **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)**: A toolkit for context engineering
+- **[LoopTroop](https://github.com/looptroop-ai/LoopTroop)**: Local-first AI coding orchestrator with LLM council planning, beads decomposition, and Ralph-style recovery loop for long-running autonomous tasks
 - **[MineContext](https://github.com/volcengine/MineContext)**: Volcengine's proactive, context-aware AI companion
 
 ### Development Frameworks
