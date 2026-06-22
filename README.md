@@ -140,6 +140,15 @@ Principles for building reliable agents: share full context and avoid fragile pa
    - Karpathy-inspired first-principles handbook
    - From prompt engineering toward context design, orchestration, and optimization
 
+6. **[The Context Course (HuggingFace)](https://github.com/huggingface/context-course)**
+   - HuggingFace course on context engineering for code agents
+   - Covers skills, MCP, plugins, subagents, hooks, and building your own agent
+   - Reference agents: Claude Code, Codex, OpenCode
+
+7. **[Agent Systems Handbook](https://github.com/Prompthon-IO/agent-systems-handbook)**
+   - Practical AI agents handbook covering agentic workflows and multi-agent architecture
+   - Spans LangGraph, MCP/A2A, context engineering, agent memory, evaluation, and observability
+
 ### Context Engineering Systems & Kits
 
 - **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)**: Meta-prompting and spec-driven development / context engineering system for Claude Code
@@ -152,6 +161,8 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **[MineContext](https://github.com/volcengine/MineContext)**: Volcengine's proactive, context-aware AI companion
 - **[pro-workflow](https://github.com/rohitg00/pro-workflow)**: Self-correcting memory system that lets Claude Code learn from its mistakes, covering context engineering, parallel worktrees, agent teams, and 17 skills
 - **[kit](https://github.com/cased/kit)**: Context engineering toolkit for AI dev tools, providing codebase mapping, symbol extraction, and code search
+- **[RepoPrompt CE](https://github.com/repoprompt/repoprompt-ce)**: Community edition of RepoPrompt, a native macOS context engineering app for AI coding agents, with an MCP CLI
+- **[context-engineering (outcomeops)](https://github.com/outcomeops/context-engineering)**: Working reference implementation of context engineering with five components (corpus, retrieval, injection, output, enforcement), running end-to-end on Amazon Bedrock
 
 ### Development Frameworks
 
@@ -161,6 +172,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 
 ### Memory & Compression
 
+- **[LeanCTX (lean-ctx)](https://github.com/yvgude/lean-ctx)**: Context intelligence layer for AI agents — a single local Rust binary that decides what agents read, remember, and save; 60–90% fewer tokens, with 76 MCP tools and local-first design
 - **[headroom](https://github.com/chopratejas/headroom)**: Compresses tool outputs/logs before they reach the LLM, saving 60-95% of tokens
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**: Framework for building stateful agents with long-term memory
 - **[Mem0](https://github.com/mem0ai/mem0)**: Memory layer for AI agents and assistants
