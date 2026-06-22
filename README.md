@@ -105,6 +105,13 @@ Principles for building reliable agents: share full context and avoid fragile pa
 
 > *The performance of Large Language Models (LLMs) is fundamentally determined by the contextual information provided during inference. This survey introduces Context Engineering, a formal discipline that transcends simple prompt design to encompass the systematic optimization of information payloads for LLMs.*
 
+**Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime**
+- 📄 Preprints: [202603.1756](https://www.preprints.org/manuscript/202603.1756/v2)
+- 📊 Audits 63 harness-relevant works across academia and public engineering practice
+- 🎯 Decomposes the agent harness layer into Control, Agency, and Runtime (CAR); proposes HarnessCard as a reporting artifact
+
+> *Situates harness engineering in the arc from software engineering through prompt and context engineering, arguing that the harness — the runtime loop wrapping tool execution, control, and agency around an LLM — is a first-class layer whose effects are often mistaken for model-driven gains.*
+
 ### Core Research Areas
 
 - **Memory Systems**: [Reflexion](https://arxiv.org/abs/2303.11366), [Generative Agents](https://ar5iv.labs.arxiv.org/html/2304.03442)
