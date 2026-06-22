@@ -136,6 +136,10 @@ Principles for building reliable agents: share full context and avoid fragile pa
    - First-principles handbook for context engineering
    - From foundations to advanced techniques
 
+5. **[Context-Engineering (jasontang-ai)](https://github.com/jasontang-ai/Context-Engineering)**
+   - Karpathy-inspired first-principles handbook
+   - From prompt engineering toward context design, orchestration, and optimization
+
 ### Context Engineering Systems & Kits
 
 - **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)**: Meta-prompting and spec-driven development / context engineering system for Claude Code
@@ -146,6 +150,8 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)**: Evolving language agents through agentic context engineering
 - **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)**: A toolkit for context engineering
 - **[MineContext](https://github.com/volcengine/MineContext)**: Volcengine's proactive, context-aware AI companion
+- **[pro-workflow](https://github.com/rohitg00/pro-workflow)**: Self-correcting memory system that lets Claude Code learn from its mistakes, covering context engineering, parallel worktrees, agent teams, and 17 skills
+- **[kit](https://github.com/cased/kit)**: Context engineering toolkit for AI dev tools, providing codebase mapping, symbol extraction, and code search
 
 ### Development Frameworks
 
