@@ -165,6 +165,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **[context-engineering (outcomeops)](https://github.com/outcomeops/context-engineering)**: Working reference implementation of context engineering with five components (corpus, retrieval, injection, output, enforcement), running end-to-end on Amazon Bedrock
 - **[Project Context Records (PCR)](https://github.com/hyf0/project-context-records)**: A context-engineering methodology that keeps a durable, repo-versioned archive of a project's meta-context (the why, architecture, and maintainer decisions) so AI collaborators inherit its judgment instead of re-deriving it
 - **[interview-prep-template](https://github.com/AbhiK189/interview-prep-template)**: A three-layer context-engineering template (immutable sources → agent-maintained wiki → operating-manual file) where the agent synthesizes raw material into reusable answers, frameworks, and scored debriefs that compound over time
+- **[Practical Guide to Context Engineering](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering)**: A practical, hands-on guide (in Chinese) to context engineering for LLM applications
 
 ### Development Frameworks
 
