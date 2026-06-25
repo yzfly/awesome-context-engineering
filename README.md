@@ -151,6 +151,17 @@ Principles for building reliable agents: share full context and avoid fragile pa
 
 ### Context Engineering Systems & Kits
 
+- **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)** ⭐64.5k: Meta-prompting, context engineering and spec-driven development system for Claude Code
+- **[Agent Skills for Context Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)** ⭐16.7k: Collection of Agent Skills for context engineering and multi-agent architectures
+- **[Context Engineering Intro](https://github.com/coleam00/context-engineering-intro)** ⭐13.5k: Context engineering introduction and methodology for AI coding assistants
+- **[Context-Engineering (jasontang-ai)](https://github.com/jasontang-ai/Context-Engineering)** ⭐9.1k: Karpathy-inspired first-principles handbook for context engineering
+- **[GSD-2](https://github.com/gsd-build/gsd-2)** ⭐7.7k: Meta-prompting / context engineering system enabling long-running autonomous agent work
+- **[MineContext](https://github.com/volcengine/MineContext)** ⭐5.4k: Volcengine's proactive, context-aware AI companion
+- **[Awesome-Context-Engineering (Meirtz)](https://github.com/Meirtz/Awesome-Context-Engineering)** ⭐3.2k: Comprehensive survey of context engineering
+- **[pro-workflow](https://github.com/rohitg00/pro-workflow)** ⭐2.3k: Self-correcting memory Claude Code workflow, including context engineering
+- **[Advanced Context Engineering for Coding Agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents)** ⭐1.7k: Advanced context engineering techniques for coding agents
+- **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)** ⭐1.2k: A context engineering skills toolkit
+- **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)** ⭐1.2k: Evolving language agents through agentic context engineering (ACE)
 - **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)**: Meta-prompting and spec-driven development / context engineering system for Claude Code
 - **[GSD-2](https://github.com/gsd-build/gsd-2)**: Meta-prompting / context engineering system enabling long-running autonomous agent work
 - **[how-claude-code-works](https://github.com/Windy3f3f3f3f/how-claude-code-works)**: Deep dive into Claude Code source: architecture, agent loop, and context engineering
