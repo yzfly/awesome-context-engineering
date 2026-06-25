@@ -178,6 +178,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **[claude-mem](https://github.com/thedotmack/claude-mem)**: Persistent cross-session memory for Claude Code that automatically captures, compresses, and re-injects context across sessions
 - **[LeanCTX (lean-ctx)](https://github.com/yvgude/lean-ctx)**: Context intelligence layer for AI agents — a single local Rust binary that decides what agents read, remember, and save; 60–90% fewer tokens, with 76 MCP tools and local-first design
 - **[headroom](https://github.com/chopratejas/headroom)**: Compresses tool outputs/logs before they reach the LLM, saving 60-95% of tokens
+- **[Accordion](https://github.com/a-Fig/Accordion)**: A pi extension that renders an agent's entire context window as a live "map" and folds (reversibly compacts) less-relevant blocks in the background via pluggable "conductors" that rank block relevance, instead of lossy all-or-nothing compaction
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**: Framework for building stateful agents with long-term memory
 - **[Mem0](https://github.com/mem0ai/mem0)**: Memory layer for AI agents and assistants
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)**: Prompt compression for accelerated and cost-efficient LLM inference
