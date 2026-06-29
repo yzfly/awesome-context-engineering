@@ -158,6 +158,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **[GSD-2](https://github.com/gsd-build/gsd-2)** ⭐7.7k: Meta-prompting / context engineering system enabling long-running autonomous agent work
 - **[MineContext](https://github.com/volcengine/MineContext)** ⭐5.4k: Volcengine's proactive, context-aware AI companion
 - **[Awesome-Context-Engineering (Meirtz)](https://github.com/Meirtz/Awesome-Context-Engineering)** ⭐3.2k: Comprehensive survey of context engineering
+- **[how-claude-code-works](https://github.com/Windy3f3f3f3f/how-claude-code-works)** ⭐2.7k: Deep dive into Claude Code source: architecture, agent loop, and context engineering
 - **[pro-workflow](https://github.com/rohitg00/pro-workflow)** ⭐2.3k: Self-correcting memory Claude Code workflow, including context engineering
 - **[Advanced Context Engineering for Coding Agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents)** ⭐1.7k: Advanced context engineering techniques for coding agents
 - **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)** ⭐1.2k: A context engineering skills toolkit
