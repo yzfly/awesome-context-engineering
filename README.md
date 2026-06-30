@@ -151,6 +151,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 
 ### Context Engineering Systems & Kits
 
+- **[Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)** ⭐76.1k: Comprehensive guide and resources for prompt engineering, context engineering, RAG, and AI agents
 - **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)** ⭐64.5k: Meta-prompting, context engineering and spec-driven development system for Claude Code
 - **[Agent Skills for Context Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)** ⭐16.7k: Collection of Agent Skills for context engineering and multi-agent architectures
 - **[Context Engineering Intro](https://github.com/coleam00/context-engineering-intro)** ⭐13.5k: Context engineering introduction and methodology for AI coding assistants
