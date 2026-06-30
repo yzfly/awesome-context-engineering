@@ -202,6 +202,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **Claude Code**: Auto-compact context management
 - **ChatGPT**: Long-term cross-session memory
 - **Cursor**: Rules-based context engineering
+- **[Pluribus](https://github.com/caioribeiroclw-pixel/pluribus)**: Context receipts for AI coding agents, recording which instructions, tools, memories, compactions, and handoffs crossed context boundaries without logging raw prompts or secrets
 - **Windsurf**: Advanced code context retrieval
 
 ## 💡 Expert Insights
