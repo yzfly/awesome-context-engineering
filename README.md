@@ -57,6 +57,9 @@ Key insights from building a production AI agent:
 - [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 - [AI智能体的有效上下文工程](docs/claudecode/effective-context-engineering-for-ai-agents.md)
 - [Context editing and the memory tool](https://www.anthropic.com/news/context-management)
+- [How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system)
+- [Writing effective tools for AI agents](https://www.anthropic.com/engineering/writing-tools-for-agents)
+- [Code execution with MCP: building more efficient agents](https://www.anthropic.com/engineering/code-execution-with-mcp)
 
 
 ### LangChain Context Engineering
@@ -94,6 +97,30 @@ Guide for using AI to solve hard problems in complex codebases.
 
 Principles for building reliable agents: share full context and avoid fragile parallel multi-agent architectures.
 
+### The New Skill in AI is Not Prompting, It's Context Engineering (Philipp Schmid)
+
+- 📄 Original: [philschmid.de](https://www.philschmid.de/context-engineering)
+
+Argues most agent failures stem from poor context, not the model; breaks context into instructions, history, long-term memory, RAG, tools, and output format.
+
+### Context Engineering (Simon Willison)
+
+- 📄 Original: [simonwillison.net](https://simonwillison.net/2025/jun/27/context-engineering/)
+
+Why "context engineering" is a better framing than "prompt engineering", curating the foundational discussion of the term.
+
+### Wide Research: Beyond the Context Window (Manus)
+
+- 📄 Original: [Manus Blog](https://manus.im/blog/manus-wide-research-solve-context-problem)
+
+Parallel sub-agent architecture that avoids fabrication when processing many items, by decomposing tasks across dedicated sub-agents instead of one overloaded context window.
+
+### SWE-grep: RL for Fast Context Retrieval (Cognition)
+
+- 📄 Original: [Cognition Blog](https://cognition.ai/blog/swe-grep)
+
+RL-trained models that run up to 8 parallel searches per turn to retrieve code context an order of magnitude faster while minimizing context pollution.
+
 ## 📑 Research Papers
 
 ### Survey Papers
@@ -111,6 +138,18 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - 🎯 Decomposes the agent harness layer into Control, Agency, and Runtime (CAR); proposes HarnessCard as a reporting artifact
 
 > *Situates harness engineering in the arc from software engineering through prompt and context engineering, arguing that the harness — the runtime loop wrapping tool execution, control, and agency around an LLM — is a first-class layer whose effects are often mistaken for model-driven gains.*
+
+**Context Engineering 2.0: The Context of Context Engineering**
+- 📄 arXiv: [2510.26493](https://arxiv.org/abs/2510.26493)
+- 🎯 Traces context engineering back two decades and proposes a systematic definition and design principles across the human-computer to human-agent evolution
+
+**Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models**
+- 📄 arXiv: [2510.04618](https://arxiv.org/abs/2510.04618)
+- 🎯 Treats context as an evolving playbook (Generator/Reflector/Curator) to prevent context collapse; reports +10.6% on agents and +8.6% on finance tasks (ICLR 2026)
+
+**Memory in the Age of AI Agents: A Survey**
+- 📄 arXiv: [2512.13564](https://arxiv.org/abs/2512.13564)
+- 🎯 A "forms-functions-dynamics" taxonomy of agent memory, distinguishing it from RAG and context engineering
 
 ### Core Research Areas
 
@@ -206,6 +245,9 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **[Mem0](https://github.com/mem0ai/mem0)**: Memory layer for AI agents and assistants
 - **[Vestige](https://github.com/samvallad33/vestige)**: "Local-first MCP memory server (single ~23MB Rust binary, data stays on-device) with entity/causal retrieval — links memories by shared file/env-var/service/symbol to recall the earlier change behind a later failure that similarity search can miss"
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)**: Prompt compression for accelerated and cost-efficient LLM inference
+- **[Cognee](https://github.com/topoteretes/cognee)**: Open-source AI memory platform giving agents persistent long-term memory via a self-hosted knowledge-graph engine
+- **[Graphiti](https://github.com/getzep/graphiti)**: Framework for building real-time, temporal knowledge graphs for AI agents (the engine behind Zep's memory)
+- **[Supermemory](https://github.com/supermemoryai/supermemory)**: Fast, scalable memory + context engine with a single Memory API; supports fully local runs
 
 ### Production Tools
 
