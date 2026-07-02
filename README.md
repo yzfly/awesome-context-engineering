@@ -170,6 +170,7 @@ Principles for building reliable agents: share full context and avoid fragile pa
 - **[how-claude-code-works](https://github.com/Windy3f3f3f3f/how-claude-code-works)**: Deep dive into Claude Code source: architecture, agent loop, and context engineering
 - **[Agent Skills for Context Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)**: Collection of Agent Skills for context engineering and multi-agent architectures
 - **[Advanced Context Engineering for Coding Agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents)**: Advanced context engineering techniques for coding agents
+- **[ax](https://github.com/Necmttn/ax)**: Local telemetry and recall graph for AI coding-agent sessions, costs, skills, routing, and hooks
 - **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)**: Evolving language agents through agentic context engineering
 - **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)**: A toolkit for context engineering
 - **[MineContext](https://github.com/volcengine/MineContext)**: Volcengine's proactive, context-aware AI companion
