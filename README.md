@@ -88,6 +88,7 @@ Deep dive into context failure modes and management strategies:
 
 - [GitHub](https://github.com/humanlayer/humanlayer)
 - [YouTube](https://humanlayer.dev/youtube)
+- **[Context Kit](https://github.com/JDDavenport/context-kit)** — Personal Context Artifacts: 4 Markdown templates + 5 Claude Code skills for giving AI agents deep personal context. MIT, one-command install.
 
 Guide for using AI to solve hard problems in complex codebases.
 
