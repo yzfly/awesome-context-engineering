@@ -235,6 +235,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[LeanCTX (lean-ctx)](https://github.com/yvgude/lean-ctx)**：面向 AI agent 的上下文智能层——单个本地 Rust 二进制决定 agent 读取、记忆与保存什么；token 减少 60–90%，提供 76 个 MCP 工具，本地优先
 - **[headroom](https://github.com/chopratejas/headroom)**：在内容进入 LLM 前压缩工具输出/日志，节省 60-95% 的 token
 - **[Accordion](https://github.com/a-Fig/Accordion)**：一个 pi 扩展,将 agent 的整个上下文窗口渲染为实时"地图",并通过可插拔的"conductor"(对各块相关性打分)在后台折叠(可逆地压缩)相关性较低的块,替代有损的全量压缩
+- **[llmtrim](https://github.com/fkiene/llmtrim)**：本地代理和 MCP 服务器，修剪系统提示词、工具定义、工具输出、历史记录和回复，以压缩发送给模型的上下文，仅在确实能节省 token 时才保留每项削减。
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**：构建具备长期记忆的有状态智能体框架
 - **[Mem0](https://github.com/mem0ai/mem0)**：面向AI智能体和助手的记忆层
 - **[Vestige](https://github.com/samvallad33/vestige)**：“本地优先的记忆 MCP 服务器（单个约 23MB Rust 二进制，数据保留在本地），支持实体/因果检索——通过共享的文件、环境变量、服务、符号关联记忆，回溯出导致后续故障、相似度检索可能遗漏的更早改动”
