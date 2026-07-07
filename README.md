@@ -249,6 +249,7 @@ RL-trained models that run up to 8 parallel searches per turn to retrieve code c
 - **[Cognee](https://github.com/topoteretes/cognee)**: Open-source AI memory platform giving agents persistent long-term memory via a self-hosted knowledge-graph engine
 - **[Graphiti](https://github.com/getzep/graphiti)**: Framework for building real-time, temporal knowledge graphs for AI agents (the engine behind Zep's memory)
 - **[Supermemory](https://github.com/supermemoryai/supermemory)**: Fast, scalable memory + context engine with a single Memory API; supports fully local runs
+- **[poolsplit](https://github.com/SpicyNoodles3/poolsplit)**: Pool-split retrieval for agent memory — reserved per-type token budgets so low-priority entries surface and behavioral corrections never get crowded out; single dependency-free Python module
 
 ### Production Tools
 
