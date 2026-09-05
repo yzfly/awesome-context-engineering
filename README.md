@@ -283,6 +283,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[skillreaper](https://github.com/thousandflowers/skillreaper)**: Measures what share of an agent's loaded context ever actually fires — skills, MCP servers, subagents, hooks — from session transcripts, then prunes the unused parts reversibly
 - **[LWC](https://github.com/JanYork/llm-wiki-cli)**: Proactive, source-grounded project memory for coding agents, preserving immutable sources, citations, provenance, and atomic changesets with SQLite/FTS5 retrieval, optional document/code graphs, lifecycle hooks, and a bounded one-tool MCP interface
 - **[billion-context-dsh](https://github.com/Tyan66666/billion-context-dsh)**: Model-driven context compression (Active Context Pruning) for the DeepSeek Harness — the model decides when and what to compress
+- **[chamnan](https://github.com/ArcticFox2029/chamnan)**: Writes a repository's own engineering context to disk as markdown the agent greps — an architecture index, an impact map and the decisions behind them, committed beside the code. Two-tier by design: a token-budgeted summary at session start, full detail one grep away, so the window carries a map rather than the codebase. Repository-local, no network, Python standard library only.
 
 ### Production Tools
 
