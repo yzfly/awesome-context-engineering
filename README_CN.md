@@ -316,6 +316,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[模型Context协议](https://modelcontextprotocol.io/introduction)**：标准化context共享
 - **[文件系统服务器](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)**：基于文件的context管理
 - **工具集成**：工具间无缝context流动
+- **[ContextStream](https://contextstream.io)**：面向 Cursor、Claude Code、Codex 与 Grok 的共享项目上下文。智能不是瓶颈，上下文才是。MCP：https://mcp.contextstream.io/mcp。基准：https://contextstream.io/benchmarks。
 
 ## 🤝 贡献指南
 

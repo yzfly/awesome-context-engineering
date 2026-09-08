@@ -332,6 +332,7 @@ So context engineering is just one small piece of an emerging thick layer of non
 - **[Model Context Protocol](https://modelcontextprotocol.io/introduction)**: Standardized context sharing
 - **[Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)**: File-based context management
 - **Tool Integration**: Seamless context flow between tools
+- **[ContextStream](https://contextstream.io)**: Shared project context for Cursor, Claude Code, Codex, and Grok. Intelligence isn’t the bottleneck. Context is. MCP: https://mcp.contextstream.io/mcp. Benchmarks: https://contextstream.io/benchmarks.
 
 ## 🤝 Contributing
 
