@@ -261,6 +261,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[YYLO](https://github.com/yylo-dev/yylo)**: Command-line orchestrator for coding agents that isolates each task in a dedicated branch/worktree for scoped implementation and focused tests, with typed task, validation, merge, and release-readiness boundaries
 - **[ctx-optimize](https://github.com/muthuishere/ctx-optimize)**: Deterministic code knowledge graph for coding agents — one static Go binary indexes a repo, and optionally its databases, buckets, queues and APIs, into a local graph, so the agent answers "who calls this" / "what breaks if I change this" from the store in one call instead of a grep-and-read chain; ships an agent skill for Claude Code and Codex, with no LLM, embeddings, database, MCP, or credentials at rest
 - **[CueParcel](https://github.com/kallist/CueParcel)**: Local-first browser extension for selecting sections of web pages, combining multiple sources, and packaging source-grounded context for AI agents, with structured TaskSpec output and GitHub Issue, GitHub Pull Request, and technical-documentation adapters
+- **[YYLO Benchmark](https://github.com/yylo-dev/yylo-benchmark)**: Longitudinal evaluation harness for coding agents — each attempt runs in a private fresh-repository workspace, and an immutable evidence chain links the workspace receipt, post-execution repository manifest, terminal, and evaluation IDs
 
 ### Development Frameworks
 
