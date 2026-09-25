@@ -278,6 +278,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**：面向 AI 智能体的上下文窗口分析器，展示 token 消耗的去向
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**：度量并削减 LLM 与智能体消息负载的 token 成本
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**：面向 LLM 对话、RAG 与智能体流水线的确定性上下文压缩（`pip install contextpress`）——一级为纯 NLP 处理、无需 API Key，可选二级 LLM 后端
+- **[toldya](https://github.com/singhlabsdev/toldya)**：从本地 Claude Code 会话记录中找出你反复对 AI 说的纠正，经你逐条确认后写入 CLAUDE.md / AGENTS.md，并统计每条规则添加前后的重复次数
 
 ### 生产工具
 
