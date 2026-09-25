@@ -295,6 +295,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**: Context-window profiler for AI agents: shows what is eating your tokens
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**: Measures and cuts the token cost of LLM and agent message payloads
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**: Deterministic context compression for LLM chat, RAG, and agent pipelines (`pip install contextpress`) â€” Tier-1 NLP stages, no API key; optional Tier-2 LLM backends
+- **[Hyperconsciousness](https://github.com/louis030195/hyperconsciousness)**: Developer-alpha Rust knowledge store with encrypted, append-only records, device sync, and MCP retrieval constrained by scoped, expiring grants
 
 ### Production Tools
 
