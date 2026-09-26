@@ -278,6 +278,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**：面向 AI 智能体的上下文窗口分析器，展示 token 消耗的去向
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**：度量并削减 LLM 与智能体消息负载的 token 成本
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**：面向 LLM 对话、RAG 与智能体流水线的确定性上下文压缩（`pip install contextpress`）——一级为纯 NLP 处理、无需 API Key，可选二级 LLM 后端
+- **[elephant](https://github.com/tonone-ai/elephant)**：为 Claude Code 提供按仓库持久记忆的插件——在仓库根目录维护 `ELEPHANT.md`，会话启动时自动加载，并随代码提交以便团队成员共享同一上下文；另提供跨仓库的全局记忆文件、基于 git 历史的冷启动记忆初始化，以及旧条目压缩
 
 ### 生产工具
 
