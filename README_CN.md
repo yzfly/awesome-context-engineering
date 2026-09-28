@@ -246,6 +246,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[YYLO](https://github.com/yylo-dev/yylo)**：面向编程智能体的命令行编排器——每个任务在专属的分支/worktree 中隔离运行，仅承载范围受限的实现与聚焦测试，并提供类型化的任务、验证、合并与发布就绪边界
 - **[ctx-optimize](https://github.com/muthuishere/ctx-optimize)**：面向编程智能体的确定性代码知识图谱——单个静态 Go 二进制将仓库（以及可选的数据库、对象存储、消息队列与 API）索引为本地图谱，智能体一次调用即可从图谱中回答「谁调用了它」「改动它会影响什么」，无需再做 grep 与逐文件阅读；内置面向 Claude Code 与 Codex 的 Agent Skill，且不依赖 LLM、嵌入、数据库或 MCP，也不留存任何凭据
 - **[CueParcel](https://github.com/kallist/CueParcel)**：本地优先的浏览器扩展，用于选取网页片段、组合多个来源，并打包成有来源依据的上下文供 AI Agent 使用；支持结构化 TaskSpec 输出，以及 GitHub Issue、GitHub Pull Request 与技术文档适配
+- **[Curtain](https://github.com/lukstei/curtain)**：可靠的分步技能执行与人工审查关卡。没有人喜欢剧透，尤其是智能体。
 
 ### 开发框架
 
