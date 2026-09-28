@@ -131,7 +131,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 
 - https://aihustleworld.com/2026/09/context-engineering-explained.html
 
-- A beginner-friendly primer: summarises the context-rot and "lost in the middle" findings and proposes a three-check test (Necessity, Position, Decay) for deciding what belongs in a model's context.
+A beginner-friendly primer: summarises the context-rot and "lost in the middle" findings and proposes a three-check test (Necessity, Position, Decay) for deciding what belongs in a model's context.
 
 ## ðŸ“‘ Research Papers
 
