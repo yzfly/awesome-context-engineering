@@ -128,6 +128,12 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 
 为什么压缩智能体的 context 是有损压缩，而非免费的摘要——哪些信息被保留、哪些被悄悄丢弃，以及它如何逐渐劣化长的多轮运行。
 
+### Context Engineering Explained: How to Give AI Models the Right Information
+
+- https://aihustleworld.com/2026/09/context-engineering-explained.html
+
+面向初学者的上下文工程入门：介绍上下文腐化（context rot）、"迷失在中间"（lost in the middle）现象，以及判断哪些信息应进入模型上下文的三项检查。
+
 ## 📑 研究论文
 
 ### 综述论文
