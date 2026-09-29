@@ -295,6 +295,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**: Context-window profiler for AI agents: shows what is eating your tokens
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**: Measures and cuts the token cost of LLM and agent message payloads
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**: Deterministic context compression for LLM chat, RAG, and agent pipelines (`pip install contextpress`) â€” Tier-1 NLP stages, no API key; optional Tier-2 LLM backends
+- **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**: VS Code extension that indexes the folders you open, on your machine, and gives any model in the picker, Copilot's included, a tool to search them; for your own model servers, the turns and tool results a window cannot hold are folded into that local store and come back when they are the closest match to the question, with a recall tool to search them
 
 ### Production Tools
 

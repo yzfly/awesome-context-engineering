@@ -278,6 +278,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**：面向 AI 智能体的上下文窗口分析器，展示 token 消耗的去向
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**：度量并削减 LLM 与智能体消息负载的 token 成本
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**：面向 LLM 对话、RAG 与智能体流水线的确定性上下文压缩（`pip install contextpress`）——一级为纯 NLP 处理、无需 API Key，可选二级 LLM 后端
+- **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**：VS Code 扩展，在本机为你打开的文件夹建立索引，并为模型选择器中的任意模型（包括 Copilot 的模型）提供检索这些文件夹的工具；对于你自己的模型服务器，窗口容纳不下的对话轮次和工具结果会被折叠进同一个本地存储，在与问题最相关时取回，并提供一个 recall 工具用于检索这些内容
 
 ### 生产工具
 
