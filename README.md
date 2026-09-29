@@ -145,6 +145,10 @@ Why compacting an agent's context is lossy compression, not free summarization �
 
 > *Situates harness engineering in the arc from software engineering through prompt and context engineering, arguing that the harness — the runtime loop wrapping tool execution, control, and agency around an LLM — is a first-class layer whose effects are often mistaken for model-driven gains.*
 
+**Harness-Zero: Harness Distillation via Agent-as-Harness**
+- 📄 arXiv: [2609.24974](https://arxiv.org/abs/2609.24974)
+- 🎯 An agent-as-harness training loop distills optimized harness behaviors into model weights, retaining harness-level gains at deployment without the harness at inference time ([code](https://github.com/metaevo-ai/harness-zero))
+
 **Context Engineering 2.0: The Context of Context Engineering**
 - 📄 arXiv: [2510.26493](https://arxiv.org/abs/2510.26493)
 - 🎯 Traces context engineering back two decades and proposes a systematic definition and design principles across the human-computer to human-agent evolution
@@ -152,6 +156,10 @@ Why compacting an agent's context is lossy compression, not free summarization �
 **Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models**
 - 📄 arXiv: [2510.04618](https://arxiv.org/abs/2510.04618)
 - 🎯 Treats context as an evolving playbook (Generator/Reflector/Curator) to prevent context collapse; reports +10.6% on agents and +8.6% on finance tasks (ICLR 2026)
+
+**Meta Context Engineering via Agentic Skill Evolution**
+- 📄 arXiv: [2601.21557](https://arxiv.org/abs/2601.21557)
+- 🎯 A bi-level framework that co-evolves context-engineering skills and context artifacts, replacing static CE heuristics (ICML 2026, [code](https://github.com/metaevo-ai/meta-context-engineering))
 
 **Memory in the Age of AI Agents: A Survey**
 - 📄 arXiv: [2512.13564](https://arxiv.org/abs/2512.13564)
