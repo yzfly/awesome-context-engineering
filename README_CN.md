@@ -203,6 +203,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Agent Skills 开放标准](https://agentskills.io/)**：以 `SKILL.md` 目录通过渐进式披露加载（名称/描述 → 完整指令 → 附带文件），已被 40+ Agent 采纳（Claude Code、Codex、Gemini CLI、Cursor、OpenCode、dsh…），是*程序性*上下文的可移植单元
 - **[MCP 2026-07-28 规范](https://blog.modelcontextprotocol.io/posts/2026-07-28/)**：无状态核心、带 `ttlMs` 的可缓存 `tools/list`、头部路由——都是为了让工具上下文更便宜、更新鲜
 - **[Claude Code 上下文文档](https://code.claude.com/docs/en/memory)**：CLAUDE.md 记忆层级、`/compact`、子 Agent 与 Hooks——被广泛借鉴的实用上下文管理模型
+- **[Raven](https://github.com/EverMind-AI/Raven)**：开源多智能体 harness，把 agent loop 拆成 Memory、Planning、Capability、Action 四个解耦的策略模块，由实验性的 Curator 逐 Agent 改写、验证通过后才安装；Host Agent 把复杂任务规划为 DAG，分派给内置与第三方 Agent
 
 ### Context工程系统与工具包
 
