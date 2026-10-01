@@ -304,6 +304,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **Cursor**: Rules-based context engineering
 - **Windsurf**: Advanced code context retrieval
 - **[OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay)**: Records the context an agent actually sent, turn by turn, and replays it offline
+- **[Praxix](https://praxix.app)**: macOS app for Claude Code that curates per-session context: pick exactly which skills, rules, and references each session loads (presets, per-project defaults, a lean CLAUDE.md), and see that context before a token is spent
 
 ## ðŸ’¡ Expert Insights
 
