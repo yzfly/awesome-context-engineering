@@ -164,6 +164,10 @@ Why compacting an agent's context is lossy compression, not free summarization �
 
 > *Evaluates LLMs' ability to assign information fragments to sub-agent roles in multi-agent orchestration scenarios. Scoring uses strict pass (zero omissions and zero leaks) plus partial-credit metrics. Data covers 10 loop-centered topologies across 100 professional domains.*
 
+**The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents**
+- 📄 SSRN: [7186738](https://ssrn.com/abstract=7186738)
+- 🎯 Takes the agent loop as the unit of analysis; covers in-loop context management and the harness as context manager, alongside termination, verification, recovery and skills
+
 ### Core Research Areas
 
 - **Memory Systems**: [Reflexion](https://arxiv.org/abs/2303.11366), [Generative Agents](https://ar5iv.labs.arxiv.org/html/2304.03442), [StructMem](https://arxiv.org/abs/2604.21748) ([code](https://github.com/zjunlp/LightMem))
