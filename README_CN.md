@@ -275,6 +275,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[trace-mcp](https://github.com/nikolai-vysotskyi/trace-mcp)**：本地 MCP 服务器，以预先构建的跨语言代码图替代逐文件读取——框架感知的边会把 PHP 控制器连到它渲染的 Vue 页面、把依赖注入装饰器连到其 provider、把 ORM 调用连到定义该表的迁移文件（81 种语言、87 个框架集成），并提供与代码关联的跨会话决策记忆；在 6 个第三方仓库的 60 个已合并 PR 上，评审所需上下文从中位数 13,595 个输入 token 降到 1,326 个
 - **[langstate](https://github.com/hermes-labs-ai/langstate)**：将长对话压缩为可检视的 `[SCAFFOLD STATE]` 消息而非不透明摘要——保留系统消息与最近若干轮原文，`validate()` 会为指定事实返回确定性回执
 - **[Caura](https://github.com/caura-ai/caura)**：面向 AI 智能体集群的受治理共享记忆——跨智能体与租户的作用域化召回、信任分级、keystone 策略、审计日志与知识图谱，通过 MCP 暴露
+- **[Statewave](https://github.com/smaramwbc/statewave)**：面向 AI 智能体的记忆运行时，将智能体事件编译为结构化记忆，并按主体组装可复现、带来源标注的上下文包，而非依赖查询时检索；基于 Postgres + pgvector 自托管，提供 Python/TypeScript SDK 与 MCP 服务器
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**：面向 AI 智能体的上下文窗口分析器，展示 token 消耗的去向
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**：度量并削减 LLM 与智能体消息负载的 token 成本
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**：面向 LLM 对话、RAG 与智能体流水线的确定性上下文压缩（`pip install contextpress`）——一级为纯 NLP 处理、无需 API Key，可选二级 LLM 后端
