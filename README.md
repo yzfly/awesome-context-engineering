@@ -295,6 +295,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**: Context-window profiler for AI agents: shows what is eating your tokens
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**: Measures and cuts the token cost of LLM and agent message payloads
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**: Deterministic context compression for LLM chat, RAG, and agent pipelines (`pip install contextpress`) â€” Tier-1 NLP stages, no API key; optional Tier-2 LLM backends
+- **[mu](https://github.com/qybaihe/mu)**: Coding agent built on pi that hands context decisions to a small judge model: long tool output is judged chunk by chunk and only what matters now enters the context (the rest is archived behind a pointer), stale tool results become one-line tombstones above a context threshold, compaction keeps or prunes passages without writing a summary, and exact repeats in failing test logs can be folded losslessly (51% fewer characters on the authors' seven largest real logs)
 
 ### Production Tools
 
