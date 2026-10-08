@@ -127,6 +127,12 @@ RL-trained models that run up to 8 parallel searches per turn to retrieve code c
 
 Why compacting an agent's context is lossy compression, not free summarization — what survives, what silently drops, and how it degrades long multi-turn runs.
 
+### Context Engineering Is Just Deciding What the Model Sees (Felipe Fontoura)
+
+- 📄 Original: [felipefontoura.com](https://felipefontoura.com/articles/context-engineering/?utm_source=github&utm_medium=referral&utm_campaign=awesome-context-engineering)
+
+Context engineering as the one job inside the agent harness that decides whether the model can finish the work, not a new discipline.
+
 ## 📑 Research Papers
 
 ### Survey Papers

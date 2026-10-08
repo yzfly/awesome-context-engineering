@@ -128,6 +128,12 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 
 为什么压缩智能体的 context 是有损压缩，而非免费的摘要——哪些信息被保留、哪些被悄悄丢弃，以及它如何逐渐劣化长的多轮运行。
 
+### 上下文工程，就是决定模型能看到什么（Felipe Fontoura）
+
+- 📄 原文：[felipefontoura.com](https://felipefontoura.com/articles/context-engineering/?utm_source=github&utm_medium=referral&utm_campaign=awesome-context-engineering)
+
+上下文工程并非一门新学科，而是智能体框架中决定模型能否完成任务的那项工作。
+
 ## 📑 研究论文
 
 ### 综述论文
