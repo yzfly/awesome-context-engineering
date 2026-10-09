@@ -295,6 +295,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**: Context-window profiler for AI agents: shows what is eating your tokens
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**: Measures and cuts the token cost of LLM and agent message payloads
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**: Deterministic context compression for LLM chat, RAG, and agent pipelines (`pip install contextpress`) â€” Tier-1 NLP stages, no API key; optional Tier-2 LLM backends
+- **[ctxprune](https://github.com/riceharvest/ctxprune)**: Small token-classifier model (LLMLingua-2 style, CPU/ONNX) that deletes low-value words from tool outputs, logs and documents while keeping IDs, paths and numbers intact (`pip install ctxprune`)
 
 ### Production Tools
 
