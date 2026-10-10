@@ -247,6 +247,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[ctx-optimize](https://github.com/muthuishere/ctx-optimize)**：面向编程智能体的确定性代码知识图谱——单个静态 Go 二进制将仓库（以及可选的数据库、对象存储、消息队列与 API）索引为本地图谱，智能体一次调用即可从图谱中回答「谁调用了它」「改动它会影响什么」，无需再做 grep 与逐文件阅读；内置面向 Claude Code 与 Codex 的 Agent Skill，且不依赖 LLM、嵌入、数据库或 MCP，也不留存任何凭据
 - **[CueParcel](https://github.com/kallist/CueParcel)**：本地优先的浏览器扩展，用于选取网页片段、组合多个来源，并打包成有来源依据的上下文供 AI Agent 使用；支持结构化 TaskSpec 输出，以及 GitHub Issue、GitHub Pull Request 与技术文档适配
 
+- **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**：面向 AI 智能体的上下文编译器——将记忆、状态、文件与证据编译为任务级、带溯源的 Context Capsule，支持 token 预算、冲突消解、显式未知项与 MCP 工具
 ### 开发框架
 
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**：用于context管理的低级编排框架
