@@ -282,6 +282,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Vestige](https://github.com/samvallad33/vestige)**: "Local-first MCP memory server (single ~23MB Rust binary, data stays on-device) with entity/causal retrieval â€” links memories by shared file/env-var/service/symbol to recall the earlier change behind a later failure that similarity search can miss"
 - **[Tree Ring Memory](https://github.com/TerminallyLazy/Tree-Ring-Memory)**: Lifecycle-aware local-first memory framework for AI agents with recall, audit, forgetting, consolidation, and project-scoped `.tree-ring` storage
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)**: Prompt compression for accelerated and cost-efficient LLM inference
+- **[LLMSlim](https://github.com/Thanatos9404/llmslim)**: Open-source (MIT) Python context compression for RAG and agents. It selects query-relevant units under a hard token budget, lexically or with an optional 22M cross-encoder, and publishes a reproducible head-to-head against LLMLingua-2 and LongLLMLingua
 - **[Cognee](https://github.com/topoteretes/cognee)**: Open-source AI memory platform giving agents persistent long-term memory via a self-hosted knowledge-graph engine
 - **[Graphiti](https://github.com/getzep/graphiti)**: Framework for building real-time, temporal knowledge graphs for AI agents (the engine behind Zep's memory)
 - **[Supermemory](https://github.com/supermemoryai/supermemory)**: Fast, scalable memory + context engine with a single Memory API; supports fully local runs

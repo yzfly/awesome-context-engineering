@@ -265,6 +265,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Vestige](https://github.com/samvallad33/vestige)**：“本地优先的记忆 MCP 服务器（单个约 23MB Rust 二进制，数据保留在本地），支持实体/因果检索——通过共享的文件、环境变量、服务、符号关联记忆，回溯出导致后续故障、相似度检索可能遗漏的更早改动”
 - **[Tree Ring Memory](https://github.com/TerminallyLazy/Tree-Ring-Memory)**：面向 AI 智能体的生命周期感知、本地优先记忆框架，支持 recall、audit、forgetting、consolidation，以及项目级 `.tree-ring` 存储
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)**：prompt压缩，加速并降低LLM推理成本
+- **[LLMSlim](https://github.com/Thanatos9404/llmslim)**：开源（MIT）的 Python 上下文压缩库，面向 RAG 与智能体：在严格的 token 预算内按查询相关性选择内容单元（词法评分，或可选的 2200 万参数交叉编码器），并公开了与 LLMLingua-2、LongLLMLingua 的可复现对比基准
 - **[Cognee](https://github.com/topoteretes/cognee)**：开源 AI 记忆平台，通过自托管知识图谱引擎为智能体提供跨会话的持久长期记忆
 - **[Graphiti](https://github.com/getzep/graphiti)**：为 AI 智能体构建实时、时序感知知识图谱的框架（Zep 记忆基础设施的核心引擎）
 - **[Supermemory](https://github.com/supermemoryai/supermemory)**：快速、可扩展的记忆与上下文引擎，提供统一 Memory API，支持完全本地运行
