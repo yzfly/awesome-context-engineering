@@ -295,6 +295,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**: Context-window profiler for AI agents: shows what is eating your tokens
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**: Measures and cuts the token cost of LLM and agent message payloads
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**: Deterministic context compression for LLM chat, RAG, and agent pipelines (`pip install contextpress`) â€” Tier-1 NLP stages, no API key; optional Tier-2 LLM backends
+- **[akc-cycle](https://github.com/shimo4228/akc-cycle)**: Claude Code plugin that keeps the rules and skills in a setup from piling up and going stale; it audits skills, rules and agent definitions, proposes keep, merge or retire for each file with a reason, changes nothing until you confirm, and promotes advice that keeps coming back into always-loaded rules
 
 ### Production Tools
 
