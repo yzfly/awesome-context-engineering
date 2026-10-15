@@ -145,6 +145,10 @@ Why compacting an agent's context is lossy compression, not free summarization �
 
 > *Situates harness engineering in the arc from software engineering through prompt and context engineering, arguing that the harness — the runtime loop wrapping tool execution, control, and agency around an LLM — is a first-class layer whose effects are often mistaken for model-driven gains.*
 
+**Harness-Zero: Harness Distillation via Agent-as-Harness**
+- 📄 arXiv: [2609.24974](https://arxiv.org/abs/2609.24974)
+- 🎯 An agent-as-harness training loop distills optimized harness behaviors into model weights, retaining harness-level gains at deployment without the harness at inference time ([code](https://github.com/metaevo-ai/harness-zero))
+
 **Context Engineering 2.0: The Context of Context Engineering**
 - 📄 arXiv: [2510.26493](https://arxiv.org/abs/2510.26493)
 - 🎯 Traces context engineering back two decades and proposes a systematic definition and design principles across the human-computer to human-agent evolution
@@ -152,6 +156,10 @@ Why compacting an agent's context is lossy compression, not free summarization �
 **Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models**
 - 📄 arXiv: [2510.04618](https://arxiv.org/abs/2510.04618)
 - 🎯 Treats context as an evolving playbook (Generator/Reflector/Curator) to prevent context collapse; reports +10.6% on agents and +8.6% on finance tasks (ICLR 2026)
+
+**Meta Context Engineering via Agentic Skill Evolution**
+- 📄 arXiv: [2601.21557](https://arxiv.org/abs/2601.21557)
+- 🎯 A bi-level framework that co-evolves context-engineering skills and context artifacts, replacing static CE heuristics (ICML 2026, [code](https://github.com/metaevo-ai/meta-context-engineering))
 
 **Memory in the Age of AI Agents: A Survey**
 - 📄 arXiv: [2512.13564](https://arxiv.org/abs/2512.13564)
@@ -163,6 +171,10 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - 🎯 The first benchmark for multi-agent orchestration prompt writing; 33 commercial models average 17.2% pass rate on role-fragment assignment
 
 > *Evaluates LLMs' ability to assign information fragments to sub-agent roles in multi-agent orchestration scenarios. Scoring uses strict pass (zero omissions and zero leaks) plus partial-credit metrics. Data covers 10 loop-centered topologies across 100 professional domains.*
+
+**The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents**
+- 📄 SSRN: [7186738](https://ssrn.com/abstract=7186738)
+- 🎯 Takes the agent loop as the unit of analysis; covers in-loop context management and the harness as context manager, alongside termination, verification, recovery and skills
 
 ### Core Research Areas
 
@@ -216,6 +228,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[Agent Skills open standard](https://agentskills.io/)**: `SKILL.md` folders loaded via progressive disclosure (name/description → full instructions → bundled files), adopted by 40+ agents (Claude Code, Codex, Gemini CLI, Cursor, OpenCode, dsh...). Skills are the portable unit of *procedural* context
 - **[MCP 2026-07-28 spec](https://blog.modelcontextprotocol.io/posts/2026-07-28/)**: stateless core, cacheable `tools/list` results with `ttlMs`, and header-based routing — all aimed at keeping tool context cheap and fresh for agents
 - **[Claude Code context docs](https://code.claude.com/docs/en/memory)**: CLAUDE.md memory hierarchy, `/compact`, subagents and hooks — the most widely copied practical context-management model
+- **[Raven](https://github.com/EverMind-AI/Raven)**: open-source multi-agent harness whose agent loop is split into four decoupled strategy modules (Memory, Planning, Capability, Action) that an experimental Curator rewrites per agent and installs only after verification; its host agent plans a complex task as a DAG and delegates the parts to built-in and third-party agents
 
 ### Context Engineering Systems & Kits
 
@@ -261,6 +274,12 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[YYLO](https://github.com/yylo-dev/yylo)**: Command-line orchestrator for coding agents that isolates each task in a dedicated branch/worktree for scoped implementation and focused tests, with typed task, validation, merge, and release-readiness boundaries
 - **[ctx-optimize](https://github.com/muthuishere/ctx-optimize)**: Deterministic code knowledge graph for coding agents — one static Go binary indexes a repo, and optionally its databases, buckets, queues and APIs, into a local graph, so the agent answers "who calls this" / "what breaks if I change this" from the store in one call instead of a grep-and-read chain; ships an agent skill for Claude Code and Codex, with no LLM, embeddings, database, MCP, or credentials at rest
 - **[CueParcel](https://github.com/kallist/CueParcel)**: Local-first browser extension for selecting sections of web pages, combining multiple sources, and packaging source-grounded context for AI agents, with structured TaskSpec output and GitHub Issue, GitHub Pull Request, and technical-documentation adapters
+- **[Archcore](https://github.com/archcore-ai/archcore)**: Git-native context engineering and spec-driven development for AI coding agents
+- **[YYLO Benchmark](https://github.com/yylo-dev/yylo-benchmark)**: Coding-agent evaluation runner for trusted hosts: runs each attempt in a fresh repository and retains outputs for independent re-evaluation; workspace separation provides context hygiene, not a security sandbox
+- **[open-bridge](https://github.com/bks-lab/open-bridge)**: Plain-text git workspace that coding agents read at session start, with a CI-enforced byte budget for always-on context and on-demand indexes for everything else
+- **[Curtain](https://github.com/lukstei/curtain)**: Step-by-step skill runner that reveals instructions only when their stage is reached, with explicit human approval gates between stages.
+
+- **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**: A context compiler for AI agents that turns memory, state, files, and evidence into task-scoped, provenance-aware Context Capsules with token budgeting, conflict resolution, explicit unknowns, and MCP tools
 
 ### Development Frameworks
 
@@ -276,12 +295,13 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[LeanCTX (lean-ctx)](https://github.com/yvgude/lean-ctx)**: Context intelligence layer for AI agents — a single local Rust binary that decides what agents read, remember, and save; 60–90% fewer tokens, with 76 MCP tools and local-first design
 - **[headroom](https://github.com/chopratejas/headroom)**: Compresses tool outputs/logs before they reach the LLM, saving 60-95% of tokens
 - **[Accordion](https://github.com/a-Fig/Accordion)**: A pi extension that renders an agent's entire context window as a live "map" and folds (reversibly compacts) less-relevant blocks in the background via pluggable "conductors" that rank block relevance, instead of lossy all-or-nothing compaction
-- **[Mnemoverse](https://github.com/mnemoverse/mcp-memory-server)**: Hosted persistent memory reachable over MCP from Claude Code, Cursor, VS Code and ChatGPT with one key; recall is re-ranked by whether a recalled memory helped or misled
+- **[Mnemoverse](https://github.com/mnemoverse/mcp-memory-server)**: Hosted persistent memory reachable over MCP from Claude Code, Cursor, VS Code and ChatGPT with one key or OAuth; recall is re-ranked by whether a recalled memory helped or misled
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**: Framework for building stateful agents with long-term memory
 - **[Mem0](https://github.com/mem0ai/mem0)**: Memory layer for AI agents and assistants
 - **[Vestige](https://github.com/samvallad33/vestige)**: "Local-first MCP memory server (single ~23MB Rust binary, data stays on-device) with entity/causal retrieval — links memories by shared file/env-var/service/symbol to recall the earlier change behind a later failure that similarity search can miss"
 - **[Tree Ring Memory](https://github.com/TerminallyLazy/Tree-Ring-Memory)**: Lifecycle-aware local-first memory framework for AI agents with recall, audit, forgetting, consolidation, and project-scoped `.tree-ring` storage
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)**: Prompt compression for accelerated and cost-efficient LLM inference
+- **[LLMSlim](https://github.com/Thanatos9404/llmslim)**: Open-source (MIT) Python context compression for RAG and agents. It selects query-relevant units under a hard token budget, lexically or with an optional 22M cross-encoder, and publishes a reproducible head-to-head against LLMLingua-2 and LongLLMLingua
 - **[Cognee](https://github.com/topoteretes/cognee)**: Open-source AI memory platform giving agents persistent long-term memory via a self-hosted knowledge-graph engine
 - **[Graphiti](https://github.com/getzep/graphiti)**: Framework for building real-time, temporal knowledge graphs for AI agents (the engine behind Zep's memory)
 - **[Supermemory](https://github.com/supermemoryai/supermemory)**: Fast, scalable memory + context engine with a single Memory API; supports fully local runs
@@ -292,9 +312,21 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[trace-mcp](https://github.com/nikolai-vysotskyi/trace-mcp)**: Local MCP server that serves a precomputed cross-language code graph instead of file reads — framework-aware edges link a PHP controller to the Vue page it renders, a DI decorator to its provider, an ORM call to the migration that defines the table (81 languages, 87 framework integrations), plus code-linked decision memory across sessions; on 60 merged PRs from six third-party repositories, review context drops from a median 13,595 to 1,326 input tokens
 - **[langstate](https://github.com/hermes-labs-ai/langstate)**: Compresses long LLM conversations into an inspectable `[SCAFFOLD STATE]` message instead of an opaque summary — keeps system messages and recent turns verbatim, and `validate()` returns a deterministic receipt for named facts
 - **[Caura](https://github.com/caura-ai/caura)**: Governed shared memory for AI agent fleets — scoped recall across agents and tenants, trust tiers, keystone policies, audit trails, and a knowledge graph, exposed over MCP
+- **[Statewave](https://github.com/smaramwbc/statewave)**: Memory runtime that compiles agent events into structured memories and assembles reproducible, provenance-tagged context bundles per subject instead of query-time retrieval, self-hosted on Postgres + pgvector with Python/TypeScript SDKs and an MCP server
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**: Context-window profiler for AI agents: shows what is eating your tokens
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**: Measures and cuts the token cost of LLM and agent message payloads
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**: Deterministic context compression for LLM chat, RAG, and agent pipelines (`pip install contextpress`) — Tier-1 NLP stages, no API key; optional Tier-2 LLM backends
+- **[toldya](https://github.com/singhlabsdev/toldya)**: Turns the corrections you keep repeating to Claude Code (found in local session history) into CLAUDE.md / AGENTS.md rules after per-rule approval, then counts whether each rule stopped the repeats
+- **[Hyperconsciousness](https://github.com/louis030195/hyperconsciousness)**: Developer-alpha Rust knowledge store with encrypted, append-only records, device sync, and MCP retrieval constrained by scoped, expiring grants
+- **[elephant](https://github.com/tonone-ai/elephant)**: Claude Code plugin for persistent per-repo memory — keeps an `ELEPHANT.md` in the repo root that is auto-loaded at session start and committed so teammates share the same context, plus a global cross-repo memory file, cold-start seeding from git history, and compaction of old entries
+- **[context-bank](https://github.com/kadiresen/context-bank)**: Git-committed, size-capped project memory for coding agents under .ai/, with retrieval-first history, a doctor check and Cline Memory Bank migration
+- **[Gobstopper](https://github.com/hraness/gobstopper)**: Local proxy for Claude Code, Codex, and other coding agents that replaces older turns with a mechanical summary once a request passes a token threshold and sends the newest turns verbatim; can also prepare smaller copies of saved sessions
+- **[Agent-Body](https://github.com/1420079678-ctrl/agent-body)**: Plugin layer for DeepSeek Harness with intent-based tool-schema gating, deterministic reflexes, and idle-time memory consolidation; includes an offline demo and a reproducible tool-schema token benchmark
+- **[Context Guru](https://github.com/rossoctl/context-guru)**: Provider-agnostic context engine combining prompt-cache management, tool-output filtering, and context compaction, with Claude Code and Codex integrations
+- **[Dory](https://github.com/tjqscott/dory)**: Project memory in a linked Markdown wiki, with decisions, findings and a taskboard; Claude Code hooks load the index at session start and check wiki structure after changes
+- **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**: Source-available (BSL 1.1) VS Code extension that indexes the folders you open, on your machine, and gives any model in the picker, Copilot's included, a tool to search them; for your own model servers, the turns and tool results a window cannot hold are folded into that local store and come back when they are the closest match to the question, with a recall tool to search them
+- **[ctxprune](https://github.com/riceharvest/ctxprune)**: Small token-classifier model (LLMLingua-2 style, CPU/ONNX) that deletes low-value words from tool outputs, logs and documents while keeping IDs, paths and numbers intact (`pip install ctxprune`)
+- **[mu](https://github.com/qybaihe/mu)**: Coding agent built on pi that hands context decisions to a small judge model: long tool output is judged chunk by chunk and only what matters now enters the context (the rest is archived behind a pointer), stale tool results become one-line tombstones above a context threshold, compaction keeps or prunes passages without writing a summary, and exact repeats in failing test logs can be folded losslessly (51% fewer characters on the authors' seven largest real logs)
 - **[akc-cycle](https://github.com/shimo4228/akc-cycle)**: Claude Code plugin that keeps the rules and skills in a setup from piling up and going stale; it audits skills, rules and agent definitions, proposes keep, merge or retire for each file with a reason, changes nothing until you confirm, and promotes advice that keeps coming back into always-loaded rules
 
 ### Production Tools
@@ -305,6 +337,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **Cursor**: Rules-based context engineering
 - **Windsurf**: Advanced code context retrieval
 - **[OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay)**: Records the context an agent actually sent, turn by turn, and replays it offline
+- **[Praxix](https://praxix.app)**: Commercial macOS app for Claude Code that curates per-session context: pick exactly which skills, rules, and references each session loads (presets, per-project defaults, a lean CLAUDE.md), and see that context before a token is spent
 
 ## 💡 Expert Insights
 
