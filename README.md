@@ -322,6 +322,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Agent-Body](https://github.com/1420079678-ctrl/agent-body)**: Plugin layer for DeepSeek Harness with intent-based tool-schema gating, deterministic reflexes, and idle-time memory consolidation; includes an offline demo and a reproducible tool-schema token benchmark
 - **[Context Guru](https://github.com/rossoctl/context-guru)**: Provider-agnostic context engine combining prompt-cache management, tool-output filtering, and context compaction, with Claude Code and Codex integrations
 - **[Dory](https://github.com/tjqscott/dory)**: Project memory in a linked Markdown wiki, with decisions, findings and a taskboard; Claude Code hooks load the index at session start and check wiki structure after changes
+- **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**: Source-available (BSL 1.1) VS Code extension that indexes the folders you open, on your machine, and gives any model in the picker, Copilot's included, a tool to search them; for your own model servers, the turns and tool results a window cannot hold are folded into that local store and come back when they are the closest match to the question, with a recall tool to search them
 
 ### Production Tools
 
