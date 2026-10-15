@@ -151,6 +151,10 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - 📄 arXiv：[2512.13564](https://arxiv.org/abs/2512.13564)
 - 🎯 提出"形态-功能-动态"多维记忆分类法，并厘清 agent memory 与 RAG、上下文工程的区别
 
+**The Agent Loop：LLM 智能体的控制策略、技能与 Harness 综述**
+- 📄 SSRN：[7186738](https://ssrn.com/abstract=7186738)
+- 🎯 以智能体循环（agent loop）为分析单位；讨论循环内的上下文管理和作为上下文管理器的 harness，并涵盖终止、验证、恢复与技能
+
 ### 核心研究领域
 
 - **记忆系统**：[Reflexion](https://arxiv.org/abs/2303.11366)、[生成式智能体](https://ar5iv.labs.arxiv.org/html/2304.03442)、[StructMem](https://arxiv.org/abs/2604.21748)（[代码](https://github.com/zjunlp/LightMem)）
@@ -203,6 +207,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Agent Skills 开放标准](https://agentskills.io/)**：以 `SKILL.md` 目录通过渐进式披露加载（名称/描述 → 完整指令 → 附带文件），已被 40+ Agent 采纳（Claude Code、Codex、Gemini CLI、Cursor、OpenCode、dsh…），是*程序性*上下文的可移植单元
 - **[MCP 2026-07-28 规范](https://blog.modelcontextprotocol.io/posts/2026-07-28/)**：无状态核心、带 `ttlMs` 的可缓存 `tools/list`、头部路由——都是为了让工具上下文更便宜、更新鲜
 - **[Claude Code 上下文文档](https://code.claude.com/docs/en/memory)**：CLAUDE.md 记忆层级、`/compact`、子 Agent 与 Hooks——被广泛借鉴的实用上下文管理模型
+- **[Raven](https://github.com/EverMind-AI/Raven)**：开源多智能体 harness，把 agent loop 拆成 Memory、Planning、Capability、Action 四个解耦的策略模块，由实验性的 Curator 逐 Agent 改写、验证通过后才安装；Host Agent 把复杂任务规划为 DAG，分派给内置与第三方 Agent
 
 ### Context工程系统与工具包
 
@@ -246,6 +251,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[YYLO](https://github.com/yylo-dev/yylo)**：面向编程智能体的命令行编排器——每个任务在专属的分支/worktree 中隔离运行，仅承载范围受限的实现与聚焦测试，并提供类型化的任务、验证、合并与发布就绪边界
 - **[ctx-optimize](https://github.com/muthuishere/ctx-optimize)**：面向编程智能体的确定性代码知识图谱——单个静态 Go 二进制将仓库（以及可选的数据库、对象存储、消息队列与 API）索引为本地图谱，智能体一次调用即可从图谱中回答「谁调用了它」「改动它会影响什么」，无需再做 grep 与逐文件阅读；内置面向 Claude Code 与 Codex 的 Agent Skill，且不依赖 LLM、嵌入、数据库或 MCP，也不留存任何凭据
 - **[CueParcel](https://github.com/kallist/CueParcel)**：本地优先的浏览器扩展，用于选取网页片段、组合多个来源，并打包成有来源依据的上下文供 AI Agent 使用；支持结构化 TaskSpec 输出，以及 GitHub Issue、GitHub Pull Request 与技术文档适配
+- **[Archcore](https://github.com/archcore-ai/archcore)**：面向 AI 编程智能体的 Git 原生上下文工程与规范驱动开发
 - **[YYLO Benchmark](https://github.com/yylo-dev/yylo-benchmark)**：面向可信主机的编程智能体评测运行器：每次尝试使用全新仓库并保留输出供独立复评；工作区隔离用于整理上下文，不构成安全沙箱
 
 ### 开发框架
@@ -261,11 +267,13 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[LeanCTX (lean-ctx)](https://github.com/yvgude/lean-ctx)**：面向 AI agent 的上下文智能层——单个本地 Rust 二进制决定 agent 读取、记忆与保存什么；token 减少 60–90%，提供 76 个 MCP 工具，本地优先
 - **[headroom](https://github.com/chopratejas/headroom)**：在内容进入 LLM 前压缩工具输出/日志，节省 60-95% 的 token
 - **[Accordion](https://github.com/a-Fig/Accordion)**：一个 pi 扩展,将 agent 的整个上下文窗口渲染为实时"地图",并通过可插拔的"conductor"(对各块相关性打分)在后台折叠(可逆地压缩)相关性较低的块,替代有损的全量压缩
+- **[Mnemoverse](https://github.com/mnemoverse/mcp-memory-server)**：通过 MCP 为 Claude Code、Cursor、VS Code 和 ChatGPT 提供托管的持久记忆，支持 API Key 或 OAuth；依据被召回记忆是否有帮助调整排序
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**：构建具备长期记忆的有状态智能体框架
 - **[Mem0](https://github.com/mem0ai/mem0)**：面向AI智能体和助手的记忆层
 - **[Vestige](https://github.com/samvallad33/vestige)**：“本地优先的记忆 MCP 服务器（单个约 23MB Rust 二进制，数据保留在本地），支持实体/因果检索——通过共享的文件、环境变量、服务、符号关联记忆，回溯出导致后续故障、相似度检索可能遗漏的更早改动”
 - **[Tree Ring Memory](https://github.com/TerminallyLazy/Tree-Ring-Memory)**：面向 AI 智能体的生命周期感知、本地优先记忆框架，支持 recall、audit、forgetting、consolidation，以及项目级 `.tree-ring` 存储
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)**：prompt压缩，加速并降低LLM推理成本
+- **[LLMSlim](https://github.com/Thanatos9404/llmslim)**：开源（MIT）的 Python 上下文压缩库，面向 RAG 与智能体：在严格的 token 预算内按查询相关性选择内容单元（词法评分，或可选的 2200 万参数交叉编码器），并公开了与 LLMLingua-2、LongLLMLingua 的可复现对比基准
 - **[Cognee](https://github.com/topoteretes/cognee)**：开源 AI 记忆平台，通过自托管知识图谱引擎为智能体提供跨会话的持久长期记忆
 - **[Graphiti](https://github.com/getzep/graphiti)**：为 AI 智能体构建实时、时序感知知识图谱的框架（Zep 记忆基础设施的核心引擎）
 - **[Supermemory](https://github.com/supermemoryai/supermemory)**：快速、可扩展的记忆与上下文引擎，提供统一 Memory API，支持完全本地运行
@@ -276,9 +284,18 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[trace-mcp](https://github.com/nikolai-vysotskyi/trace-mcp)**：本地 MCP 服务器，以预先构建的跨语言代码图替代逐文件读取——框架感知的边会把 PHP 控制器连到它渲染的 Vue 页面、把依赖注入装饰器连到其 provider、把 ORM 调用连到定义该表的迁移文件（81 种语言、87 个框架集成），并提供与代码关联的跨会话决策记忆；在 6 个第三方仓库的 60 个已合并 PR 上，评审所需上下文从中位数 13,595 个输入 token 降到 1,326 个
 - **[langstate](https://github.com/hermes-labs-ai/langstate)**：将长对话压缩为可检视的 `[SCAFFOLD STATE]` 消息而非不透明摘要——保留系统消息与最近若干轮原文，`validate()` 会为指定事实返回确定性回执
 - **[Caura](https://github.com/caura-ai/caura)**：面向 AI 智能体集群的受治理共享记忆——跨智能体与租户的作用域化召回、信任分级、keystone 策略、审计日志与知识图谱，通过 MCP 暴露
+- **[Statewave](https://github.com/smaramwbc/statewave)**：面向 AI 智能体的记忆运行时，将智能体事件编译为结构化记忆，并按主体组装可复现、带来源标注的上下文包，而非依赖查询时检索；基于 Postgres + pgvector 自托管，提供 Python/TypeScript SDK 与 MCP 服务器
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**：面向 AI 智能体的上下文窗口分析器，展示 token 消耗的去向
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**：度量并削减 LLM 与智能体消息负载的 token 成本
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**：面向 LLM 对话、RAG 与智能体流水线的确定性上下文压缩（`pip install contextpress`）——一级为纯 NLP 处理、无需 API Key，可选二级 LLM 后端
+- **[toldya](https://github.com/singhlabsdev/toldya)**：从本地 Claude Code 会话记录中找出你反复对 AI 说的纠正，经你逐条确认后写入 CLAUDE.md / AGENTS.md，并统计每条规则添加前后的重复次数
+- **[Hyperconsciousness](https://github.com/louis030195/hyperconsciousness)**：处于开发者 alpha 阶段的 Rust 知识存储，支持加密的仅追加记录、设备同步，并通过限定范围、设定有效期的授权控制 MCP 检索
+- **[elephant](https://github.com/tonone-ai/elephant)**：为 Claude Code 提供按仓库持久记忆的插件——在仓库根目录维护 `ELEPHANT.md`，会话启动时自动加载，并随代码提交以便团队成员共享同一上下文；另提供跨仓库的全局记忆文件、基于 git 历史的冷启动记忆初始化，以及旧条目压缩
+- **[context-bank](https://github.com/kadiresen/context-bank)**：提交到 git 的、有大小上限的编码智能体项目记忆（.ai/），支持按需检索的历史记录、doctor 健康检查以及从 Cline Memory Bank 迁移
+- **[Gobstopper](https://github.com/hraness/gobstopper)**：面向 Claude Code、Codex 等编程智能体的本地代理，请求超过 token 阈值时将较早轮次替换为机械摘要，最新轮次原样发送；也可为已保存会话生成更小的副本
+- **[Agent-Body](https://github.com/1420079678-ctrl/agent-body)**：面向 DeepSeek Harness 的插件层，按命令意图显影工具 schema，提供确定性反射与空闲期记忆巩固；附无需 API key 的离线演示和可复现的工具 schema token 基准
+- **[Context Guru](https://github.com/rossoctl/context-guru)**：provider 无关的上下文引擎，结合 prompt 缓存管理、工具输出过滤与上下文压缩，支持 Claude Code 与 Codex 集成
+- **[Dory](https://github.com/tjqscott/dory)**：用相互链接的 Markdown wiki 页面保存项目决策、研究结果和任务；Claude Code 钩子在会话开始时加载索引，并在修改后检查 wiki 结构
 
 ### 生产工具
 
