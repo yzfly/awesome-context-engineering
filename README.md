@@ -297,6 +297,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**: Measures and cuts the token cost of LLM and agent message payloads
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**: Deterministic context compression for LLM chat, RAG, and agent pipelines (`pip install contextpress`) â€” Tier-1 NLP stages, no API key; optional Tier-2 LLM backends
 - **[toldya](https://github.com/singhlabsdev/toldya)**: Turns the corrections you keep repeating to Claude Code (found in local session history) into CLAUDE.md / AGENTS.md rules after per-rule approval, then counts whether each rule stopped the repeats
+- **[Hyperconsciousness](https://github.com/louis030195/hyperconsciousness)**: Developer-alpha Rust knowledge store with encrypted, append-only records, device sync, and MCP retrieval constrained by scoped, expiring grants
 
 ### Production Tools
 
