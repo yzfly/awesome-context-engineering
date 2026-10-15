@@ -216,6 +216,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[Agent Skills open standard](https://agentskills.io/)**: `SKILL.md` folders loaded via progressive disclosure (name/description → full instructions → bundled files), adopted by 40+ agents (Claude Code, Codex, Gemini CLI, Cursor, OpenCode, dsh...). Skills are the portable unit of *procedural* context
 - **[MCP 2026-07-28 spec](https://blog.modelcontextprotocol.io/posts/2026-07-28/)**: stateless core, cacheable `tools/list` results with `ttlMs`, and header-based routing — all aimed at keeping tool context cheap and fresh for agents
 - **[Claude Code context docs](https://code.claude.com/docs/en/memory)**: CLAUDE.md memory hierarchy, `/compact`, subagents and hooks — the most widely copied practical context-management model
+- **[Raven](https://github.com/EverMind-AI/Raven)**: open-source multi-agent harness whose agent loop is split into four decoupled strategy modules (Memory, Planning, Capability, Action) that an experimental Curator rewrites per agent and installs only after verification; its host agent plans a complex task as a DAG and delegates the parts to built-in and third-party agents
 
 ### Context Engineering Systems & Kits
 
@@ -261,6 +262,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[YYLO](https://github.com/yylo-dev/yylo)**: Command-line orchestrator for coding agents that isolates each task in a dedicated branch/worktree for scoped implementation and focused tests, with typed task, validation, merge, and release-readiness boundaries
 - **[ctx-optimize](https://github.com/muthuishere/ctx-optimize)**: Deterministic code knowledge graph for coding agents — one static Go binary indexes a repo, and optionally its databases, buckets, queues and APIs, into a local graph, so the agent answers "who calls this" / "what breaks if I change this" from the store in one call instead of a grep-and-read chain; ships an agent skill for Claude Code and Codex, with no LLM, embeddings, database, MCP, or credentials at rest
 - **[CueParcel](https://github.com/kallist/CueParcel)**: Local-first browser extension for selecting sections of web pages, combining multiple sources, and packaging source-grounded context for AI agents, with structured TaskSpec output and GitHub Issue, GitHub Pull Request, and technical-documentation adapters
+- **[Archcore](https://github.com/archcore-ai/archcore)**: Git-native context engineering and spec-driven development for AI coding agents
 
 ### Development Frameworks
 
@@ -295,6 +297,12 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**: Context-window profiler for AI agents: shows what is eating your tokens
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**: Measures and cuts the token cost of LLM and agent message payloads
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**: Deterministic context compression for LLM chat, RAG, and agent pipelines (`pip install contextpress`) — Tier-1 NLP stages, no API key; optional Tier-2 LLM backends
+- **[toldya](https://github.com/singhlabsdev/toldya)**: Turns the corrections you keep repeating to Claude Code (found in local session history) into CLAUDE.md / AGENTS.md rules after per-rule approval, then counts whether each rule stopped the repeats
+- **[Hyperconsciousness](https://github.com/louis030195/hyperconsciousness)**: Developer-alpha Rust knowledge store with encrypted, append-only records, device sync, and MCP retrieval constrained by scoped, expiring grants
+- **[elephant](https://github.com/tonone-ai/elephant)**: Claude Code plugin for persistent per-repo memory — keeps an `ELEPHANT.md` in the repo root that is auto-loaded at session start and committed so teammates share the same context, plus a global cross-repo memory file, cold-start seeding from git history, and compaction of old entries
+- **[context-bank](https://github.com/kadiresen/context-bank)**: Git-committed, size-capped project memory for coding agents under .ai/, with retrieval-first history, a doctor check and Cline Memory Bank migration
+- **[Gobstopper](https://github.com/hraness/gobstopper)**: Local proxy for Claude Code, Codex, and other coding agents that replaces older turns with a mechanical summary once a request passes a token threshold and sends the newest turns verbatim; can also prepare smaller copies of saved sessions
+- **[Agent-Body](https://github.com/1420079678-ctrl/agent-body)**: Plugin layer for DeepSeek Harness with intent-based tool-schema gating, deterministic reflexes, and idle-time memory consolidation; includes an offline demo and a reproducible tool-schema token benchmark
 - **[Context Guru](https://github.com/rossoctl/context-guru)**: Provider-agnostic context engine combining prompt-cache management, tool-output filtering, and context compaction, with Claude Code and Codex integrations
 
 ### Production Tools

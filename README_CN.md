@@ -203,6 +203,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Agent Skills 开放标准](https://agentskills.io/)**：以 `SKILL.md` 目录通过渐进式披露加载（名称/描述 → 完整指令 → 附带文件），已被 40+ Agent 采纳（Claude Code、Codex、Gemini CLI、Cursor、OpenCode、dsh…），是*程序性*上下文的可移植单元
 - **[MCP 2026-07-28 规范](https://blog.modelcontextprotocol.io/posts/2026-07-28/)**：无状态核心、带 `ttlMs` 的可缓存 `tools/list`、头部路由——都是为了让工具上下文更便宜、更新鲜
 - **[Claude Code 上下文文档](https://code.claude.com/docs/en/memory)**：CLAUDE.md 记忆层级、`/compact`、子 Agent 与 Hooks——被广泛借鉴的实用上下文管理模型
+- **[Raven](https://github.com/EverMind-AI/Raven)**：开源多智能体 harness，把 agent loop 拆成 Memory、Planning、Capability、Action 四个解耦的策略模块，由实验性的 Curator 逐 Agent 改写、验证通过后才安装；Host Agent 把复杂任务规划为 DAG，分派给内置与第三方 Agent
 
 ### Context工程系统与工具包
 
@@ -246,6 +247,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[YYLO](https://github.com/yylo-dev/yylo)**：面向编程智能体的命令行编排器——每个任务在专属的分支/worktree 中隔离运行，仅承载范围受限的实现与聚焦测试，并提供类型化的任务、验证、合并与发布就绪边界
 - **[ctx-optimize](https://github.com/muthuishere/ctx-optimize)**：面向编程智能体的确定性代码知识图谱——单个静态 Go 二进制将仓库（以及可选的数据库、对象存储、消息队列与 API）索引为本地图谱，智能体一次调用即可从图谱中回答「谁调用了它」「改动它会影响什么」，无需再做 grep 与逐文件阅读；内置面向 Claude Code 与 Codex 的 Agent Skill，且不依赖 LLM、嵌入、数据库或 MCP，也不留存任何凭据
 - **[CueParcel](https://github.com/kallist/CueParcel)**：本地优先的浏览器扩展，用于选取网页片段、组合多个来源，并打包成有来源依据的上下文供 AI Agent 使用；支持结构化 TaskSpec 输出，以及 GitHub Issue、GitHub Pull Request 与技术文档适配
+- **[Archcore](https://github.com/archcore-ai/archcore)**：面向 AI 编程智能体的 Git 原生上下文工程与规范驱动开发
 
 ### 开发框架
 
@@ -278,6 +280,12 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Ctxlens](https://github.com/AgentPostmortem/Ctxlens)**：面向 AI 智能体的上下文窗口分析器，展示 token 消耗的去向
 - **[tokencut](https://github.com/AgentPostmortem/tokencut)**：度量并削减 LLM 与智能体消息负载的 token 成本
 - **[contextpress](https://github.com/Taha-azizi/contextpress)**：面向 LLM 对话、RAG 与智能体流水线的确定性上下文压缩（`pip install contextpress`）——一级为纯 NLP 处理、无需 API Key，可选二级 LLM 后端
+- **[toldya](https://github.com/singhlabsdev/toldya)**：从本地 Claude Code 会话记录中找出你反复对 AI 说的纠正，经你逐条确认后写入 CLAUDE.md / AGENTS.md，并统计每条规则添加前后的重复次数
+- **[Hyperconsciousness](https://github.com/louis030195/hyperconsciousness)**：处于开发者 alpha 阶段的 Rust 知识存储，支持加密的仅追加记录、设备同步，并通过限定范围、设定有效期的授权控制 MCP 检索
+- **[elephant](https://github.com/tonone-ai/elephant)**：为 Claude Code 提供按仓库持久记忆的插件——在仓库根目录维护 `ELEPHANT.md`，会话启动时自动加载，并随代码提交以便团队成员共享同一上下文；另提供跨仓库的全局记忆文件、基于 git 历史的冷启动记忆初始化，以及旧条目压缩
+- **[context-bank](https://github.com/kadiresen/context-bank)**：提交到 git 的、有大小上限的编码智能体项目记忆（.ai/），支持按需检索的历史记录、doctor 健康检查以及从 Cline Memory Bank 迁移
+- **[Gobstopper](https://github.com/hraness/gobstopper)**：面向 Claude Code、Codex 等编程智能体的本地代理，请求超过 token 阈值时将较早轮次替换为机械摘要，最新轮次原样发送；也可为已保存会话生成更小的副本
+- **[Agent-Body](https://github.com/1420079678-ctrl/agent-body)**：面向 DeepSeek Harness 的插件层，按命令意图显影工具 schema，提供确定性反射与空闲期记忆巩固；附无需 API key 的离线演示和可复现的工具 schema token 基准
 - **[Context Guru](https://github.com/rossoctl/context-guru)**：provider 无关的上下文引擎，结合 prompt 缓存管理、工具输出过滤与上下文压缩，支持 Claude Code 与 Codex 集成
 
 ### 生产工具
