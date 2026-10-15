@@ -269,6 +269,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Archcore](https://github.com/archcore-ai/archcore)**: Git-native context engineering and spec-driven development for AI coding agents
 - **[YYLO Benchmark](https://github.com/yylo-dev/yylo-benchmark)**: Coding-agent evaluation runner for trusted hosts: runs each attempt in a fresh repository and retains outputs for independent re-evaluation; workspace separation provides context hygiene, not a security sandbox
 - **[open-bridge](https://github.com/bks-lab/open-bridge)**: Plain-text git workspace that coding agents read at session start, with a CI-enforced byte budget for always-on context and on-demand indexes for everything else
+- **[Curtain](https://github.com/lukstei/curtain)**: Step-by-step skill runner that reveals instructions only when their stage is reached, with explicit human approval gates between stages.
 
 ### Development Frameworks
 
