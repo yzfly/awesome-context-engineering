@@ -312,6 +312,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**：源码可见（BSL 1.1）的 VS Code 扩展，在本机为你打开的文件夹建立索引，并为模型选择器中的任意模型（包括 Copilot 的模型）提供检索这些文件夹的工具；对于你自己的模型服务器，窗口容纳不下的对话轮次和工具结果会被折叠进同一个本地存储，在与问题最相关时取回，并提供一个 recall 工具用于检索这些内容
 
 - **[ctxprune](https://github.com/riceharvest/ctxprune)**：小型 token 分类模型（类似 LLMLingua-2，支持 CPU/ONNX），删除工具输出、日志和文档中的低价值词语，同时保护 ID、路径与数字（`pip install ctxprune`）
+- **[mu](https://github.com/qybaihe/mu)**：基于 pi 的编程智能体，把上下文决策交给小型判定模型：长工具输出逐块判定，只有当前需要的部分进入上下文，其余存档并留指针；上下文超过阈值时，过时的工具结果替换为一行占位；压缩按段落取舍，不写摘要；失败测试日志中完全重复的内容可无损折叠（作者 7 份最大的真实日志共减少 51% 字符）
 
 ### 生产工具
 

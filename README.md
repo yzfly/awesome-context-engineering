@@ -326,6 +326,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Dory](https://github.com/tjqscott/dory)**: Project memory in a linked Markdown wiki, with decisions, findings and a taskboard; Claude Code hooks load the index at session start and check wiki structure after changes
 - **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**: Source-available (BSL 1.1) VS Code extension that indexes the folders you open, on your machine, and gives any model in the picker, Copilot's included, a tool to search them; for your own model servers, the turns and tool results a window cannot hold are folded into that local store and come back when they are the closest match to the question, with a recall tool to search them
 - **[ctxprune](https://github.com/riceharvest/ctxprune)**: Small token-classifier model (LLMLingua-2 style, CPU/ONNX) that deletes low-value words from tool outputs, logs and documents while keeping IDs, paths and numbers intact (`pip install ctxprune`)
+- **[mu](https://github.com/qybaihe/mu)**: Coding agent built on pi that hands context decisions to a small judge model: long tool output is judged chunk by chunk and only what matters now enters the context (the rest is archived behind a pointer), stale tool results become one-line tombstones above a context threshold, compaction keeps or prunes passages without writing a summary, and exact repeats in failing test logs can be folded losslessly (51% fewer characters on the authors' seven largest real logs)
 
 ### Production Tools
 
