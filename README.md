@@ -301,6 +301,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[elephant](https://github.com/tonone-ai/elephant)**: Claude Code plugin for persistent per-repo memory â€” keeps an `ELEPHANT.md` in the repo root that is auto-loaded at session start and committed so teammates share the same context, plus a global cross-repo memory file, cold-start seeding from git history, and compaction of old entries
 - **[context-bank](https://github.com/kadiresen/context-bank)**: Git-committed, size-capped project memory for coding agents under .ai/, with retrieval-first history, a doctor check and Cline Memory Bank migration
 - **[Gobstopper](https://github.com/hraness/gobstopper)**: Local proxy for Claude Code, Codex, and other coding agents that replaces older turns with a mechanical summary once a request passes a token threshold and sends the newest turns verbatim; can also prepare smaller copies of saved sessions
+- **[Agent-Body](https://github.com/1420079678-ctrl/agent-body)**: Plugin layer for DeepSeek Harness with intent-based tool-schema gating, deterministic reflexes, and idle-time memory consolidation; includes an offline demo and a reproducible tool-schema token benchmark
 
 ### Production Tools
 
