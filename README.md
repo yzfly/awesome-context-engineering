@@ -299,6 +299,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[toldya](https://github.com/singhlabsdev/toldya)**: Turns the corrections you keep repeating to Claude Code (found in local session history) into CLAUDE.md / AGENTS.md rules after per-rule approval, then counts whether each rule stopped the repeats
 - **[Hyperconsciousness](https://github.com/louis030195/hyperconsciousness)**: Developer-alpha Rust knowledge store with encrypted, append-only records, device sync, and MCP retrieval constrained by scoped, expiring grants
 - **[elephant](https://github.com/tonone-ai/elephant)**: Claude Code plugin for persistent per-repo memory â€” keeps an `ELEPHANT.md` in the repo root that is auto-loaded at session start and committed so teammates share the same context, plus a global cross-repo memory file, cold-start seeding from git history, and compaction of old entries
+- **[context-bank](https://github.com/kadiresen/context-bank)**: Git-committed, size-capped project memory for coding agents under .ai/, with retrieval-first history, a doctor check and Cline Memory Bank migration
 
 ### Production Tools
 

@@ -282,6 +282,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[toldya](https://github.com/singhlabsdev/toldya)**：从本地 Claude Code 会话记录中找出你反复对 AI 说的纠正，经你逐条确认后写入 CLAUDE.md / AGENTS.md，并统计每条规则添加前后的重复次数
 - **[Hyperconsciousness](https://github.com/louis030195/hyperconsciousness)**：处于开发者 alpha 阶段的 Rust 知识存储，支持加密的仅追加记录、设备同步，并通过限定范围、设定有效期的授权控制 MCP 检索
 - **[elephant](https://github.com/tonone-ai/elephant)**：为 Claude Code 提供按仓库持久记忆的插件——在仓库根目录维护 `ELEPHANT.md`，会话启动时自动加载，并随代码提交以便团队成员共享同一上下文；另提供跨仓库的全局记忆文件、基于 git 历史的冷启动记忆初始化，以及旧条目压缩
+- **[context-bank](https://github.com/kadiresen/context-bank)**：提交到 git 的、有大小上限的编码智能体项目记忆（.ai/），支持按需检索的历史记录、doctor 健康检查以及从 Cline Memory Bank 迁移
 
 ### 生产工具
 
