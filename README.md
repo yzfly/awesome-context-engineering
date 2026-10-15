@@ -216,6 +216,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[Agent Skills open standard](https://agentskills.io/)**: `SKILL.md` folders loaded via progressive disclosure (name/description → full instructions → bundled files), adopted by 40+ agents (Claude Code, Codex, Gemini CLI, Cursor, OpenCode, dsh...). Skills are the portable unit of *procedural* context
 - **[MCP 2026-07-28 spec](https://blog.modelcontextprotocol.io/posts/2026-07-28/)**: stateless core, cacheable `tools/list` results with `ttlMs`, and header-based routing — all aimed at keeping tool context cheap and fresh for agents
 - **[Claude Code context docs](https://code.claude.com/docs/en/memory)**: CLAUDE.md memory hierarchy, `/compact`, subagents and hooks — the most widely copied practical context-management model
+- **[Raven](https://github.com/EverMind-AI/Raven)**: open-source multi-agent harness whose agent loop is split into four decoupled strategy modules (Memory, Planning, Capability, Action) that an experimental Curator rewrites per agent and installs only after verification; its host agent plans a complex task as a DAG and delegates the parts to built-in and third-party agents
 
 ### Context Engineering Systems & Kits
 
