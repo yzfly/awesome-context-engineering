@@ -151,6 +151,10 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - 📄 arXiv：[2512.13564](https://arxiv.org/abs/2512.13564)
 - 🎯 提出"形态-功能-动态"多维记忆分类法，并厘清 agent memory 与 RAG、上下文工程的区别
 
+**The Agent Loop：LLM 智能体的控制策略、技能与 Harness 综述**
+- 📄 SSRN：[7186738](https://ssrn.com/abstract=7186738)
+- 🎯 以智能体循环（agent loop）为分析单位；讨论循环内的上下文管理和作为上下文管理器的 harness，并涵盖终止、验证、恢复与技能
+
 ### 核心研究领域
 
 - **记忆系统**：[Reflexion](https://arxiv.org/abs/2303.11366)、[生成式智能体](https://ar5iv.labs.arxiv.org/html/2304.03442)、[StructMem](https://arxiv.org/abs/2604.21748)（[代码](https://github.com/zjunlp/LightMem)）
