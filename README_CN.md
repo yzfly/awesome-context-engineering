@@ -139,6 +139,10 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 
 > *大语言模型(LLM)的性能从根本上由推理过程中提供的上下文信息决定。本综述介绍了Context工程，这是一门超越简单prompt设计的正式学科，涵盖了对LLM信息负载的系统性优化。*
 
+**Harness-Zero: Harness Distillation via Agent-as-Harness**
+- 📄 arXiv：[2609.24974](https://arxiv.org/abs/2609.24974)
+- 🎯 通过 agent-as-harness 训练循环将优化后的 harness 行为蒸馏进模型权重，研究不在推理阶段保留该 harness 时的效果（[代码](https://github.com/metaevo-ai/harness-zero)）
+
 **Context Engineering 2.0：上下文工程的语境**
 - 📄 arXiv：[2510.26493](https://arxiv.org/abs/2510.26493)
 - 🎯 将上下文工程追溯二十余年，系统性给出定义，并梳理从人机交互到人-智能体范式的设计原则
@@ -154,6 +158,10 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 **The Agent Loop：LLM 智能体的控制策略、技能与 Harness 综述**
 - 📄 SSRN：[7186738](https://ssrn.com/abstract=7186738)
 - 🎯 以智能体循环（agent loop）为分析单位；讨论循环内的上下文管理和作为上下文管理器的 harness，并涵盖终止、验证、恢复与技能
+
+**Meta Context Engineering via Agentic Skill Evolution**
+- 📄 arXiv：[2601.21557](https://arxiv.org/abs/2601.21557)
+- 🎯 同时演化上下文工程技能与上下文产物的双层框架，用于替代静态启发式规则（ICML 2026，[代码](https://github.com/metaevo-ai/meta-context-engineering)）
 
 ### 核心研究领域
 
