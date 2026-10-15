@@ -309,6 +309,8 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Dory](https://github.com/tjqscott/dory)**：用相互链接的 Markdown wiki 页面保存项目决策、研究结果和任务；Claude Code 钩子在会话开始时加载索引，并在修改后检查 wiki 结构
 - **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**：源码可见（BSL 1.1）的 VS Code 扩展，在本机为你打开的文件夹建立索引，并为模型选择器中的任意模型（包括 Copilot 的模型）提供检索这些文件夹的工具；对于你自己的模型服务器，窗口容纳不下的对话轮次和工具结果会被折叠进同一个本地存储，在与问题最相关时取回，并提供一个 recall 工具用于检索这些内容
 
+- **[ctxprune](https://github.com/riceharvest/ctxprune)**：小型 token 分类模型（类似 LLMLingua-2，支持 CPU/ONNX），删除工具输出、日志和文档中的低价值词语，同时保护 ID、路径与数字（`pip install ctxprune`）
+
 ### 生产工具
 
 - **Claude Code**：自动压缩context管理
