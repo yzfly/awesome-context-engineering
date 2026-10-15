@@ -279,6 +279,8 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[open-bridge](https://github.com/bks-lab/open-bridge)**: Plain-text git workspace that coding agents read at session start, with a CI-enforced byte budget for always-on context and on-demand indexes for everything else
 - **[Curtain](https://github.com/lukstei/curtain)**: Step-by-step skill runner that reveals instructions only when their stage is reached, with explicit human approval gates between stages.
 
+- **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**: A context compiler for AI agents that turns memory, state, files, and evidence into task-scoped, provenance-aware Context Capsules with token budgeting, conflict resolution, explicit unknowns, and MCP tools
+
 ### Development Frameworks
 
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**: Low-level orchestration framework for context management

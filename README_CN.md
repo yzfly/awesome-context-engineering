@@ -265,6 +265,8 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[open-bridge](https://github.com/bks-lab/open-bridge)**：编程智能体在会话开始时读取的纯文本 Git 工作区，通过 CI 限制常驻上下文的字节预算，其余信息按需通过索引加载
 - **[Curtain](https://github.com/lukstei/curtain)**：分步技能运行器，仅在进入相应阶段时加载该阶段指令，并支持阶段之间的显式人工审批。
 
+- **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**：面向 AI 智能体的上下文编译器——将记忆、状态、文件与证据编译为任务级、带溯源的 Context Capsule，支持 token 预算、冲突消解、显式未知项与 MCP 工具
+
 ### 开发框架
 
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**：用于context管理的低级编排框架
