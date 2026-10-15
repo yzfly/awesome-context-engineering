@@ -293,6 +293,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Gobstopper](https://github.com/hraness/gobstopper)**：面向 Claude Code、Codex 等编程智能体的本地代理，请求超过 token 阈值时将较早轮次替换为机械摘要，最新轮次原样发送；也可为已保存会话生成更小的副本
 - **[Agent-Body](https://github.com/1420079678-ctrl/agent-body)**：面向 DeepSeek Harness 的插件层，按命令意图显影工具 schema，提供确定性反射与空闲期记忆巩固；附无需 API key 的离线演示和可复现的工具 schema token 基准
 - **[Context Guru](https://github.com/rossoctl/context-guru)**：provider 无关的上下文引擎，结合 prompt 缓存管理、工具输出过滤与上下文压缩，支持 Claude Code 与 Codex 集成
+- **[Dory](https://github.com/tjqscott/dory)**：用相互链接的 Markdown wiki 页面保存项目决策、研究结果和任务；Claude Code 钩子在会话开始时加载索引，并在修改后检查 wiki 结构
 
 ### 生产工具
 
