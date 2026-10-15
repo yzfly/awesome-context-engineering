@@ -268,6 +268,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[CueParcel](https://github.com/kallist/CueParcel)**: Local-first browser extension for selecting sections of web pages, combining multiple sources, and packaging source-grounded context for AI agents, with structured TaskSpec output and GitHub Issue, GitHub Pull Request, and technical-documentation adapters
 - **[Archcore](https://github.com/archcore-ai/archcore)**: Git-native context engineering and spec-driven development for AI coding agents
 - **[YYLO Benchmark](https://github.com/yylo-dev/yylo-benchmark)**: Coding-agent evaluation runner for trusted hosts: runs each attempt in a fresh repository and retains outputs for independent re-evaluation; workspace separation provides context hygiene, not a security sandbox
+- **[open-bridge](https://github.com/bks-lab/open-bridge)**: Plain-text git workspace that coding agents read at session start, with a CI-enforced byte budget for always-on context and on-demand indexes for everything else
 
 ### Development Frameworks
 

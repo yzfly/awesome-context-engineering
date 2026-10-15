@@ -254,6 +254,8 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Archcore](https://github.com/archcore-ai/archcore)**：面向 AI 编程智能体的 Git 原生上下文工程与规范驱动开发
 - **[YYLO Benchmark](https://github.com/yylo-dev/yylo-benchmark)**：面向可信主机的编程智能体评测运行器：每次尝试使用全新仓库并保留输出供独立复评；工作区隔离用于整理上下文，不构成安全沙箱
 
+- **[open-bridge](https://github.com/bks-lab/open-bridge)**：编程智能体在会话开始时读取的纯文本 Git 工作区，通过 CI 限制常驻上下文的字节预算，其余信息按需通过索引加载
+
 ### 开发框架
 
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**：用于context管理的低级编排框架
