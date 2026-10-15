@@ -263,6 +263,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[CueParcel](https://github.com/kallist/CueParcel)**: Local-first browser extension for selecting sections of web pages, combining multiple sources, and packaging source-grounded context for AI agents, with structured TaskSpec output and GitHub Issue, GitHub Pull Request, and technical-documentation adapters
 
 - **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**: A context compiler for AI agents that turns memory, state, files, and evidence into task-scoped, provenance-aware Context Capsules with token budgeting, conflict resolution, explicit unknowns, and MCP tools
+
 ### Development Frameworks
 
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**: Low-level orchestration framework for context management

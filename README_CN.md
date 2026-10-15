@@ -248,6 +248,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[CueParcel](https://github.com/kallist/CueParcel)**：本地优先的浏览器扩展，用于选取网页片段、组合多个来源，并打包成有来源依据的上下文供 AI Agent 使用；支持结构化 TaskSpec 输出，以及 GitHub Issue、GitHub Pull Request 与技术文档适配
 
 - **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**：面向 AI 智能体的上下文编译器——将记忆、状态、文件与证据编译为任务级、带溯源的 Context Capsule，支持 token 预算、冲突消解、显式未知项与 MCP 工具
+
 ### 开发框架
 
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**：用于context管理的低级编排框架
