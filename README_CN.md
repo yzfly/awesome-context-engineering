@@ -266,6 +266,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Curtain](https://github.com/lukstei/curtain)**：分步技能运行器，仅在进入相应阶段时加载该阶段指令，并支持阶段之间的显式人工审批。
 
 - **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**：面向 AI 智能体的上下文编译器——将记忆、状态、文件与证据编译为任务级、带溯源的 Context Capsule，支持 token 预算、冲突消解、显式未知项与 MCP 工具
+- **[Session Handoff Kit](https://github.com/alapha888/session-handoff-kit)**：免费的 Agent Skill（SKILL.md），附上下文卫生清单与交接模板：当上下文将满或会话结束时，智能体写下结构化交接笔记（目标状态、决策及理由、改动过的文件、未闭环事项、下一步动作），让下一个会话——或下一个智能体——从事实出发，而不是从退化、过载的上下文出发。支持 Claude Code、Codex、Cursor 与 Gemini CLI
 
 ### 开发框架
 

@@ -280,6 +280,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[Curtain](https://github.com/lukstei/curtain)**: Step-by-step skill runner that reveals instructions only when their stage is reached, with explicit human approval gates between stages.
 
 - **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**: A context compiler for AI agents that turns memory, state, files, and evidence into task-scoped, provenance-aware Context Capsules with token budgeting, conflict resolution, explicit unknowns, and MCP tools
+- **[Session Handoff Kit](https://github.com/alapha888/session-handoff-kit)**: A free Agent Skill (SKILL.md) with a context-hygiene checklist and handoff template: when context fills up or a session ends, the agent writes a structured handoff note (goal state, decisions and why, files touched, open loops, next action), so the next session — or the next agent — starts from facts instead of a degraded, over-full context. Works with Claude Code, Codex, Cursor, and Gemini CLI
 
 ### Development Frameworks
 
