@@ -325,6 +325,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **Windsurf**：高级代码context检索
 - **[OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay)**：逐轮记录智能体实际发出的上下文，并可离线重放
 - **[Praxix](https://praxix.app)**：面向 Claude Code 的商业 macOS 应用，按会话精选 context：精确选择每个会话加载的 skills、rules 和 references（预设、项目默认、精简的 CLAUDE.md），在消耗 token 之前先看到完整 context
+- **[thredly Manual Handover Builder](https://thredly.io/templates/ai-coding-handover)**：免费的浏览器工具，无需注册，可将编程任务笔记整理成交接说明，涵盖目标、决策、当前产出、未解决问题和下一步操作，并支持复制或下载。仅进行手动内容格式整理，不使用 AI，也不核验来源。
 
 ## 💡 专家观点
 
