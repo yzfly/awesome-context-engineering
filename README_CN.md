@@ -325,6 +325,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **Windsurf**：高级代码context检索
 - **[OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay)**：逐轮记录智能体实际发出的上下文，并可离线重放
 - **[Praxix](https://praxix.app)**：面向 Claude Code 的商业 macOS 应用，按会话精选 context：精确选择每个会话加载的 skills、rules 和 references（预设、项目默认、精简的 CLAUDE.md），在消耗 token 之前先看到完整 context
+- **[Aident Loadout](https://aident.ai/)**：托管的 MCP 服务器、CLI 与 Skill，用于管理智能体的工具 context：智能体按意图搜索动作，只为实际执行的动作读取实时 schema，可直接使用 400+ 专家编写的 Skills；API 密钥保存在 Aident Vault 中，不进入模型 context
 
 ## 💡 专家观点
 
