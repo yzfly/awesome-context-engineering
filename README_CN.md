@@ -139,6 +139,10 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 
 > *大语言模型(LLM)的性能从根本上由推理过程中提供的上下文信息决定。本综述介绍了Context工程，这是一门超越简单prompt设计的正式学科，涵盖了对LLM信息负载的系统性优化。*
 
+**Recursive Harness Distillation across Agents for Robot Manipulation**
+- 📄 arXiv：[2609.33378](https://arxiv.org/abs/2609.33378)
+- 🎯 将 Astra 的机器人干预经验蒸馏为供轻量级 Luna 智能体复用的操作手册，并根据 Luna 的执行反馈递归改进手册；智能体与 VLA 的模型权重保持不变（[项目主页](https://seungyeon.me/RHD/)）
+
 **Harness-Zero: Harness Distillation via Agent-as-Harness**
 - 📄 arXiv：[2609.24974](https://arxiv.org/abs/2609.24974)
 - 🎯 通过 agent-as-harness 训练循环将优化后的 harness 行为蒸馏进模型权重，研究不在推理阶段保留该 harness 时的效果（[代码](https://github.com/metaevo-ai/harness-zero)）

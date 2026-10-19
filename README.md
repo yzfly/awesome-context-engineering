@@ -145,6 +145,10 @@ Why compacting an agent's context is lossy compression, not free summarization �
 
 > *Situates harness engineering in the arc from software engineering through prompt and context engineering, arguing that the harness — the runtime loop wrapping tool execution, control, and agency around an LLM — is a first-class layer whose effects are often mistaken for model-driven gains.*
 
+**Recursive Harness Distillation across Agents for Robot Manipulation**
+- 📄 arXiv: [2609.33378](https://arxiv.org/abs/2609.33378)
+- 🎯 Distills Astra's robot-intervention experience into a reusable playbook for Luna and recursively refines it from Luna's execution feedback, keeping agent and VLA model weights fixed ([project](https://seungyeon.me/RHD/))
+
 **Harness-Zero: Harness Distillation via Agent-as-Harness**
 - 📄 arXiv: [2609.24974](https://arxiv.org/abs/2609.24974)
 - 🎯 An agent-as-harness training loop distills optimized harness behaviors into model weights, retaining harness-level gains at deployment without the harness at inference time ([code](https://github.com/metaevo-ai/harness-zero))
