@@ -339,6 +339,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **Windsurf**: Advanced code context retrieval
 - **[OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay)**: Records the context an agent actually sent, turn by turn, and replays it offline
 - **[Praxix](https://praxix.app)**: Commercial macOS app for Claude Code that curates per-session context: pick exactly which skills, rules, and references each session loads (presets, per-project defaults, a lean CLAUDE.md), and see that context before a token is spent
+- **[Frink](https://github.com/benord-labs/frink)**: Fine-tuned automation for everyone: visual workflows where AI coding agents (Claude Code, Codex, OpenCode, GitHub Copilot, Cursor) act on your tickets, errors and schedules, and ask before they change anything. Local and open source, on macOS and Linux
 
 ## ðŸ’¡ Expert Insights
 
