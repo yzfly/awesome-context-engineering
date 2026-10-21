@@ -315,6 +315,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[mu](https://github.com/qybaihe/mu)**：基于 pi 的编程智能体，把上下文决策交给小型判定模型：长工具输出逐块判定，只有当前需要的部分进入上下文，其余存档并留指针；上下文超过阈值时，过时的工具结果替换为一行占位；压缩按段落取舍，不写摘要；失败测试日志中完全重复的内容可无损折叠（作者 7 份最大的真实日志共减少 51% 字符）
 - **[akc-cycle](https://github.com/shimo4228/akc-cycle)**：Claude Code 插件，防止配置中的规则与技能不断堆积、逐渐过时；审计技能、规则与智能体定义，为每个文件给出保留、合并或退役的建议及理由，确认前不做任何修改，并将反复出现的建议提升为常驻加载的规则
 - **[contexttax](https://github.com/henrikdukefoss/contexttax)**：按智能体统计编程智能体每次请求都会加载的固定上下文（CLAUDE.md/AGENTS.md 及其 `@` 导入、常驻规则、技能描述、MCP 工具 schema），按 token 从大到小排列，并指出哪些部分可以改为按需加载
+- **[agent-files-check](https://github.com/lesshands/agent-files-check)**：检查编程智能体的指令文件（AGENTS.md、CLAUDE.md、GEMINI.md、Cursor、Copilot、Windsurf 与 Cline 规则）中引用的文件和文件夹，报告 git 历史表明已被删除或移动的引用，给出 file:line、对应提交，并在能判断时给出新位置；作为 GitHub Action 运行时，会在 pull request 中标注其引用路径被该改动删除或重命名的指令行
 
 ### 生产工具
 
