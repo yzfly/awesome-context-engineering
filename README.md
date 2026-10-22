@@ -379,6 +379,7 @@ So context engineering is just one small piece of an emerging thick layer of non
 ### MCP Ecosystem
 - **[Model Context Protocol](https://modelcontextprotocol.io/introduction)**: Standardized context sharing
 - **[Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)**: File-based context management
+- **[installed-api](https://github.com/ajwann/installed-api)**: MCP server (packaged as a Claude Code plugin) that answers Python and TypeScript API questions from the packages installed in the project rather than from model memory or web docs: signatures, docstrings, source and versions from the project's own interpreter, and `.d.ts` declarations from `node_modules`, returned as bounded excerpts instead of whole files; Python standard library only, no network requests
 - **Tool Integration**: Seamless context flow between tools
 
 ## 🤝 Contributing
