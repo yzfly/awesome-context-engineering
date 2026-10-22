@@ -280,6 +280,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[Curtain](https://github.com/lukstei/curtain)**: Step-by-step skill runner that reveals instructions only when their stage is reached, with explicit human approval gates between stages.
 
 - **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**: A context compiler for AI agents that turns memory, state, files, and evidence into task-scoped, provenance-aware Context Capsules with token budgeting, conflict resolution, explicit unknowns, and MCP tools
+- **[AI Coding Rules Sampler](https://github.com/elirankotzero/ai-coding-rules-sampler)**: MIT starter set of project instruction files (CLAUDE.md, AGENTS.md, Cursor .mdc rules, Windsurf and Copilot instructions) with short always-on rules and three on-demand workflow skills (plan, review, record decisions)
 
 ### Development Frameworks
 
