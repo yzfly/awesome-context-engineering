@@ -329,6 +329,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[mu](https://github.com/qybaihe/mu)**: Coding agent built on pi that hands context decisions to a small judge model: long tool output is judged chunk by chunk and only what matters now enters the context (the rest is archived behind a pointer), stale tool results become one-line tombstones above a context threshold, compaction keeps or prunes passages without writing a summary, and exact repeats in failing test logs can be folded losslessly (51% fewer characters on the authors' seven largest real logs)
 - **[akc-cycle](https://github.com/shimo4228/akc-cycle)**: Claude Code plugin that keeps the rules and skills in a setup from piling up and going stale; it audits skills, rules and agent definitions, proposes keep, merge or retire for each file with a reason, changes nothing until you confirm, and promotes advice that keeps coming back into always-loaded rules
 - **[contexttax](https://github.com/henrikdukefoss/contexttax)**: Measures the fixed context a coding agent loads on every request (CLAUDE.md/AGENTS.md and their `@` imports, always-on rules, skill descriptions, MCP tool schemas) per agent, largest first, and points out what can load on demand instead
+- **[GFT Map](https://github.com/CoralLips/gft-map)**: A local app for Claude Code and Codex that stores decisions, reasons, and open questions in editable documents and maps for topic-based context readback
 
 ### Production Tools
 
