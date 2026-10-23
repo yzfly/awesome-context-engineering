@@ -163,6 +163,16 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - 📄 arXiv：[2601.21557](https://arxiv.org/abs/2601.21557)
 - 🎯 同时演化上下文工程技能与上下文产物的双层框架，用于替代静态启发式规则（ICML 2026，[代码](https://github.com/metaevo-ai/meta-context-engineering)）
 
+**PerspectiveGap：多智能体编排提示词 benchmark**
+- 📄 arXiv：[2606.08878](https://arxiv.org/abs/2606.08878)
+- 📊 110 个场景、10 种拓扑，测试 LLM 如何把上下文片段分配给 subagents
+- 🎯 首个面向多智能体编排 prompt 写作的基准；33 个商业模型在角色-片段分配任务上平均通过率仅 17.2%
+
+**Agon：基于 Prompt Economy 的大规模全学科自主科研系统**
+- 📄 arXiv：[2606.24177](https://arxiv.org/abs/2606.24177)
+- 📊 18 个角色共 230.6 KiB prompt，是跨学科 autoresearch 系统中 prompt 体量最小的（[代码](https://github.com/AutoResearch-Factory/Agon)）
+- 🎯 Prompt Economy 把 prompt 工程当作工程学科，用可复用的循环驱动智能体；不改代码已跑过 10 多个研究领域，最长一次无人值守运行 30 天
+
 ### 核心研究领域
 
 - **记忆系统**：[Reflexion](https://arxiv.org/abs/2303.11366)、[生成式智能体](https://ar5iv.labs.arxiv.org/html/2304.03442)、[StructMem](https://arxiv.org/abs/2604.21748)（[代码](https://github.com/zjunlp/LightMem)）
