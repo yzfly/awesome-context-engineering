@@ -10,8 +10,11 @@ A curated collection of resources, papers, tools, and best practices for **Conte
 
 [中文版本](README_CN.md) | [English](README.md)
 
+> 🗓️ **Last updated: 2026-10-23** — see [What's New](#-whats-new) for this week's highlights.
+
 ## 📚 Table of Contents
 
+- [What's New](#-whats-new)
 - [What is Context Engineering?](#what-is-context-engineering)
 - [Featured Articles](#featured-articles)
 - [Research Papers](#research-papers)
@@ -30,6 +33,16 @@ Context Engineering is the systematic optimization of information payloads for L
 - **Context Management**: Handling context windows, memory, and state across interactions
 - **Context Compression**: Reducing token usage while preserving essential information
 - **Context Isolation**: Separating concerns across different context spaces
+
+## 🆕 What's New
+
+*Week of 2026-10-23 — collected from official engineering blogs, new papers and trending GitHub projects.*
+
+- **Agent Skills joins MCP under the Linux Foundation.** Anthropic [donated the Agent Skills standard](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation) to the Agentic AI Foundation (Oct 22). More than 70 agent platforms (ChatGPT, Cursor, GitHub Copilot, VS Code…) have integrated it; about 1M skills have been published and ~280M installed. Progressive disclosure (`SKILL.md` → bundled files) is now the default way to ship procedural context. See also Vercel's [State of agent skills](https://vercel.com/blog/state-of-agent-skills).
+- **Context per request keeps growing — caching is the economics.** Anthropic reports that [context per request in Claude Code grew 2.6× in six months](https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context) and the input:output token ratio moved from 189:1 to 324:1. Opus 5.5 cut the cached-read price 60%, and Claude Code more than halved cache-missing input (changing effort mid-session or loading tools on demand no longer breaks the cache; 1-hour TTL for API users). OpenAI shipped [better prompt caching for GPT-6](https://openai.com/index/better-prompt-caching-for-gpt-6) with a caching dashboard and miss diagnostics.
+- **Harness engineering, measured.** Cursor [trimmed ~66% of its system prompt and moved built-in tools into dynamic context](https://cursor.com/blog/improved-token-efficiency), cutting token cost 7% with no quality loss (dynamic MCP tool loading had already cut tokens 46.9%). AI21 [cut GitLab Duo Code Review cost 98%](https://www.ai21.com/blog/gitlab-case-study/) by controlling which model reads how much context. Hugging Face: [the same weights scored 62% in one harness and 33% in another](https://x.com/huggingface/status/2106034221005312448).
+- **Compaction is now a research topic — and an attack surface.** [SelfCompact](https://arxiv.org/abs/2606.23525) lets the agent decide when to compact (30–70% cheaper per task); [REMORY](https://arxiv.org/abs/2610.11287) adds residual soft-memory tokens to summaries; [Cache Engineering for Agents](https://arxiv.org/abs/2610.28577) lets agents drop or reposition KV-cache entries directly. Meanwhile OpenAI caught models in training [writing prompt injections into their own compaction summaries](https://simonwillison.net/2026/Sep/17/compaction-summaries/).
+- **Memory that consolidates offline.** Cognition shipped [Devin Memory & Dreaming](https://devin.ai/blog/memory-and-dreaming): markdown memories plus a daily asynchronous pass that dedupes and links them. LangChain [revamped skills in Deep Agents](https://www.langchain.com/blog/revamping-skills-in-deep-agents) (tool-bound, pinned and reloadable skills that keep the prompt cache warm) and argues that [context engineering starts with retrieval](https://www.langchain.com/blog/context-engineering-starts-with-retrieval).
 
 ## 📖 Featured Articles
 
@@ -60,6 +73,28 @@ Key insights from building a production AI agent:
 - [How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system)
 - [Writing effective tools for AI agents](https://www.anthropic.com/engineering/writing-tools-for-agents)
 - [Code execution with MCP: building more efficient agents](https://www.anthropic.com/engineering/code-execution-with-mcp)
+- [Donating Agent Skills to the Agentic AI Foundation](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation) (Oct 2026)
+- [Coding sessions are longer and use more context. Claude Opus 5.5 is built with that in mind.](https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context) — context per request grew 2.6× in six months; how pricing, model behavior and the Claude Code harness keep long sessions on cache
+- [Using Claude Code: Spending your effort](https://claude.dev/blog/spending-your-effort/) — what the effort setting actually buys (mostly more verification and edge-case testing)
+- [Building effective agent automations](https://claude.dev/blog/building-effective-agent-automations/) — scheduled Managed Agents that track what changed since the last run
+
+### OpenAI
+
+- [Better prompt caching for GPT-6](https://openai.com/index/better-prompt-caching-for-gpt-6) — higher default hit rates, 30-minute shared-prefix discount, caching dashboard and miss diagnostics
+- [A model guide for the GPT-6 family](https://openai.com/index/practical-guide-building-gpt-6/) — model choice, caching and compaction, skills, and long-running task orchestration
+- [Introducing the Agents API](https://openai.com/index/introducing-the-agents-api) — the harness behind Codex exposed as an API for long-running cloud agents
+- [Our framework for reporting model misalignment](https://openai.com/index/model-misalignment-reporting-framework) — includes the case of a model injecting instructions into its own compaction summary
+
+### Harness Engineering
+
+- [Improved token efficiency for longer agent runs (Cursor)](https://cursor.com/blog/improved-token-efficiency) — trim the system prompt, load tools only when needed, improve cache reuse, compress file reads, use subagents strategically
+- [Free the models: Harness design at the frontier (Replit)](https://replit.com/blog/free-the-models) — let the main agent decide subagent depth and effort instead of a fixed router
+- [The Anatomy of Harness Engineering (Google)](https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents) — how to evaluate, iterate and guard coding agents
+- [Improving Deep Agents with harness engineering (LangChain)](https://www.langchain.com/blog/improving-deep-agents-with-harness-engineering) — Terminal Bench 2.0 from 52.8 to 66.5 by changing only the harness
+- [How we cut GitLab Duo Code Review's cost by 98% (AI21)](https://www.ai21.com/blog/gitlab-case-study/) — per-stage model choice and how much context each stage reads
+- [A Smarter Model Won't Save Your Bad Harness (Cerebras)](https://www.cerebras.ai/blog/a-smarter-model-won-t-save-your-bad-harness)
+- [Memory and dreaming: how Devin learns from working with you (Cognition)](https://devin.ai/blog/memory-and-dreaming)
+- [Introducing Manus 2.0](https://manus.im/blog/introducing-manus-2-0) — new in-house harness "Cascade" (23.2% fewer tokens in Manus's test configuration)
 
 
 ### LangChain Context Engineering
@@ -72,6 +107,11 @@ Comprehensive guide covering four key strategies:
 - **Select Context**: Pulling relevant information into context
 - **Compress Context**: Retaining only necessary tokens
 - **Isolate Context**: Splitting context across different spaces
+
+More from LangChain:
+- [Context Engineering for AI Agents Starts with Retrieval](https://www.langchain.com/blog/context-engineering-starts-with-retrieval) (Oct 2026) — search before reading, offload oversized results, delegate retrieval to subagents
+- [Revamping Skills in Deep Agents](https://www.langchain.com/blog/revamping-skills-in-deep-agents) (Oct 2026) — tool-bound, pinned and reloadable skills
+- [Context Management for Deep Agents](https://www.langchain.com/blog/context-management-for-deepagents) — filesystem offloading of large tool I/O plus threshold-triggered summarization
 
 ### dbreunig Context Engineering Series
 **How Long Contexts Fail and How to Fix Them**
@@ -126,6 +166,8 @@ RL-trained models that run up to 8 parallel searches per turn to retrieve code c
 - https://loopandretry.github.io/posts/compaction-is-a-lossy-operation/
 
 Why compacting an agent's context is lossy compression, not free summarization — what survives, what silently drops, and how it degrades long multi-turn runs.
+
+- [Self-generated prompt injections in compaction summaries (Simon Willison)](https://simonwillison.net/2026/Sep/17/compaction-summaries/) — a model under RL wrote "additional instructions" into its own compaction summary; treat summaries as untrusted context
 
 ## 📑 Research Papers
 
@@ -185,6 +227,32 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - 📊 18 roles in 230.6 KiB of prompts, the smallest prompt footprint among cross-disciplinary autoresearch systems ([code](https://github.com/AutoResearch-Factory/Agon))
 - 🎯 Prompt Economy treats prompt engineering as engineering and drives the agents with reusable loops; has run in 10+ research fields without code changes, with the longest unattended run lasting 30 days
 
+### Recent Papers (Sep–Oct 2026)
+
+**Compaction & KV cache**
+- [Self-Compacting Language Model Agents](https://arxiv.org/abs/2606.23525) — the model decides when and how to compact via a compaction tool and light rules; matches or beats fixed-interval summarization at 30–70% lower cost per task
+- [REMORY: Learning Residual Memory for Context Compaction](https://arxiv.org/abs/2610.11287) — bounded soft-memory tokens added to the text summary, like a residual connection along the sequence
+- [Cache Engineering for Agents](https://arxiv.org/abs/2610.28577) — agents operate on the live KV cache (drop, reposition) without re-prefill; rolling drop +1.7 points at −27.7% cost
+- [The KV-Surgeon: Compensation-Aware Offline KV-Cache Compaction](https://arxiv.org/abs/2610.25933) — up to +4 points over attention matching at 50× compression
+- [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](https://arxiv.org/abs/2609.19969) — cross-layer KV reuse plus FP4 cache, ~890 bytes of global KV per token for 1M context
+
+**Context structure & memory**
+- [Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries](https://arxiv.org/abs/2610.22273) — RL-trained agents build a hierarchical file workspace for downstream answerers; +33 points on BrowseComp-Plus
+- [Pack Light, CarryOn: Building Object-Oriented Context for Long-Horizon Agents](https://arxiv.org/abs/2610.18784) — persist reusable task objects instead of replaying history; 22.9–51.9% fewer tokens
+- [FlowState: Execution State as Memory for Long-Horizon LLM Agents](https://arxiv.org/abs/2609.34565) — semantic state nodes with references to raw tool observations; ~41–43% fewer tokens
+- [Beyond Memory: Harnessing Long-Horizon Agents with Explicit Belief States](https://arxiv.org/abs/2610.01415) — maintain an explicit belief state as the decision context
+- [Cortex: Consolidating Context into Parametric Memory](https://arxiv.org/abs/2610.20399) — distill context-conditioned behavior into mergeable weight updates
+- [Memory-Centric Continual Learning for AI Agents](https://arxiv.org/abs/2610.29357) — judge memory by whether it improves future actions, not recall
+- [Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory](https://arxiv.org/abs/2610.19366) — survey of multimodal agent memory
+
+**Harness engineering & skills**
+- [Harness²: Recursive Agent Harnessing for an Open World](https://arxiv.org/abs/2610.14224) ([code](https://github.com/google-research/harness2))
+- [Self-Evolving Agent Harness](https://arxiv.org/abs/2610.18813) — frozen weights; prompts, memory and workflows evolve with persistence and admission rules
+- [MILO: Automated Harness Discovery via Orchestrated Multi-Agent Evolution](https://arxiv.org/abs/2609.38349)
+- [Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents](https://arxiv.org/abs/2610.20344) — best of 19 frontier models passes 53% of tests
+- [How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?](https://arxiv.org/abs/2609.40303) — a minimal read/write/bash scaffold matches complex open-source scaffolds on MLE tasks
+- [Surviving the Router: Optimizing Skill Injections for Retrieval and Execution](https://arxiv.org/abs/2610.08098) — skill-injection attacks must first win skill retrieval; implications for skill-library security
+
 ### Core Research Areas
 
 - **Memory Systems**: [Reflexion](https://arxiv.org/abs/2303.11366), [Generative Agents](https://ar5iv.labs.arxiv.org/html/2304.03442), [StructMem](https://arxiv.org/abs/2604.21748) ([code](https://github.com/zjunlp/LightMem))
@@ -234,48 +302,48 @@ Why compacting an agent's context is lossy compression, not free summarization �
 ### Context Engineering in 2026: Harnesses, Skills & Protocols
 
 - **[deepseek-harness (dsh)](https://github.com/deepseek-ai/deepseek-harness)**: DeepSeek's official open-source agent harness (Aug 2026). Its append-only session log is the *only* source of model context ("model-visible means logged"), with prompt sections, tool schemas, skills and sub-agents all composed as swappable plugins — a reference design for context assembly
-- **[Agent Skills open standard](https://agentskills.io/)**: `SKILL.md` folders loaded via progressive disclosure (name/description → full instructions → bundled files), adopted by 40+ agents (Claude Code, Codex, Gemini CLI, Cursor, OpenCode, dsh...). Skills are the portable unit of *procedural* context
+- **[Agent Skills open standard](https://agentskills.io/)**: `SKILL.md` folders loaded via progressive disclosure (name/description → full instructions → bundled files), integrated by 70+ agent platforms (Claude Code, ChatGPT, Codex, Gemini CLI, Cursor, GitHub Copilot, VS Code, OpenCode, dsh...); ~1M skills published. Donated to the Agentic AI Foundation (Linux Foundation) in Oct 2026, next to MCP. Skills are the portable unit of *procedural* context
 - **[MCP 2026-07-28 spec](https://blog.modelcontextprotocol.io/posts/2026-07-28/)**: stateless core, cacheable `tools/list` results with `ttlMs`, and header-based routing — all aimed at keeping tool context cheap and fresh for agents
 - **[Claude Code context docs](https://code.claude.com/docs/en/memory)**: CLAUDE.md memory hierarchy, `/compact`, subagents and hooks — the most widely copied practical context-management model
+- **[OpenAI Agents API](https://openai.com/index/introducing-the-agents-api)**: the agent harness behind Codex exposed as an API — hosted or self-run sandboxes, MCP tools and concurrent subagents for long-running agents
+- **[skills (vercel-labs)](https://github.com/vercel-labs/skills)** ⭐36.3k: the open agent skills tool (`npx skills`) for installing and managing skills across agents
+- **[SkillSpector](https://github.com/NVIDIA/SkillSpector)** ⭐21.1k: NVIDIA's security scanner for agent skills — prompt injection, data exfiltration and supply-chain risks in skill folders
+- **[ECC](https://github.com/affaan-m/ECC)** ⭐287k: agent harness performance optimization system — skills, instincts, memory and security for Claude Code, Codex, OpenCode and Cursor
+- **[Harness²](https://github.com/google-research/harness2)** ⭐18.6k: Google Research's recursive agent harnessing — optimizing prompts, tools, memory, skills and orchestration around a model
+- **[Strands harness-sdk](https://github.com/strands-agents/harness-sdk)** ⭐8.9k: open-source SDK (Python/TypeScript) for building and controlling an agent harness end-to-end
+- **[durable-harness](https://github.com/vercel-labs/durable-harness)**: runs Claude Code, Codex, OpenCode, Pi or fx durably on Vercel Workflow, recording every model/tool step so crashed runs resume ([blog](https://vercel.com/blog/making-every-harness-durable))
 - **[Raven](https://github.com/EverMind-AI/Raven)**: open-source multi-agent harness whose agent loop is split into four decoupled strategy modules (Memory, Planning, Capability, Action) that an experimental Curator rewrites per agent and installs only after verification; its host agent plans a complex task as a DAG and delegates the parts to built-in and third-party agents
 
 ### Context Engineering Systems & Kits
 
-- **[Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)** ⭐76.1k: Comprehensive guide and resources for prompt engineering, context engineering, RAG, and AI agents
-- **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)** ⭐64.5k: Meta-prompting, context engineering and spec-driven development system for Claude Code
-- **[screenpipe](https://github.com/screenpipe/screenpipe)** ⭐19.9k: Source-available, local-first work-context layer that captures screen, audio, input, browser, and meeting activity for agent retrieval through MCP, REST, and CLI
-- **[Agent Skills for Context Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)** ⭐16.7k: Collection of Agent Skills for context engineering and multi-agent architectures
-- **[Context Engineering Intro](https://github.com/coleam00/context-engineering-intro)** ⭐13.5k: Context engineering introduction and methodology for AI coding assistants
-- **[Context-Engineering (jasontang-ai)](https://github.com/jasontang-ai/Context-Engineering)** ⭐9.1k: Karpathy-inspired first-principles handbook for context engineering
-- **[GSD-2](https://github.com/gsd-build/gsd-2)** ⭐7.7k: Meta-prompting / context engineering system enabling long-running autonomous agent work
-- **[MineContext](https://github.com/volcengine/MineContext)** ⭐5.4k: Volcengine's proactive, context-aware AI companion
-- **[Awesome-Context-Engineering (Meirtz)](https://github.com/Meirtz/Awesome-Context-Engineering)** ⭐3.2k: Comprehensive survey of context engineering
-- **[how-claude-code-works](https://github.com/Windy3f3f3f3f/how-claude-code-works)** ⭐2.7k: Deep dive into Claude Code source: architecture, agent loop, and context engineering
-- **[pro-workflow](https://github.com/rohitg00/pro-workflow)** ⭐2.3k: Self-correcting memory Claude Code workflow, including context engineering
-- **[Advanced Context Engineering for Coding Agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents)** ⭐1.7k: Advanced context engineering techniques for coding agents
-- **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)** ⭐1.2k: A context engineering skills toolkit
-- **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)** ⭐1.2k: Evolving language agents through agentic context engineering (ACE)
+- **[graphify](https://github.com/Graphify-Labs/graphify)** ⭐134.0k: Turns a codebase with its docs, SQL schemas, configs and PDFs into a queryable knowledge graph, exposed as a `/graphify` skill for Claude Code, Cursor, Codex and Gemini CLI
+- **[Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)** ⭐79.5k: Comprehensive guide and resources for prompt engineering, context engineering, RAG, and AI agents
+- **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)** ⭐64.2k: Meta-prompting, context engineering and spec-driven development system for Claude Code
+- **[screenpipe](https://github.com/screenpipe/screenpipe)** ⭐22.0k: Source-available, local-first work-context layer that captures screen, audio, input, browser, and meeting activity for agent retrieval through MCP, REST, and CLI
+- **[Agent Skills for Context Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)** ⭐18.2k: Collection of Agent Skills for context engineering and multi-agent architectures
+- **[XERJ](https://github.com/xerj-org/xerj)** ⭐14.2k: Local-first search engine and MCP server for agents — one Rust binary indexes code, docs, logs, CSV/JSONL and PDFs for BM25, vector and hybrid search instead of grep/sed token waste
+- **[Context Engineering Intro](https://github.com/coleam00/context-engineering-intro)** ⭐13.9k: Context engineering introduction and methodology for AI coding assistants
+- **[Context-Engineering (jasontang-ai)](https://github.com/jasontang-ai/Context-Engineering)** ⭐9.3k: Karpathy-inspired first-principles handbook for context engineering
+- **[GSD-2](https://github.com/gsd-build/gsd-2)** ⭐7.8k: Meta-prompting / context engineering system enabling long-running autonomous agent work
+- **[MineContext](https://github.com/volcengine/MineContext)** ⭐5.5k: Volcengine's proactive, context-aware AI companion
+- **[how-claude-code-works](https://github.com/Windy3f3f3f3f/how-claude-code-works)** ⭐3.8k: Deep dive into Claude Code source: architecture, agent loop, and context engineering
+- **[Awesome-Context-Engineering (Meirtz)](https://github.com/Meirtz/Awesome-Context-Engineering)** ⭐3.3k: Comprehensive survey of context engineering
+- **[pro-workflow](https://github.com/rohitg00/pro-workflow)** ⭐2.9k: Self-correcting memory Claude Code workflow, including context engineering
+- **[Advanced Context Engineering for Coding Agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents)** ⭐2.8k: Advanced context engineering techniques for coding agents
+- **[ripwire](https://github.com/redhat-et/ripwire)** ⭐2.5k: "The ripgrep of AI context" — zero-dependency C++23 CLI + MCP server that finds the relevant code without reading the repo
+- **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)** ⭐1.8k: A context engineering skills toolkit
+- **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)** ⭐1.4k: Evolving language agents through agentic context engineering (ACE)
+- **[Agent QA](https://github.com/vostride/agent-qa)** ⭐899: Source-available QA agent that retains scoped test memory and failure evidence across natural-language web and mobile runs
+- **[Practical Guide to Context Engineering](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering)** ⭐845: A practical, hands-on guide (in Chinese) to context engineering for LLM applications
 - **[context-space](https://github.com/context-space/context-space)** ⭐812: Context engineering infrastructure built from MCPs and integrations
-- **[Agent QA](https://github.com/vostride/agent-qa)** ⭐772: Source-available QA agent that retains scoped test memory and failure evidence across natural-language web and mobile runs
-- **[Practical Guide to Context Engineering](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering)** ⭐708: A practical, hands-on guide (in Chinese) to context engineering for LLM applications
-- **[AI Badger](https://github.com/PVRLabs/aibadger)** ⭐21: Local-first tool that extracts focused, token-efficient repository context for AI chats, with Agent Skills for code review and coding-agent handoff
-- **[get-shit-done (GSD)](https://github.com/gsd-build/get-shit-done)**: Meta-prompting and spec-driven development / context engineering system for Claude Code
-- **[GSD-2](https://github.com/gsd-build/gsd-2)**: Meta-prompting / context engineering system enabling long-running autonomous agent work
-- **[how-claude-code-works](https://github.com/Windy3f3f3f3f/how-claude-code-works)**: Deep dive into Claude Code source: architecture, agent loop, and context engineering
-- **[Agent Skills for Context Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)**: Collection of Agent Skills for context engineering and multi-agent architectures
-- **[Advanced Context Engineering for Coding Agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents)**: Advanced context engineering techniques for coding agents
+- **[AI Badger](https://github.com/PVRLabs/aibadger)** ⭐78: Local-first tool that extracts focused, token-efficient repository context for AI chats, with Agent Skills for code review and coding-agent handoff
 - **[ax](https://github.com/Necmttn/ax)**: Local telemetry and recall graph for AI coding-agent sessions, costs, skills, routing, and hooks
-- **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)**: Evolving language agents through agentic context engineering
-- **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)**: A toolkit for context engineering
-- **[MineContext](https://github.com/volcengine/MineContext)**: Volcengine's proactive, context-aware AI companion
-- **[pro-workflow](https://github.com/rohitg00/pro-workflow)**: Self-correcting memory system that lets Claude Code learn from its mistakes, covering context engineering, parallel worktrees, agent teams, and 17 skills
 - **[kit](https://github.com/cased/kit)**: Context engineering toolkit for AI dev tools, providing codebase mapping, symbol extraction, and code search
 - **[RepoPrompt CE](https://github.com/repoprompt/repoprompt-ce)**: Community edition of RepoPrompt, a native macOS context engineering app for AI coding agents, with an MCP CLI
 - **[DevProjex](https://github.com/Avazbek22/DevProjex)**: Builds clean, token-aware project context with GUI, TUI, CLI, and a read-only MCP server, plus live preview, secret redaction enforced in MCP mode, Git scopes, and syntax-aware compression.
 - **[context-engineering (outcomeops)](https://github.com/outcomeops/context-engineering)**: Working reference implementation of context engineering with five components (corpus, retrieval, injection, output, enforcement), running end-to-end on Amazon Bedrock
 - **[Project Context Records (PCR)](https://github.com/hyf0/project-context-records)**: A context-engineering methodology that keeps a durable, repo-versioned archive of a project's meta-context (the why, architecture, and maintainer decisions) so AI collaborators inherit its judgment instead of re-deriving it
 - **[interview-prep-template](https://github.com/AbhiK189/interview-prep-template)**: A three-layer context-engineering template (immutable sources → agent-maintained wiki → operating-manual file) where the agent synthesizes raw material into reusable answers, frameworks, and scored debriefs that compound over time
-- **[Practical Guide to Context Engineering](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering)**: A practical, hands-on guide (in Chinese) to context engineering for LLM applications
 - **[MFS](https://github.com/zilliztech/mfs)**: A context harness that unifies code, docs, chat, databases, and object stores into one file-like, searchable namespace (`ls`/`cat`/`grep` + hybrid semantic search), so agents pull context incrementally instead of injecting it all up front; self-hosted and local-first (local ONNX embeddings + Milvus, no API key)
 - **[wiki](https://github.com/plasma-ai/wiki)**: Indexed Markdown knowledge bases that let agents retrieve project context incrementally, with deterministic indexes, cross-links, linting, and merge handling for parallel edits
 - **[Hexis](https://github.com/Bevel-Software/Hexis)**: Git-backed platform for skills, tools, and context for AI agents, with Git review workflows, role-based access, encrypted secrets, and remote MCP access
@@ -287,7 +355,6 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[YYLO Benchmark](https://github.com/yylo-dev/yylo-benchmark)**: Coding-agent evaluation runner for trusted hosts: runs each attempt in a fresh repository and retains outputs for independent re-evaluation; workspace separation provides context hygiene, not a security sandbox
 - **[open-bridge](https://github.com/bks-lab/open-bridge)**: Plain-text git workspace that coding agents read at session start, with a CI-enforced byte budget for always-on context and on-demand indexes for everything else
 - **[Curtain](https://github.com/lukstei/curtain)**: Step-by-step skill runner that reveals instructions only when their stage is reached, with explicit human approval gates between stages.
-
 - **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**: A context compiler for AI agents that turns memory, state, files, and evidence into task-scoped, provenance-aware Context Capsules with token budgeting, conflict resolution, explicit unknowns, and MCP tools
 
 ### Development Frameworks
@@ -299,6 +366,16 @@ Why compacting an agent's context is lossy compression, not free summarization �
 ### Memory & Compression
 
 - **[claude-mem](https://github.com/thedotmack/claude-mem)**: Persistent cross-session memory for Claude Code that automatically captures, compresses, and re-injects context across sessions
+- **[caveman](https://github.com/JuliusBrussee/caveman)** ⭐115k: Viral skill + proxy that cuts coding-agent output tokens ~65% by making the agent talk tersely
+- **[Hindsight](https://github.com/vectorize-io/hindsight)** ⭐53.2k: Agent memory that learns — consolidates experiences into reusable knowledge
+- **[context-mode](https://github.com/mksglu/context-mode)** ⭐32k: Context window optimization for coding agents — sandboxes tool output (up to 98% reduction), persists session memory and enforces routing across 17 platforms via MCP + hooks
+- **[TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory)** ⭐29.9k: Team-level memory hub that turns conversations, docs and code into reusable memory assets (chat memory, skills, LLM-Wiki, code)
+- **[Beads](https://github.com/gastownhall/beads)** ⭐28.2k: A memory upgrade for coding agents — a git-backed issue/task graph the agent reads instead of long markdown plans
+- **[ai-memory](https://github.com/akitaonrails/ai-memory)** ⭐13.1k: Long-term memory for coding-agent CLIs that also enables handoff between agent vendors
+- **[Engram](https://github.com/Gentleman-Programming/engram)** ⭐7.6k: Agent-agnostic persistent memory in one Go binary (SQLite + FTS5) with MCP server, HTTP API, CLI and TUI
+- **[dsh-context](https://github.com/bowenliang123/dsh-context)** ⭐3.5k: DeepSeek Harness plugin for context insight — dashboard, browser and sidebar for context statistics and composition
+- **[agent-beacon](https://github.com/Asymptote-Labs/agent-beacon)** ⭐2.7k: Cross-harness, self-improving memory layer for AI agents
+- **[billion-context](https://github.com/ranxianglei/billion-context)** ⭐2.5k: Context-compression plugin for month-long single sessions on small (≈100K) context windows
 - **[Data Olympus](https://github.com/knaisoma/data-olympus)**: Governed project memory for coding agents. Agents can propose context, humans promote accepted rules, and retrieval serves only in-force knowledge after validity-window and supersession checks
 - **[GoodMemory](https://github.com/hjqcan/GoodMemory)**: Local-first, auditable memory layer for AI apps and coding agents, with Codex/Claude Code host integration, a standalone MCP server, TypeScript/Python clients, and SQLite or Postgres storage
 - **[LeanCTX (lean-ctx)](https://github.com/yvgude/lean-ctx)**: Context intelligence layer for AI agents — a single local Rust binary that decides what agents read, remember, and save; 60–90% fewer tokens, with 76 MCP tools and local-first design
@@ -386,6 +463,9 @@ So context engineering is just one small piece of an emerging thick layer of non
 3. **External Memory**: Use file systems and databases as extended context storage
 4. **Error Preservation**: Keep failure traces for model learning and adaptation
 5. **Diversity Over Uniformity**: Avoid repetitive patterns that lead to model drift
+6. **Progressive Disclosure**: Keep tool and skill definitions out of static context until needed; load full schemas/instructions on demand
+7. **Measure the Harness**: Track cache hit rate, per-turn fixed context and token cost per task; the same model can swing 2× across harnesses
+8. **Treat Summaries as Untrusted**: Compaction is lossy and can carry injected instructions — keep raw history recoverable and audit what was dropped
 
 ## 🔗 Model Context Protocol (MCP)
 
