@@ -323,6 +323,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[gknowledge](https://github.com/openapi/gknowledge)**：以原生 GNOME 应用实现的本地优先 Karpathy LLM Wiki：原始资料保持不可变，每次导入只更新相关的 Markdown 页面（YAML frontmatter 记录来源、`index.md` 目录、仅追加的 `log.md`、跨来源合并同名实体），提问时基于编译好的 wiki 给出带引用的回答，而不是重新读取原始文档；内置 MCP 服务器（`search_wiki`、`read_page`、`ask`、`add_source`）让 Claude Code、Codex 或 Cursor 读取并扩充同一个 wiki，离线引擎无需模型或 API key 即可使用（MIT）
 - **[Chisle](https://github.com/JayPokale/Chisle)**：适用于 Claude Code、Pi、OpenCode 和 Copilot CLI 的插件（另为九个智能体生成规则文件），在工具输出重新进入上下文之前压缩过长的结果（保留开头和结尾、保留错误行、同一会话内去重；从不改动 Read/Edit/Write 的输出），并加入"上下文节食"规则（先 grep 再读取、分段读取、不重复读取）；在实测的 171 个 Claude Code 会话中，工具输出占上下文的 67.5%，该钩子将符合条件的输出平均缩减约 46%。确定性处理，无依赖，无网络请求
 - **[Next Context](https://github.com/ajwann/next-context)**：Claude Code 插件，在输入框上方实时显示上下文窗口：按 `/context` 类别统计的用量、首条消息之前已加载的开销（并标出占用最多的 MCP 服务器）、每轮增长，以及距自动压缩还剩多少轮的预测，并支持自定义警告阈值；完全在本地运行，不发起网络或 API 调用
+- **[Off the Wall](https://github.com/toranalytics/off-the-wall)**：Claude Code 与 Codex 插件，保存你纠正智能体的消息，并在它回答前逐字引用最相关的几条，而不是把它们总结成规则；`otw report` 显示你最常纠正的内容，路由规则要求编排者在每次调用子智能体时指定模型。无需 API key，无依赖
 
 ### 生产工具
 
