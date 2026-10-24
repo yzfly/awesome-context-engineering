@@ -180,6 +180,11 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - 📄 SSRN: [7186738](https://ssrn.com/abstract=7186738)
 - 🎯 Takes the agent loop as the unit of analysis; covers in-loop context management and the harness as context manager, alongside termination, verification, recovery and skills
 
+**Agon: An Autonomous Large-Scale Omnidisciplinary Research System Built on Prompt Economy**
+- 📄 arXiv: [2606.24177](https://arxiv.org/abs/2606.24177)
+- 📊 18 roles in 230.6 KiB of prompts, the smallest prompt footprint among cross-disciplinary autoresearch systems ([code](https://github.com/AutoResearch-Factory/Agon))
+- 🎯 Prompt Economy treats prompt engineering as engineering and drives the agents with reusable loops; has run in 10+ research fields without code changes, with the longest unattended run lasting 30 days
+
 ### Core Research Areas
 
 - **Memory Systems**: [Reflexion](https://arxiv.org/abs/2303.11366), [Generative Agents](https://ar5iv.labs.arxiv.org/html/2304.03442), [StructMem](https://arxiv.org/abs/2604.21748) ([code](https://github.com/zjunlp/LightMem))
