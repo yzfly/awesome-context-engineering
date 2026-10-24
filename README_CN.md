@@ -316,6 +316,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[akc-cycle](https://github.com/shimo4228/akc-cycle)**：Claude Code 插件，防止配置中的规则与技能不断堆积、逐渐过时；审计技能、规则与智能体定义，为每个文件给出保留、合并或退役的建议及理由，确认前不做任何修改，并将反复出现的建议提升为常驻加载的规则
 - **[contexttax](https://github.com/henrikdukefoss/contexttax)**：按智能体统计编程智能体每次请求都会加载的固定上下文（CLAUDE.md/AGENTS.md 及其 `@` 导入、常驻规则、技能描述、MCP 工具 schema），按 token 从大到小排列，并指出哪些部分可以改为按需加载
 - **[turntax](https://github.com/TorutDev/turntax)**：按各编程智能体文档中的加载规则，测算 16 种智能体每轮都会发送的指令文件（AGENTS.md、CLAUDE.md、Cursor/Copilot/Windsurf 规则）的 token 成本，区分常驻与按需加载的文件，并预览安全的修复；提供 CLI、GitHub Action 和只读 MCP 服务器
+- **[gknowledge](https://github.com/openapi/gknowledge)**：以原生 GNOME 应用实现的本地优先 Karpathy LLM Wiki：原始资料保持不可变，每次导入只更新相关的 Markdown 页面（YAML frontmatter 记录来源、`index.md` 目录、仅追加的 `log.md`、跨来源合并同名实体），提问时基于编译好的 wiki 给出带引用的回答，而不是重新读取原始文档；内置 MCP 服务器（`search_wiki`、`read_page`、`ask`、`add_source`）让 Claude Code、Codex 或 Cursor 读取并扩充同一个 wiki，离线引擎无需模型或 API key 即可使用（MIT）
 
 ### 生产工具
 
