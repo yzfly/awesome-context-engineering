@@ -297,7 +297,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[skillreaper](https://github.com/thousandflowers/skillreaper)**：基于会话记录统计智能体加载的 context 中真正被调用的比例（技能、MCP 服务器、子智能体、hooks），并可逆地清理未使用的部分
 - **[LWC](https://github.com/JanYork/llm-wiki-cli)**：面向编码智能体的主动式、来源可追溯项目记忆，保存不可变原始资料、引用、来源链与原子变更集，提供 SQLite/FTS5 检索、可选文档图与代码图、生命周期 Hook，以及受限的单工具 MCP 接口
 - **[billion-context-dsh](https://github.com/Tyan66666/billion-context-dsh)**：面向 DeepSeek Harness 的模型驱动上下文压缩（Active Context Pruning）——由模型决定何时压缩、压缩什么
-- **[TekMyra](https://github.com/laconiq-ai/tekmyra)**: 面向 LLM 管道的受治理上下文压缩：输出前验证每个受保护片段恰好出现一次，无法验证即拒绝，拒绝也计入公开指标的分母
+- **[TekMyra](https://github.com/laconiq-ai/tekmyra)**: 面向 LLM 管道的受治理上下文压缩：输出前检查每个受保护片段（标识符、金额、引用）均被保留，无法保证即拒绝，拒绝也计入公开指标的分母
 - **[trace-mcp](https://github.com/nikolai-vysotskyi/trace-mcp)**：本地 MCP 服务器，以预先构建的跨语言代码图替代逐文件读取——框架感知的边会把 PHP 控制器连到它渲染的 Vue 页面、把依赖注入装饰器连到其 provider、把 ORM 调用连到定义该表的迁移文件（81 种语言、87 个框架集成），并提供与代码关联的跨会话决策记忆；在 6 个第三方仓库的 60 个已合并 PR 上，评审所需上下文从中位数 13,595 个输入 token 降到 1,326 个
 - **[langstate](https://github.com/hermes-labs-ai/langstate)**：将长对话压缩为可检视的 `[SCAFFOLD STATE]` 消息而非不透明摘要——保留系统消息与最近若干轮原文，`validate()` 会为指定事实返回确定性回执
 - **[Caura](https://github.com/caura-ai/caura)**：面向 AI 智能体集群的受治理共享记忆——跨智能体与租户的作用域化召回、信任分级、keystone 策略、审计日志与知识图谱，通过 MCP 暴露
