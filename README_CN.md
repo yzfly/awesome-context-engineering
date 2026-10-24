@@ -326,6 +326,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - **[Off the Wall](https://github.com/toranalytics/off-the-wall)**：Claude Code 与 Codex 插件，保存你纠正智能体的消息，并在它回答前逐字引用最相关的几条，而不是把它们总结成规则；`otw report` 显示你最常纠正的内容，路由规则要求编排者在每次调用子智能体时指定模型。无需 API key，无依赖
 - **[agent-files-check](https://github.com/lesshands/agent-files-check)**：检查编程智能体的指令文件（AGENTS.md、CLAUDE.md、GEMINI.md、Cursor、Copilot、Windsurf 与 Cline 规则）中引用的文件和文件夹，报告 git 历史表明已被删除或移动的引用，给出 file:line、对应提交，并在能判断时给出新位置；作为 GitHub Action 运行时，会在 pull request 中标注其引用路径被该改动删除或重命名的指令行
 - **[GFT Map](https://github.com/CoralLips/gft-map)**：面向 Claude Code 与 Codex 的本地应用，用可编辑文稿和关系图保存决定、理由与待解决问题，按主题交给下一场会话读取
+- **[lean-agent-tools](https://github.com/SirGrokkius/lean-agent-tools)**：14 个单文件、仅依赖 Python 标准库的命令行过滤工具，放在 shell 输出与模型之间：`logdiff` 将日志折叠为带计数的模板（保留错误行），`jsonslim` 只保留指定的 JSON 路径，`htmltext` 在预算内返回网页正文，另有缓存、仅在变化时输出的轮询工具和无依赖的 token 估算器；附每个工具的前后 token 实测数据（o200k）
 
 ### 生产工具
 
