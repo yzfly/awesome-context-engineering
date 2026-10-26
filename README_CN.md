@@ -422,6 +422,7 @@ LangChain 更多文章：
 - **[GFT Map](https://github.com/CoralLips/gft-map)**：面向 Claude Code 与 Codex 的本地应用，用可编辑文稿和关系图保存决定、理由与待解决问题，按主题交给下一场会话读取
 - **[lean-agent-tools](https://github.com/SirGrokkius/lean-agent-tools)**：14 个单文件、仅依赖 Python 标准库的命令行过滤工具，放在 shell 输出与模型之间：`logdiff` 将日志折叠为带计数的模板（保留错误行），`jsonslim` 只保留指定的 JSON 路径，`htmltext` 在预算内返回网页正文，另有缓存、仅在变化时输出的轮询工具和无依赖的 token 估算器；附每个工具的前后 token 实测数据（o200k）
 - **[lcc](https://github.com/lucasmartins-ai/lcc)**：不做摘要地压缩编程智能体会话：已用过的工具输出移入本地内容寻址存储，智能体可按哈希 `recall` 取回原文，用户与助手消息逐字节保留，每次压缩都输出 JSON 报告说明删了什么、为什么；离线运行，提供 CLI、MCP 服务器和 Claude Code 插件
+- **[VibeDesk](https://github.com/fxd-gif/vibedesk)**：面向 Claude Code 的 Windows 桌面应用（MIT），将项目记忆以兼容 Obsidian 的 Markdown 笔记（支持 [[链接]]）保存在仓库内，每个会话启动时获得概览，并可通过 MCP 工具检索、读取和扩展；同时支持并排运行多个会话
 
 ### 生产工具
 
