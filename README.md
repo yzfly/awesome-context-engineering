@@ -424,6 +424,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[GFT Map](https://github.com/CoralLips/gft-map)**: A local app for Claude Code and Codex that stores decisions, reasons, and open questions in editable documents and maps for topic-based context readback
 - **[lean-agent-tools](https://github.com/SirGrokkius/lean-agent-tools)**: 14 single-file, standard-library-only Python CLI filters that sit between shell output and the model: `logdiff` collapses logs into counted templates (errors kept), `jsonslim` projects JSON to named paths, `htmltext` returns readable page text under a budget, plus caching, change-only polling and a dependency-free token estimator; published per-tool before/after token counts (o200k)
 - **[lcc](https://github.com/lucasmartins-ai/lcc)**: Compacts coding-agent sessions without a summary: spent tool outputs move to a local content-addressed stash the agent can `recall` by hash, user and assistant messages stay byte for byte, and every pass writes a JSON report of what was cut and why; offline, as a CLI, an MCP server and a Claude Code plugin
+- **[VibeDesk](https://github.com/fxd-gif/vibedesk)**: Windows desktop app for Claude Code (MIT) that keeps per-project memory as Obsidian-compatible Markdown notes with [[links]] inside the repo and gives each session an overview plus MCP tools to search, read and extend it; also runs several sessions side by side
 
 ### Production Tools
 
