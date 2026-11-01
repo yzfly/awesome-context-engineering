@@ -376,6 +376,7 @@ LangChain 更多文章：
 - **[dsh-context](https://github.com/bowenliang123/dsh-context)** ⭐3.5k：DeepSeek Harness 上下文洞察插件，提供上下文统计与构成的仪表盘、浏览器和侧边栏
 - **[agent-beacon](https://github.com/Asymptote-Labs/agent-beacon)** ⭐2.7k：跨 harness、可自我改进的智能体记忆层
 - **[billion-context](https://github.com/ranxianglei/billion-context)** ⭐2.5k：上下文压缩插件，支持在约 100K 的小窗口上进行长达一个月的单一会话
+- **[Sno Station](https://github.com/sno-ai/sno-station)** ⭐1.1k：把 Codex、Claude Code、Cursor、Hermes Agent 和 OpenClaw 组成一个在本机运行的团队：一个用量到上限，另一个带着同样的上下文接着做，并互相审查代码
 - **[Data Olympus](https://github.com/knaisoma/data-olympus)**：面向编程智能体的受治理项目记忆。智能体可以提议上下文，由人把认可的规则升级生效；检索只返回经过有效期与替代关系检查、仍然有效的知识
 - **[GoodMemory](https://github.com/hjqcan/GoodMemory)**：面向 AI 应用与编程智能体的本地优先、可审计记忆层，支持 Codex/Claude Code 主机集成、独立 MCP 服务、TypeScript/Python 客户端，以及 SQLite 或 Postgres 存储
 - **[LeanCTX (lean-ctx)](https://github.com/yvgude/lean-ctx)**：面向 AI agent 的上下文智能层——单个本地 Rust 二进制决定 agent 读取、记忆与保存什么；token 减少 60–90%，提供 76 个 MCP 工具，本地优先
