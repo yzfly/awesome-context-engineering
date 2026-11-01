@@ -426,6 +426,8 @@ LangChain 更多文章：
 - **[lcc](https://github.com/lucasmartins-ai/lcc)**：不做摘要地压缩编程智能体会话：已用过的工具输出移入本地内容寻址存储，智能体可按哈希 `recall` 取回原文，用户与助手消息逐字节保留，每次压缩都输出 JSON 报告说明删了什么、为什么；离线运行，提供 CLI、MCP 服务器和 Claude Code 插件
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**：面向 Claude Code 的 Windows 桌面应用（MIT），将项目记忆以兼容 Obsidian 的 Markdown 笔记（支持 [[链接]]）保存在仓库内，每个会话启动时获得概览，并可通过 MCP 工具检索、读取和扩展；同时支持并排运行多个会话
 
+- **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**：DeepSeek Harness 文本记忆插件（公开测试），保留原始来源、全局/项目范围、条件与纠错记录；使用词法检索
+
 ### 生产工具
 
 - **Claude Code**：自动压缩context管理

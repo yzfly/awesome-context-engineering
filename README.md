@@ -428,6 +428,8 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[lcc](https://github.com/lucasmartins-ai/lcc)**: Compacts coding-agent sessions without a summary: spent tool outputs move to a local content-addressed stash the agent can `recall` by hash, user and assistant messages stay byte for byte, and every pass writes a JSON report of what was cut and why; offline, as a CLI, an MCP server and a Claude Code plugin
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**: Windows desktop app for Claude Code (MIT) that keeps per-project memory as Obsidian-compatible Markdown notes with [[links]] inside the repo and gives each session an overview plus MCP tools to search, read and extend it; also runs several sessions side by side
 
+- **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**: Public-beta DeepSeek Harness text-memory plugin with original-source references, project/global scope, conditions and correction history; lexical recall
+
 ### Production Tools
 
 - **Claude Code**: Auto-compact context management
