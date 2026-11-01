@@ -378,6 +378,7 @@ LangChain 更多文章：
 - **[GoodMemory](https://github.com/hjqcan/GoodMemory)**：面向 AI 应用与编程智能体的本地优先、可审计记忆层，支持 Codex/Claude Code 主机集成、独立 MCP 服务、TypeScript/Python 客户端，以及 SQLite 或 Postgres 存储
 - **[LeanCTX (lean-ctx)](https://github.com/yvgude/lean-ctx)**：面向 AI agent 的上下文智能层——单个本地 Rust 二进制决定 agent 读取、记忆与保存什么；token 减少 60–90%，提供 76 个 MCP 工具，本地优先
 - **[headroom](https://github.com/chopratejas/headroom)**：在内容进入 LLM 前压缩工具输出/日志，节省 60-95% 的 token
+- **[Mnemonic Proxy](https://github.com/lastreload/mnemonic-proxy)**：面向编程智能体的 HTTP 代理，在屏蔽较旧工具输出的同时保留逐字存档，供模型按需调用工具检索；在支持的后端上保存和恢复推理引擎状态
 - **[Accordion](https://github.com/a-Fig/Accordion)**：一个 pi 扩展,将 agent 的整个上下文窗口渲染为实时"地图",并通过可插拔的"conductor"(对各块相关性打分)在后台折叠(可逆地压缩)相关性较低的块,替代有损的全量压缩
 - **[Mnemoverse](https://github.com/mnemoverse/mcp-memory-server)**：通过 MCP 为 Claude Code、Cursor、VS Code 和 ChatGPT 提供托管的持久记忆，支持 API Key 或 OAuth；依据被召回记忆是否有帮助调整排序
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**：构建具备长期记忆的有状态智能体框架
