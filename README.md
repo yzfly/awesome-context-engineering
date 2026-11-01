@@ -356,6 +356,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[open-bridge](https://github.com/bks-lab/open-bridge)**: Plain-text git workspace that coding agents read at session start, with a CI-enforced byte budget for always-on context and on-demand indexes for everything else
 - **[Curtain](https://github.com/lukstei/curtain)**: Step-by-step skill runner that reveals instructions only when their stage is reached, with explicit human approval gates between stages.
 - **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**: A context compiler for AI agents that turns memory, state, files, and evidence into task-scoped, provenance-aware Context Capsules with token budgeting, conflict resolution, explicit unknowns, and MCP tools
+- **[DESIGN:OS CLI](https://github.com/jangtrinh/design-os)**: Design skill pack for Claude Code, Codex, Gemini CLI and Antigravity that keeps design context small through progressive disclosure: a `SKILL.md` router loads domain packs on demand instead of putting a whole style guide in every prompt, and deterministic gates check the output. Free, source-available (PolyForm Shield)
 
 ### Development Frameworks
 

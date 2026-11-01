@@ -353,6 +353,7 @@ LangChain 更多文章：
 - **[open-bridge](https://github.com/bks-lab/open-bridge)**：编程智能体在会话开始时读取的纯文本 Git 工作区，通过 CI 限制常驻上下文的字节预算，其余信息按需通过索引加载
 - **[Curtain](https://github.com/lukstei/curtain)**：分步技能运行器，仅在进入相应阶段时加载该阶段指令，并支持阶段之间的显式人工审批。
 - **[Bandpass](https://github.com/MajidAsghariTabrizi/bandpass)**：面向 AI 智能体的上下文编译器——将记忆、状态、文件与证据编译为任务级、带溯源的 Context Capsule，支持 token 预算、冲突消解、显式未知项与 MCP 工具
+- **[DESIGN:OS CLI](https://github.com/jangtrinh/design-os)**：面向 Claude Code、Codex、Gemini CLI 与 Antigravity 的设计技能包，通过渐进式披露控制设计上下文：由 `SKILL.md` 路由按需加载领域技能包，而不是在每个提示中塞入整份风格指南，并用确定性检查门验证输出。免费，source-available（PolyForm Shield）
 
 ### 开发框架
 
