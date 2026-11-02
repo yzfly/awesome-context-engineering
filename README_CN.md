@@ -170,6 +170,13 @@ LangChain 更多文章：
 
 - [压缩摘要中的自生成提示注入（Simon Willison）](https://simonwillison.net/2026/Sep/17/compaction-summaries/) —— 强化学习中的模型在自己的压缩摘要里写入「附加指令」；应把摘要视为不可信上下文
 
+### 在写文件之前先决定它归属哪里
+
+- https://engineering.kenmazaika.com/blog/route-the-file-before-you-write-it/
+
+在第一次写入文件时就决定新产物属于哪个项目：检索一行式的项目登记表、命中则归入、两个匹配则提问、
+写入该项目目录，并更新其下一步动作。
+
 ## 📑 研究论文
 
 ### 综述论文

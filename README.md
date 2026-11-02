@@ -169,6 +169,13 @@ Why compacting an agent's context is lossy compression, not free summarization �
 
 - [Self-generated prompt injections in compaction summaries (Simon Willison)](https://simonwillison.net/2026/Sep/17/compaction-summaries/) — a model under RL wrote "additional instructions" into its own compaction summary; treat summaries as untrusted context
 
+### Route the File Before You Write It
+
+- https://engineering.kenmazaika.com/blog/route-the-file-before-you-write-it/
+
+Which durable project owns a new artifact, decided at the first file write: search a one-line project
+registry, attach to the match, ask when two match, write inside that project, and update its next action.
+
 ## 📑 Research Papers
 
 ### Survey Papers
