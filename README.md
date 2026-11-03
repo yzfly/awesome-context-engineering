@@ -95,6 +95,9 @@ Key insights from building a production AI agent:
 - [A Smarter Model Won't Save Your Bad Harness (Cerebras)](https://www.cerebras.ai/blog/a-smarter-model-won-t-save-your-bad-harness)
 - [Memory and dreaming: how Devin learns from working with you (Cognition)](https://devin.ai/blog/memory-and-dreaming)
 - [Introducing Manus 2.0](https://manus.im/blog/introducing-manus-2-0) — new in-house harness "Cascade" (23.2% fewer tokens in Manus's test configuration)
+- [Effective harnesses for long-running agents (Anthropic)](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) — an initializer agent plus progress files and git history so each new context window can pick up where the last one stopped
+- [12 Factor Agents (HumanLayer)](https://www.humanlayer.dev/blog/12-factor-agents) — own your prompts and context window, keep execution state explicit, and make agents pausable and resumable
+- [Why Context Alone Isn't Enough for Enterprise AI Agents (Chain of Thought podcast)](https://chainofthought.show/podcast/75-why-context-alone-isnt-enough-for-enterprise-ai-agents-wisdomai-cpo-kapil-chhabra/) — interview with WisdomAI's CPO on keeping shared business definitions current as context drifts, and a harness that decomposes the question, then verifies and repairs the answer; full transcript and chapters
 
 
 ### LangChain Context Engineering
