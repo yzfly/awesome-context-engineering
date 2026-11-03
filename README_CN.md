@@ -489,6 +489,7 @@ LangChain 更多文章：
 - **[模型Context协议](https://modelcontextprotocol.io/introduction)**：标准化context共享
 - **[文件系统服务器](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)**：基于文件的context管理
 - **[installed-api](https://github.com/ajwann/installed-api)**：MCP 服务器（以 Claude Code 插件形式提供），根据项目中实际安装的包回答 Python 和 TypeScript API 问题，而不是依赖模型记忆或网页文档：从项目自身的解释器获取签名、文档字符串、源码和版本，从 `node_modules` 读取 `.d.ts` 声明，只返回有长度上限的片段而非整个文件；仅使用 Python 标准库，不发起网络请求
+- **[Keenable](https://github.com/keenableai/keenable-mcp)**：网页搜索与页面抓取 MCP 服务器，控制网页 context 的体积：搜索返回带摘要的排序结果，可按站点和发布日期过滤；抓取把页面转为 Markdown，传入 `prompt` 时只返回抽取结果而非整页内容；无需 API Key 即可在公共额度上使用
 - **工具集成**：工具间无缝context流动
 
 ## 🤝 贡献指南
