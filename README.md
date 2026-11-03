@@ -334,6 +334,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[Context Engineering Kit](https://github.com/NeoLabHQ/context-engineering-kit)** ⭐1.8k: A context engineering skills toolkit
 - **[ACE (Agentic Context Engineering)](https://github.com/ace-agent/ace)** ⭐1.4k: Evolving language agents through agentic context engineering (ACE)
 - **[Agent QA](https://github.com/vostride/agent-qa)** ⭐899: Source-available QA agent that retains scoped test memory and failure evidence across natural-language web and mobile runs
+- **[Most Capable Agent System Prompt](https://github.com/fainir/most-capable-agent-system-prompt)** ⭐882: Copy-paste system prompt that has Claude Code, Codex or Cursor build a self-improving agent system whose context lives in files (AGENTS.md, plan.md, tasks.md, knowledge.md, FAILURE.md); the agent writes a compact operating summary of the prompt and re-reads it during long runs
 - **[Practical Guide to Context Engineering](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering)** ⭐845: A practical, hands-on guide (in Chinese) to context engineering for LLM applications
 - **[context-space](https://github.com/context-space/context-space)** ⭐812: Context engineering infrastructure built from MCPs and integrations
 - **[AI Badger](https://github.com/PVRLabs/aibadger)** ⭐78: Local-first tool that extracts focused, token-efficient repository context for AI chats, with Agent Skills for code review and coding-agent handoff
