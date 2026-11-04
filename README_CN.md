@@ -433,6 +433,8 @@ LangChain 更多文章：
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**：面向 Claude Code 的 Windows 桌面应用（MIT），将项目记忆以兼容 Obsidian 的 Markdown 笔记（支持 [[链接]]）保存在仓库内，每个会话启动时获得概览，并可通过 MCP 工具检索、读取和扩展；同时支持并排运行多个会话
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**：DeepSeek Harness 文本记忆插件（公开测试），保留原始来源、全局/项目范围、条件与纠错记录；使用词法检索
+- **[dreaming](https://github.com/danwilsonai/dreaming)**：让 Claude Code 为你自己的环境搭建定期运行的“做梦”流程：读取近期会话、每个定时任务最近的运行记录、指令与记忆文件以及 git 历史，针对 CLAUDE.md、记忆和流程提出修改建议，每条都附证据和测试方法；只读运行，未经批准不会应用任何改动（CC BY 4.0）
+- **[build-and-fix](https://github.com/danwilsonai/build-and-fix)**：六条修复智能体配置的原则，主张删除指令而不是继续添加规则；附带安装说明，把原则写入 CLAUDE.md，测算每次会话都会加载的内容（包括 MCP 工具 schema 和后台 `claude -p` 任务），并逐项给出可删减的内容及其节省的 token（CC BY 4.0）
 
 ### 生产工具
 
