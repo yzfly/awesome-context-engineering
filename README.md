@@ -435,6 +435,8 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**: Windows desktop app for Claude Code (MIT) that keeps per-project memory as Obsidian-compatible Markdown notes with [[links]] inside the repo and gives each session an overview plus MCP tools to search, read and extend it; also runs several sessions side by side
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**: Public-beta DeepSeek Harness text-memory plugin with original-source references, project/global scope, conditions and correction history; lexical recall
+- **[dreaming](https://github.com/danwilsonai/dreaming)**: Instructions for Claude Code to build a scheduled "dreaming" pass over your own setup: reads recent sessions, every scheduled job's recent runs, the instruction and memory files and the git history, and proposes fixes to CLAUDE.md, memory and processes, each with its evidence and a test; read-only, nothing is applied without approval (CC BY 4.0)
+- **[build-and-fix](https://github.com/danwilsonai/build-and-fix)**: Six principles for fixing agent setups by deleting instructions rather than adding them, with an installer that adds them to CLAUDE.md, measures what loads every session (including MCP tool schemas and background `claude -p` runs) and proposes cuts with the token saving for each (CC BY 4.0)
 
 ### Production Tools
 
