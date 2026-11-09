@@ -356,6 +356,7 @@ LangChain 更多文章：
 - **[DESIGN:OS CLI](https://github.com/jangtrinh/design-os)**：面向 Claude Code、Codex、Gemini CLI 与 Antigravity 的设计技能包，通过渐进式披露控制设计上下文：由 `SKILL.md` 路由按需加载领域技能包，而不是在每个提示中塞入整份风格指南，并用确定性检查门验证输出。免费，source-available（PolyForm Shield）
 - **[HIVE.md (The Hive Code)](https://thehivecode.ai/learn/hive-md)**：放在仓库根目录的简短文件，告诉人和协助他们的 AI 工具：项目是什么、面向谁、当前需要什么帮助以及如何运行；提供免费模板和[生成器](https://thehivecode.ai/tools/hive-md-generator)
 - **[TokenRip](https://tokenrip.com)**：通过 MCP 连接的托管共享工作区；Claude Code、Codex、Cursor 和 ChatGPT 在开始前读取同一组置顶决策，写入带版本和修改原因的文件与任务，让上下文在不同智能体和会话之间延续
+- **[Compass](https://github.com/EdwardBatt/Compass)**：以纯 Markdown 存放在仓库中的分层项目记忆：地图把每个任务路由到一条有长度上限的笔记和对应源码；CI lint 在笔记腐化时（失效路径、复制代码的笔记、被手改的规则文件）直接报错。一份配置即可生成 Claude Code、Cursor、Gemini、Antigravity 和 AGENTS.md 的规则
 
 ### 开发框架
 
