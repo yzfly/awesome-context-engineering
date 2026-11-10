@@ -383,6 +383,7 @@ LangChain 更多文章：
 - **[Mnemonic Proxy](https://github.com/lastreload/mnemonic-proxy)**：面向编程智能体的 HTTP 代理，在屏蔽较旧工具输出的同时保留逐字存档，供模型按需调用工具检索；在支持的后端上保存和恢复推理引擎状态
 - **[Accordion](https://github.com/a-Fig/Accordion)**：一个 pi 扩展,将 agent 的整个上下文窗口渲染为实时"地图",并通过可插拔的"conductor"(对各块相关性打分)在后台折叠(可逆地压缩)相关性较低的块,替代有损的全量压缩
 - **[Mnemoverse](https://github.com/mnemoverse/mcp-memory-server)**：通过 MCP 为 Claude Code、Cursor、VS Code 和 ChatGPT 提供托管的持久记忆，支持 API Key 或 OAuth；依据被召回记忆是否有帮助调整排序
+- **[Cloud Alter Ego](https://github.com/SebastiaanBoon/cloud-alter-ego)**：远程 MCP 连接器，让每个 AI 对话都能使用你的规则、个人资料、上下文、日志和工作手册，以纯 Markdown 文件存放在你自己的 OneDrive、Google Drive、Dropbox、GitHub 或 Azure DevOps 中，服务器不保存内容。面向开发者的 MIT 模板
 - **[Letta (MemGPT)](https://github.com/letta-ai/letta)**：构建具备长期记忆的有状态智能体框架
 - **[Mem0](https://github.com/mem0ai/mem0)**：面向AI智能体和助手的记忆层
 - **[Vestige](https://github.com/samvallad33/vestige)**：“本地优先的记忆 MCP 服务器（单个约 23MB Rust 二进制，数据保留在本地），支持实体/因果检索——通过共享的文件、环境变量、服务、符号关联记忆，回溯出导致后续故障、相似度检索可能遗漏的更早改动”
