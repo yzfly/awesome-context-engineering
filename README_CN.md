@@ -433,6 +433,7 @@ LangChain 更多文章：
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**：面向 Claude Code 的 Windows 桌面应用（MIT），将项目记忆以兼容 Obsidian 的 Markdown 笔记（支持 [[链接]]）保存在仓库内，每个会话启动时获得概览，并可通过 MCP 工具检索、读取和扩展；同时支持并排运行多个会话
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**：DeepSeek Harness 文本记忆插件（公开测试），保留原始来源、全局/项目范围、条件与纠错记录；使用词法检索
+- **[MemoryBrain](https://memorybrain.ai/)**：面向 ChatGPT 和 Claude 的托管 MCP 记忆服务，每条笔记都保留其来源（读过的、说过的或聊天）以及与其他笔记的类型化链接；方法与技能以 MIT 协议开源
 
 ### 生产工具
 

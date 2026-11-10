@@ -435,6 +435,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**: Windows desktop app for Claude Code (MIT) that keeps per-project memory as Obsidian-compatible Markdown notes with [[links]] inside the repo and gives each session an overview plus MCP tools to search, read and extend it; also runs several sessions side by side
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**: Public-beta DeepSeek Harness text-memory plugin with original-source references, project/global scope, conditions and correction history; lexical recall
+- **[MemoryBrain](https://memorybrain.ai/)**: Hosted MCP memory for ChatGPT and Claude where every note keeps its source (read, said or chat) and typed links to other notes; the method and skills are MIT-licensed
 
 ### Production Tools
 
