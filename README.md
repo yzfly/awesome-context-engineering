@@ -244,6 +244,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - [Cortex: Consolidating Context into Parametric Memory](https://arxiv.org/abs/2610.20399) — distill context-conditioned behavior into mergeable weight updates
 - [Memory-Centric Continual Learning for AI Agents](https://arxiv.org/abs/2610.29357) — judge memory by whether it improves future actions, not recall
 - [Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory](https://arxiv.org/abs/2610.19366) — survey of multimodal agent memory
+- [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) — 248 Principal-Investigator-level judgment calls drawn from senior researchers' corrections of LLM agents over 6 months of real research; at medium reasoning effort, giving models the project record makes every model worse ([code](https://github.com/AutoResearch-Factory/SciPIvot))
 
 **Harness engineering & skills**
 - [Harness²: Recursive Agent Harnessing for an Open World](https://arxiv.org/abs/2610.14224) ([code](https://github.com/google-research/harness2))
