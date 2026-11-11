@@ -433,6 +433,7 @@ LangChain 更多文章：
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**：面向 Claude Code 的 Windows 桌面应用（MIT），将项目记忆以兼容 Obsidian 的 Markdown 笔记（支持 [[链接]]）保存在仓库内，每个会话启动时获得概览，并可通过 MCP 工具检索、读取和扩展；同时支持并排运行多个会话
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**：DeepSeek Harness 文本记忆插件（公开测试），保留原始来源、全局/项目范围、条件与纠错记录；使用词法检索
+- **[Contextely](https://www.contextely.com)**：为知道提问者是谁的企业打造的智能体记忆：把企业记录凝练为记忆对象，通过 MCP 提供给智能体，并在排序之前判定每个人可以读取什么。
 
 ### 生产工具
 
