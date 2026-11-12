@@ -359,6 +359,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[DESIGN:OS CLI](https://github.com/jangtrinh/design-os)**: Design skill pack for Claude Code, Codex, Gemini CLI and Antigravity that keeps design context small through progressive disclosure: a `SKILL.md` router loads domain packs on demand instead of putting a whole style guide in every prompt, and deterministic gates check the output. Free, source-available (PolyForm Shield)
 - **[HIVE.md (The Hive Code)](https://thehivecode.ai/learn/hive-md)**: A short file at a repo's root that tells people, and the AI tools helping them, what the project is, who it's for, what help it wants and how to run it; free template and [generator](https://thehivecode.ai/tools/hive-md-generator)
 - **[TokenRip](https://tokenrip.com)**: Hosted shared workspace that agents connect to over MCP; Claude Code, Codex, Cursor and ChatGPT read the same pinned decisions before they start and write versioned files and tasks with a recorded reason, so context carries over between agents and sessions
+- **[BlitzHash Context Handoff](https://github.com/blitzhash360-web/blitzhash-context-handoff)**: Zero-dependency CLI and Agent Skill that scans a project into one `HANDOFF.md` (stack, commands, file layout, env var names only, TODOs, recent commits) and exports it to Cursor rules, `CLAUDE.md`, `AGENTS.md`, Windsurf, Copilot and Gemini files; hand-written decisions survive refreshes and secret values are never exported. MIT
 
 ### Development Frameworks
 
