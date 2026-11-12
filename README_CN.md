@@ -431,6 +431,7 @@ LangChain 更多文章：
 - **[Engramory](https://github.com/tinqiao-oss/engramory)**：面向编程智能体的文件型长期记忆协议，只存经过筛选的事实：一条事实一个 Markdown 文件，加上每次会话都加载、有大小上限的小索引 `MEMORY.md`；在 Claude Code（hook）和 DeepSeek Harness（`dsh-engramory` 插件，每一步还会把索引注入运行时上下文）上写入前强制执行上限，也提供 Codex、OpenClaw、Kiro 的安装说明
 - **[Mnemosyne OS](https://github.com/Mnemosyne-OS/Mnemosyne-Neural-OS)**：面向 Windows、macOS 与 Linux 的桌面记忆应用。被监视的文件夹在用户本机上分别汇入按领域划分的独立记忆库（vault）；检索将向量排序与本地 BM25 关键词通道融合，并由用户决定接入的模型可以读取哪些记忆库；智能体通过 MIT 许可的 MCP 服务器（`npx -y -p @mnemosyne_os/mcp mnemosyne-mcp`）接入。开放核心（open core）：记忆引擎以闭源形式随免费桌面版提供
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**：面向 Claude Code 的 Windows 桌面应用（MIT），将项目记忆以兼容 Obsidian 的 Markdown 笔记（支持 [[链接]]）保存在仓库内，每个会话启动时获得概览，并可通过 MCP 工具检索、读取和扩展；同时支持并排运行多个会话
+- **[ClickHouse Loom](https://github.com/ClickHouse/loom)**：自托管的 MCP 服务器，为编程智能体提供共享的长期记忆和代码索引（定义、调用方、变更影响），减少整文件读取；其公开的 Claude Code 配对实验中，模型成本降低 20%，回答质量更高
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**：DeepSeek Harness 文本记忆插件（公开测试），保留原始来源、全局/项目范围、条件与纠错记录；使用词法检索
 
