@@ -435,6 +435,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**: Windows desktop app for Claude Code (MIT) that keeps per-project memory as Obsidian-compatible Markdown notes with [[links]] inside the repo and gives each session an overview plus MCP tools to search, read and extend it; also runs several sessions side by side
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**: Public-beta DeepSeek Harness text-memory plugin with original-source references, project/global scope, conditions and correction history; lexical recall
+- **[json-schema-for-llms](https://github.com/carmenaresearch/json-schema-for-llms)**: TypeScript library (MIT, no dependencies; Node 18+, Bun, Deno) that turns JSON too large for the context window into a short JSON Schema with field counts, value ranges and a few real example records, so the model writes a parser or JSONPath for the full data instead of reading it; on a test file of 20,000 orders, 936,288 tokens of JSON became a 541-token schema (o200k). `fits()` reports when a later document has fields the schema has never seen, without a model call
 
 ### Production Tools
 
