@@ -365,6 +365,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[HIVE.md (The Hive Code)](https://thehivecode.ai/learn/hive-md)**: A short file at a repo's root that tells people, and the AI tools helping them, what the project is, who it's for, what help it wants and how to run it; free template and [generator](https://thehivecode.ai/tools/hive-md-generator)
 - **[TokenRip](https://tokenrip.com)**: Hosted shared workspace that agents connect to over MCP; Claude Code, Codex, Cursor and ChatGPT read the same pinned decisions before they start and write versioned files and tasks with a recorded reason, so context carries over between agents and sessions
 - **[Ponder](https://github.com/Quinnod345/ponder)**: Zero-dependency Node.js CLI, skill, and append-only JSONL review ledger (`.ponder/<slug>/ledger.jsonl`) for Claude Code, Codex, Cursor, Gemini CLI, and OpenClaw that persists unit inventories (`units.json`), graded findings (`findings.json`), and four-role deliberation notes on disk across context compactions, blocking completion (`exit 2`) until every declared unit is graded and finding churn converges
+- **[Compass](https://github.com/EdwardBatt/Compass)**: Tiered project memory for coding agents, kept in the repo as plain Markdown: a map routes each task to one capped note and the source, and a CI lint fails when notes rot (dead paths, notes that copy code, hand-edited rules). One config generates the rules for Claude Code, Cursor, Gemini, Antigravity and AGENTS.md
 
 ### Development Frameworks
 
