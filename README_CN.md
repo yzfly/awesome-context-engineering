@@ -283,7 +283,7 @@ LangChain 更多文章：
    - 以Claude Code为中心的方法
    - 实践实施策略
 
-4. **[Context-Engineering（davidkimai）](https://github.com/davidkimai/Context-Engineering)**
+4. **[Context-Engineering（davidkimai）](https://github.com/jasontang-ai/Context-Engineering)**
    - 上下文工程第一性原理手册
    - 从基础原理到进阶技术
 
@@ -345,7 +345,7 @@ LangChain 更多文章：
 - **[RepoPrompt CE](https://github.com/repoprompt/repoprompt-ce)**：RepoPrompt 社区版，面向 AI 编码 agent 的 macOS 原生上下文工程应用，附带 MCP CLI
 - **[DevProjex](https://github.com/Avazbek22/DevProjex)**：通过 GUI、TUI、CLI 和只读 MCP 服务，构建整洁且具备 token 感知的项目上下文，并提供实时预览、MCP 模式强制凭据脱敏、Git 范围和语法感知压缩。
 - **[context-engineering（outcomeops）](https://github.com/outcomeops/context-engineering)**：上下文工程的可运行参考实现，含语料、检索、注入、输出、强制执行五大组件，在 Amazon Bedrock 上端到端运行
-- **[Project Context Records (PCR)](https://github.com/hyf0/project-context-records)**：一套上下文工程方法论，在仓库内持久化、版本化地存档项目的「元上下文」（缘由、架构、维护者决策），让 AI 协作者继承项目判断力，而非反复重新推导
+- **[Project Context Records (PCR)](https://github.com/hyfdev/project-context-records)**：一套上下文工程方法论，在仓库内持久化、版本化地存档项目的「元上下文」（缘由、架构、维护者决策），让 AI 协作者继承项目判断力，而非反复重新推导
 - **[interview-prep-template](https://github.com/AbhiK189/interview-prep-template)**：三层上下文工程模板（不可变原始素材 → agent 维护的 wiki → 运行手册文件），由 agent 把原始素材合成为可复用的答案、框架与带评分的复盘，并随每次面试持续累积变强
 - **[MFS](https://github.com/zilliztech/mfs)**：一个上下文 harness，把代码、文档、聊天、数据库和对象存储统一成一个类文件、可搜索的命名空间（`ls`/`cat`/`grep` + 混合语义检索），让智能体按需增量拉取上下文，而不是一开始全部注入；自托管、本地优先（本地 ONNX 向量 + Milvus，无需 API key）
 - **[wiki](https://github.com/plasma-ai/wiki)**：面向智能体的索引式 Markdown 知识库，支持按需渐进检索项目上下文，并提供确定性索引、交叉链接、结构校验，以及并行编辑时的合并处理
@@ -388,7 +388,7 @@ LangChain 更多文章：
 - **[Data Olympus](https://github.com/knaisoma/data-olympus)**：面向编程智能体的受治理项目记忆。智能体可以提议上下文，由人把认可的规则升级生效；检索只返回经过有效期与替代关系检查、仍然有效的知识
 - **[GoodMemory](https://github.com/hjqcan/GoodMemory)**：面向 AI 应用与编程智能体的本地优先、可审计记忆层，支持 Codex/Claude Code 主机集成、独立 MCP 服务、TypeScript/Python 客户端，以及 SQLite 或 Postgres 存储
 - **[LeanCTX (lean-ctx)](https://github.com/yvgude/lean-ctx)**：面向 AI agent 的上下文智能层——单个本地 Rust 二进制决定 agent 读取、记忆与保存什么；token 减少 60–90%，提供 76 个 MCP 工具，本地优先
-- **[headroom](https://github.com/chopratejas/headroom)**：在内容进入 LLM 前压缩工具输出/日志，节省 60-95% 的 token
+- **[headroom](https://github.com/headroomlabs-ai/headroom)**：在内容进入 LLM 前压缩工具输出/日志，节省 60-95% 的 token
 - **[Mnemonic Proxy](https://github.com/lastreload/mnemonic-proxy)**：面向编程智能体的 HTTP 代理，在屏蔽较旧工具输出的同时保留逐字存档，供模型按需调用工具检索；在支持的后端上保存和恢复推理引擎状态
 - **[Accordion](https://github.com/a-Fig/Accordion)**：一个 pi 扩展,将 agent 的整个上下文窗口渲染为实时"地图",并通过可插拔的"conductor"(对各块相关性打分)在后台折叠(可逆地压缩)相关性较低的块,替代有损的全量压缩
 - **[Mnemoverse](https://github.com/mnemoverse/mcp-memory-server)**：通过 MCP 为 Claude Code、Cursor、VS Code 和 ChatGPT 提供托管的持久记忆，支持 API Key 或 OAuth；依据被召回记忆是否有帮助调整排序
@@ -420,7 +420,6 @@ LangChain 更多文章：
 - **[Gobstopper](https://github.com/hraness/gobstopper)**：面向 Claude Code、Codex 等编程智能体的本地代理，请求超过 token 阈值时将较早轮次替换为机械摘要，最新轮次原样发送；也可为已保存会话生成更小的副本
 - **[Agent-Body](https://github.com/1420079678-ctrl/agent-body)**：面向 DeepSeek Harness 的插件层，按命令意图显影工具 schema，提供确定性反射与空闲期记忆巩固；附无需 API key 的离线演示和可复现的工具 schema token 基准
 - **[Context Guru](https://github.com/rossoctl/context-guru)**：provider 无关的上下文引擎，结合 prompt 缓存管理、工具输出过滤与上下文压缩，支持 Claude Code 与 Codex 集成
-- **[Dory](https://github.com/tjqscott/dory)**：用相互链接的 Markdown wiki 页面保存项目决策、研究结果和任务；Claude Code 钩子在会话开始时加载索引，并在修改后检查 wiki 结构
 - **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**：源码可见（BSL 1.1）的 VS Code 扩展，在本机为你打开的文件夹建立索引，并为模型选择器中的任意模型（包括 Copilot 的模型）提供检索这些文件夹的工具；对于你自己的模型服务器，窗口容纳不下的对话轮次和工具结果会被折叠进同一个本地存储，在与问题最相关时取回，并提供一个 recall 工具用于检索这些内容
 
 - **[ctxprune](https://github.com/riceharvest/ctxprune)**：小型 token 分类模型（类似 LLMLingua-2，支持 CPU/ONNX），删除工具输出、日志和文档中的低价值词语，同时保护 ID、路径与数字（`pip install ctxprune`）
