@@ -244,6 +244,7 @@ LangChain 更多文章：
 - [Cortex: Consolidating Context into Parametric Memory](https://arxiv.org/abs/2610.20399) —— 把上下文带来的增益蒸馏为可合并的权重更新
 - [Memory-Centric Continual Learning for AI Agents](https://arxiv.org/abs/2610.29357) —— 以「能否改善未来行动」而非「能否回忆」评判记忆
 - [Seeing, Maintaining, and Learning](https://arxiv.org/abs/2610.19366) —— 多模态智能体记忆综述
+- [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) —— 评测科研 agent 在关键节点上像 Principal Investigator 一样做判断的能力。248 道题来自 6 个月真实研究中资深研究者对 LLM agent 的纠正，覆盖 26 个项目、6 个学科。5 个前沿模型里有 4 个正确率低于瞎蒙，最好的那一个也只有 63.5%，而无领域背景知识的人类轻松达到 73.4%。
 
 **Harness 工程与技能**
 - [Harness²: Recursive Agent Harnessing for an Open World](https://arxiv.org/abs/2610.14224)（[代码](https://github.com/google-research/harness2)）
