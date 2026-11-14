@@ -256,7 +256,7 @@ LangChain 更多文章：
 
 ### 核心研究领域
 
-- **记忆系统**：[Reflexion](https://arxiv.org/abs/2303.11366)、[生成式智能体](https://ar5iv.labs.arxiv.org/html/2304.03442)、[StructMem](https://arxiv.org/abs/2604.21748)（[代码](https://github.com/zjunlp/LightMem)）
+- **记忆系统**：[Reflexion](https://arxiv.org/abs/2303.11366)、[生成式智能体](https://ar5iv.labs.arxiv.org/html/2304.03442)、[StructMem](https://arxiv.org/abs/2604.21748)（[代码](https://github.com/zjunlp/LightMem)）、[MixUA](https://arxiv.org/abs/2611.10439)
 - **检索增强生成**：[RAG综述](https://github.com/langchain-ai/rag-from-scratch)
 - **工具集成**：[工具选择](https://arxiv.org/abs/2410.14594)、[BigTool](https://arxiv.org/abs/2505.03275)
 - **Context压缩**：[递归摘要](https://arxiv.org/pdf/2308.15022)、[Context修剪](https://arxiv.org/abs/2501.16214)、[TokenPilot](https://arxiv.org/abs/2606.17016)（[代码](https://github.com/zjunlp/LightRSI)）
