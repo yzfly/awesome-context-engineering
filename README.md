@@ -16,13 +16,13 @@ A curated collection of resources, papers, tools, and best practices for **Conte
 
 - [What's New](#-whats-new)
 - [What is Context Engineering?](#what-is-context-engineering)
-- [Featured Articles](#featured-articles)
-- [Research Papers](#research-papers)
-- [Tools & Projects](#tools--projects)
-- [Expert Insights](#expert-insights)
-- [Model Context Protocol (MCP)](#model-context-protocol-mcp)
-- [Contributing](#contributing)
-- [Star History](#star-history)
+- [Featured Articles](#-featured-articles)
+- [Research Papers](#-research-papers)
+- [Tools & Projects](#️-tools--projects)
+- [Expert Insights](#-expert-insights)
+- [Model Context Protocol (MCP)](#-model-context-protocol-mcp)
+- [Contributing](#-contributing)
+- [Star History](#-star-history)
 
 ## What is Context Engineering?
 
