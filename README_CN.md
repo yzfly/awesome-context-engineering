@@ -359,6 +359,7 @@ LangChain 更多文章：
 - **[DESIGN:OS CLI](https://github.com/jangtrinh/design-os)**：面向 Claude Code、Codex、Gemini CLI 与 Antigravity 的设计技能包，通过渐进式披露控制设计上下文：由 `SKILL.md` 路由按需加载领域技能包，而不是在每个提示中塞入整份风格指南，并用确定性检查门验证输出。免费，source-available（PolyForm Shield）
 - **[HIVE.md (The Hive Code)](https://thehivecode.ai/learn/hive-md)**：放在仓库根目录的简短文件，告诉人和协助他们的 AI 工具：项目是什么、面向谁、当前需要什么帮助以及如何运行；提供免费模板和[生成器](https://thehivecode.ai/tools/hive-md-generator)
 - **[TokenRip](https://tokenrip.com)**：通过 MCP 连接的托管共享工作区；Claude Code、Codex、Cursor 和 ChatGPT 在开始前读取同一组置顶决策，写入带版本和修改原因的文件与任务，让上下文在不同智能体和会话之间延续
+- **[Ponder](https://github.com/Quinnod345/ponder)**：面向 Claude Code、Codex、Cursor、Gemini CLI 与 OpenClaw 的零依赖 Node.js CLI、Agent Skill 与仅追加 JSONL 评审账本（`.ponder/<slug>/ledger.jsonl`），将待审单元清单（`units.json`）、评分结果（`findings.json`）与四角色推演记录持久化到磁盘以跨越上下文压缩，并在覆盖率未达 100% 或结果波动未收敛时拒绝提前结束（`exit 2`）
 
 ### 开发框架
 
