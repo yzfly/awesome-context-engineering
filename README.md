@@ -36,6 +36,14 @@ Context Engineering is the systematic optimization of information payloads for L
 
 ## 🆕 What's New
 
+*Week of 2026-11-13 — collected from official model docs, new papers and trending GitHub projects.*
+
+- **Don't rebuild history — append a system message.** Anthropic's [Claude Opus 5.5 migration guide](https://platform.claude.com/docs/en/models/opus-5-5/migration-guide) says that if you rebuild conversation history to update instructions you should switch to a mid-conversation system message: after a rebuild a request can get a 400 error and prompt cache hits are lost. Thinking is always on, so `effort` is the main lever for how much context the model spends reasoning.
+- **Frontier + fast worker as a context split.** Google's [Gemini 4 Hydrogen](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/) (Nov 12) has flat pricing across its 1M-token window; in Antigravity, Gemini 4 Carbon coordinates while Hydrogen runs worker and verifier agents — the orchestrator/sub-agent isolation pattern, now shipped as a product default.
+- **Retrieval moves server-side.** DeepSeek's [Nov 13 API update](https://api-docs.deepseek.com/news/news261113) adds web search, deep-thinking search, file input and URL reading whose tool calls and context assembly run on DeepSeek's side; Search, Fetch, OCR, ASR and TTS are also exposed as standalone APIs.
+- **Million-token context with a shared output budget.** Alibaba's [Qwen4-Max-Preview](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview) (Nov 11, two-week preview) has a 1M context and up to 393,216 output tokens shared by thinking and the final answer — budget `max_tokens` for both.
+- **When does explicit state beat long context?** [Agent Memory as Rate-Limited Filtering](https://arxiv.org/abs/2611.02361) finds models reading full event histories lose accuracy as histories grow while models given an explicit current state stay near 96–98%, and the crossover point depends on the reader model; [ASTC](https://arxiv.org/abs/2610.41291) compresses agent context into soft tokens without training, using up to 50.68% fewer attention pairs at equal or better accuracy.
+
 *Week of 2026-10-23 — collected from official engineering blogs, new papers and trending GitHub projects.*
 
 - **Agent Skills joins MCP under the Linux Foundation.** Anthropic [donated the Agent Skills standard](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation) to the Agentic AI Foundation (Oct 22). More than 70 agent platforms (ChatGPT, Cursor, GitHub Copilot, VS Code…) have integrated it; about 1M skills have been published and ~280M installed. Progressive disclosure (`SKILL.md` → bundled files) is now the default way to ship procedural context. See also Vercel's [State of agent skills](https://vercel.com/blog/state-of-agent-skills).
@@ -230,7 +238,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - 📊 18 roles in 230.6 KiB of prompts, the smallest prompt footprint among cross-disciplinary autoresearch systems ([code](https://github.com/AutoResearch-Factory/Agon))
 - 🎯 Prompt Economy treats prompt engineering as engineering and drives the agents with reusable loops; has run in 10+ research fields without code changes, with the longest unattended run lasting 30 days
 
-### Recent Papers (Sep–Oct 2026)
+### Recent Papers (Sep–Nov 2026)
 
 **Compaction & KV cache**
 - [Self-Compacting Language Model Agents](https://arxiv.org/abs/2606.23525) — the model decides when and how to compact via a compaction tool and light rules; matches or beats fixed-interval summarization at 30–70% lower cost per task
@@ -238,6 +246,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - [Cache Engineering for Agents](https://arxiv.org/abs/2610.28577) — agents operate on the live KV cache (drop, reposition) without re-prefill; rolling drop +1.7 points at −27.7% cost
 - [The KV-Surgeon: Compensation-Aware Offline KV-Cache Compaction](https://arxiv.org/abs/2610.25933) — up to +4 points over attention matching at 50× compression
 - [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](https://arxiv.org/abs/2609.19969) — cross-layer KV reuse plus FP4 cache, ~890 bytes of global KV per token for 1M context
+- [In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents](https://arxiv.org/abs/2610.41291) — ASTC, a training-free method that compresses agent context into soft tokens inside the model; matches or beats the uncompressed agent with up to 50.68% fewer end-to-end attention pairs, while trained compressors need 15.4–103.7× more per successful task
 
 **Context structure & memory**
 - [Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries](https://arxiv.org/abs/2610.22273) — RL-trained agents build a hierarchical file workspace for downstream answerers; +33 points on BrowseComp-Plus
@@ -248,6 +257,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - [Memory-Centric Continual Learning for AI Agents](https://arxiv.org/abs/2610.29357) — judge memory by whether it improves future actions, not recall
 - [Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory](https://arxiv.org/abs/2610.19366) — survey of multimodal agent memory
 - [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) — 248 Principal-Investigator-level judgment calls drawn from senior researchers' corrections of LLM agents over 6 months of real research; at medium reasoning effort, giving models the project record makes every model worse ([code](https://github.com/AutoResearch-Factory/SciPIvot))
+- [Agent Memory as Rate-Limited Filtering](https://arxiv.org/abs/2611.02361) — on a policy-based access-log benchmark, models reading the full event history lose accuracy as it grows while models given an explicit current state stay near 96–98%; the history length where explicit state wins grows with the reader model's capability
 
 **Harness engineering & skills**
 - [Harness²: Recursive Agent Harnessing for an Open World](https://arxiv.org/abs/2610.14224) ([code](https://github.com/google-research/harness2))
@@ -443,6 +453,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[Mnemosyne OS](https://github.com/Mnemosyne-OS/Mnemosyne-Neural-OS)**: Desktop memory app for Windows, macOS and Linux in which watched folders feed separate per-domain vaults on the user's machine; retrieval fuses vector ranking with a local BM25 keyword channel, and the human picks which vaults a connected model may read; agents connect through an MIT MCP server (`npx -y -p @mnemosyne_os/mcp mnemosyne-mcp`). Open core: the memory engine ships closed in the free desktop build
 - **[VibeDesk](https://github.com/fxd-gif/vibedesk)**: Windows desktop app for Claude Code (MIT) that keeps per-project memory as Obsidian-compatible Markdown notes with [[links]] inside the repo and gives each session an overview plus MCP tools to search, read and extend it; also runs several sessions side by side
 - **[ClickHouse Loom](https://github.com/ClickHouse/loom)**: Self-hosted MCP server that gives coding agents shared long-term memory and a code index (definitions, callers, change impact) so they read fewer files; in its published paired Claude Code runs, 20% lower model cost at higher answer quality
+- **[OKF Agent Memory](https://github.com/okf-memory/okf-agent-memory)**: Git-native project memory for coding agents built on the Open Knowledge Format v0.2: a dual-memory design keeps behavioral rules in always-loaded files and domain knowledge in a searchable store (in-memory BM25), with an embedded MCP server; MIT
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**: Public-beta DeepSeek Harness text-memory plugin with original-source references, project/global scope, conditions and correction history; lexical recall
 - **[json-schema-for-llms](https://github.com/carmenaresearch/json-schema-for-llms)**: TypeScript library (MIT, no dependencies; Node 18+, Bun, Deno) that turns JSON too large for the context window into a short JSON Schema with field counts, value ranges and a few real example records, so the model writes a parser or JSONPath for the full data instead of reading it; on a test file of 20,000 orders, 936,288 tokens of JSON became a 541-token schema (o200k). `fits()` reports when a later document has fields the schema has never seen, without a model call

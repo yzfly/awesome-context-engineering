@@ -36,6 +36,14 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 
 ## 🆕 最新动态
 
+*2026-11-13 当周，整理自各家官方模型文档、新论文与 GitHub 热门项目。*
+
+- **不要重建历史，追加一条系统消息。** Anthropic 的 [Claude Opus 5.5 迁移指南](https://platform.claude.com/docs/en/models/opus-5-5/migration-guide)指出：如果为更新指令而重建对话历史，应改用对话中途的 system 消息；重建后请求可能返回 400 错误，且会丢失提示缓存命中。思考始终开启，`effort` 是控制模型在推理上花多少上下文的主要手段。
+- **前沿模型 + 快速执行模型的上下文分工。** Google 于 11 月 12 日发布 [Gemini 4 Hydrogen](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/)，1M token 窗口内统一计价；在 Antigravity 中由 Gemini 4 Carbon 负责协调、Hydrogen 运行执行与校验子智能体——编排者 / 子智能体隔离的模式已成为产品默认做法。
+- **检索挪到服务端。** DeepSeek [11 月 13 日的 API 更新](https://api-docs.deepseek.com/news/news261113)新增联网搜索、深度思考搜索、文件输入和 URL 读取，工具调用与上下文拼装都在服务端完成；Search、Fetch、OCR、ASR、TTS 也开放为独立 API。
+- **百万上下文，思考与回答共用输出预算。** 阿里云 [Qwen4-Max-Preview](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview)（11 月 11 日起两周预览）支持 1M 上下文，最多 393,216 个输出 token，由思考与最终回答共用——设置 `max_tokens` 时要同时预留两者。
+- **显式状态何时胜过长上下文？** [Agent Memory as Rate-Limited Filtering](https://arxiv.org/abs/2611.02361) 发现：读取完整事件历史的模型随历史变长而掉点，给出显式当前状态的模型保持在 96–98% 左右，二者的交叉点取决于读取模型的能力；[ASTC](https://arxiv.org/abs/2610.41291) 无需训练即可把智能体上下文压缩为软 token，在准确率持平或更高的同时最多减少 50.68% 的注意力对。
+
 *2026-10-23 当周，整理自各家官方工程博客、新论文与 GitHub 热门项目。*
 
 - **Agent Skills 与 MCP 一起进入 Linux 基金会。** Anthropic 于 10 月 22 日[将 Agent Skills 标准捐赠给 Agentic AI Foundation](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)。已有 70 多个智能体平台（ChatGPT、Cursor、GitHub Copilot、VS Code…）集成，累计发布约 100 万个技能、安装近 2.8 亿次。渐进式披露（`SKILL.md` → 附带文件）已成为交付程序性上下文的默认方式。另见 Vercel 的 [State of agent skills](https://vercel.com/blog/state-of-agent-skills)。
@@ -227,7 +235,7 @@ LangChain 更多文章：
 - 📊 18 个角色共 230.6 KiB prompt，是跨学科 autoresearch 系统中 prompt 体量最小的（[代码](https://github.com/AutoResearch-Factory/Agon)）
 - 🎯 Prompt Economy 把 prompt 工程当作工程学科，用可复用的循环驱动智能体；不改代码已跑过 10 多个研究领域，最长一次无人值守运行 30 天
 
-### 近期论文（2026 年 9–10 月）
+### 近期论文（2026 年 9–11 月）
 
 **压缩与 KV 缓存**
 - [Self-Compacting Language Model Agents](https://arxiv.org/abs/2606.23525) —— 模型通过压缩工具和轻量规则自行决定何时、如何压缩；效果持平或优于固定间隔摘要，单题成本降 30–70%
@@ -235,6 +243,7 @@ LangChain 更多文章：
 - [Cache Engineering for Agents](https://arxiv.org/abs/2610.28577) —— 智能体直接操作活跃 KV 缓存（丢弃、重定位）而无需重新预填充；滚动丢弃平均 +1.7 分、成本 −27.7%
 - [The KV-Surgeon: Compensation-Aware Offline KV-Cache Compaction](https://arxiv.org/abs/2610.25933) —— 50 倍压缩下比注意力匹配方法最多高 4 分
 - [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](https://arxiv.org/abs/2609.19969) —— 跨层 KV 复用 + FP4 缓存，百万上下文下全局 KV 约每 token 890 字节
+- [In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents](https://arxiv.org/abs/2610.41291) —— ASTC：无需训练、在模型内部把智能体上下文压缩为软 token；准确率持平或优于未压缩的智能体，端到端注意力对最多减少 50.68%，而需训练的压缩器每个成功任务要多花 15.4–103.7 倍
 
 **上下文结构与记忆**
 - [Librarian Agents](https://arxiv.org/abs/2610.22273) —— 用强化学习训练智能体为下游回答者构建层级文件工作区；BrowseComp-Plus 上 +33 个百分点
@@ -245,6 +254,7 @@ LangChain 更多文章：
 - [Memory-Centric Continual Learning for AI Agents](https://arxiv.org/abs/2610.29357) —— 以「能否改善未来行动」而非「能否回忆」评判记忆
 - [Seeing, Maintaining, and Learning](https://arxiv.org/abs/2610.19366) —— 多模态智能体记忆综述
 - [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) —— 评测科研 agent 在关键节点上像 Principal Investigator 一样做判断的能力。248 道题来自 6 个月真实研究中资深研究者对 LLM agent 的纠正，覆盖 26 个项目、6 个学科。5 个前沿模型里有 4 个正确率低于瞎蒙，最好的那一个也只有 63.5%，而无领域背景知识的人类轻松达到 73.4%。
+- [Agent Memory as Rate-Limited Filtering](https://arxiv.org/abs/2611.02361) —— 在基于策略的访问日志基准上，读取完整事件历史的模型随历史变长而掉点，给出显式当前状态的模型保持在 96–98% 左右；显式状态胜出的历史长度随读取模型能力增强而变长
 
 **Harness 工程与技能**
 - [Harness²: Recursive Agent Harnessing for an Open World](https://arxiv.org/abs/2610.14224)（[代码](https://github.com/google-research/harness2)）
@@ -421,6 +431,7 @@ LangChain 更多文章：
 - **[Agent-Body](https://github.com/1420079678-ctrl/agent-body)**：面向 DeepSeek Harness 的插件层，按命令意图显影工具 schema，提供确定性反射与空闲期记忆巩固；附无需 API key 的离线演示和可复现的工具 schema token 基准
 - **[Context Guru](https://github.com/rossoctl/context-guru)**：provider 无关的上下文引擎，结合 prompt 缓存管理、工具输出过滤与上下文压缩，支持 Claude Code 与 Codex 集成
 - **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**：源码可见（BSL 1.1）的 VS Code 扩展，在本机为你打开的文件夹建立索引，并为模型选择器中的任意模型（包括 Copilot 的模型）提供检索这些文件夹的工具；对于你自己的模型服务器，窗口容纳不下的对话轮次和工具结果会被折叠进同一个本地存储，在与问题最相关时取回，并提供一个 recall 工具用于检索这些内容
+- **[OKF Agent Memory](https://github.com/okf-memory/okf-agent-memory)**：基于 Open Knowledge Format v0.2 的 Git 原生编程智能体项目记忆：双记忆设计把行为规则放在常驻文件、把领域知识放进可检索存储（内存 BM25），内置 MCP 服务器；MIT
 
 - **[ctxprune](https://github.com/riceharvest/ctxprune)**：小型 token 分类模型（类似 LLMLingua-2，支持 CPU/ONNX），删除工具输出、日志和文档中的低价值词语，同时保护 ID、路径与数字（`pip install ctxprune`）
 - **[mu](https://github.com/qybaihe/mu)**：基于 pi 的编程智能体，把上下文决策交给小型判定模型：长工具输出逐块判定，只有当前需要的部分进入上下文，其余存档并留指针；上下文超过阈值时，过时的工具结果替换为一行占位；压缩按段落取舍，不写摘要；失败测试日志中完全重复的内容可无损折叠（作者 7 份最大的真实日志共减少 51% 字符）
