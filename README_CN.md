@@ -444,6 +444,7 @@ LangChain 更多文章：
 - **[ClickHouse Loom](https://github.com/ClickHouse/loom)**：自托管的 MCP 服务器，为编程智能体提供共享的长期记忆和代码索引（定义、调用方、变更影响），减少整文件读取；其公开的 Claude Code 配对实验中，模型成本降低 20%，回答质量更高
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**：DeepSeek Harness 文本记忆插件（公开测试），保留原始来源、全局/项目范围、条件与纠错记录；使用词法检索
+- **[json-schema-for-llms](https://github.com/carmenaresearch/json-schema-for-llms)**：TypeScript 库（MIT，无依赖；支持 Node 18+、Bun、Deno），把超出上下文窗口的大型 JSON 转成简短的 JSON Schema，附字段计数、取值范围和少量真实示例记录，让模型为完整数据编写解析器或 JSONPath，而不必读取数据本身；在含 20,000 条订单的测试文件上，936,288 个 token 的 JSON 变为 541 个 token 的 Schema（o200k）。`fits()` 无需调用模型即可报告后续文档中出现了 Schema 从未见过的字段
 
 ### 生产工具
 
