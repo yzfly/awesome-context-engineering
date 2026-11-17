@@ -374,6 +374,7 @@ LangChain 更多文章：
 - **[TokenRip](https://tokenrip.com)**：通过 MCP 连接的托管共享工作区；Claude Code、Codex、Cursor 和 ChatGPT 在开始前读取同一组置顶决策，写入带版本和修改原因的文件与任务，让上下文在不同智能体和会话之间延续
 - **[Ponder](https://github.com/Quinnod345/ponder)**：面向 Claude Code、Codex、Cursor、Gemini CLI 与 OpenClaw 的零依赖 Node.js CLI、Agent Skill 与仅追加 JSONL 评审账本（`.ponder/<slug>/ledger.jsonl`），将待审单元清单（`units.json`）、评分结果（`findings.json`）与四角色推演记录持久化到磁盘以跨越上下文压缩，并在覆盖率未达 100% 或结果波动未收敛时拒绝提前结束（`exit 2`）
 - **[Compass](https://github.com/EdwardBatt/Compass)**：以纯 Markdown 存放在仓库中的分层项目记忆：地图把每个任务路由到一条有长度上限的笔记和对应源码；CI lint 在笔记腐化时（失效路径、复制代码的笔记、被手改的规则文件）直接报错。一份配置即可生成 Claude Code、Cursor、Gemini、Antigravity 和 AGENTS.md 的规则
+- **[AsItIs](https://github.com/Katta041/asitis-agent-tools)**：只读的 CLAUDE.md、AGENTS.md、GEMINI.md 和 SKILL.md 检查工具（CLI 和 MCP server），列出每个 agent 启动时实际加载哪些文件、哪些因大小上限被截断，并估算每个文件的 token 开销
 
 ### 开发框架
 
