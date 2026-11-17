@@ -375,6 +375,8 @@ LangChain 更多文章：
 - **[Ponder](https://github.com/Quinnod345/ponder)**：面向 Claude Code、Codex、Cursor、Gemini CLI 与 OpenClaw 的零依赖 Node.js CLI、Agent Skill 与仅追加 JSONL 评审账本（`.ponder/<slug>/ledger.jsonl`），将待审单元清单（`units.json`）、评分结果（`findings.json`）与四角色推演记录持久化到磁盘以跨越上下文压缩，并在覆盖率未达 100% 或结果波动未收敛时拒绝提前结束（`exit 2`）
 - **[Compass](https://github.com/EdwardBatt/Compass)**：以纯 Markdown 存放在仓库中的分层项目记忆：地图把每个任务路由到一条有长度上限的笔记和对应源码；CI lint 在笔记腐化时（失效路径、复制代码的笔记、被手改的规则文件）直接报错。一份配置即可生成 Claude Code、Cursor、Gemini、Antigravity 和 AGENTS.md 的规则
 
+- **[Project Oracle](https://github.com/iruzen-dono/hermes-project-oracle)**：零依赖的 Python 命令行工具，审计 agent 读取的上下文文件——指出仓库能够证实的规则、被仓库推翻的规则（例如已不存在的 `npm run test`）以及无法验证的空话——并在项目缺失时生成 AGENTS.md / CLAUDE.md
+
 ### 开发框架
 
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**：用于context管理的低级编排框架

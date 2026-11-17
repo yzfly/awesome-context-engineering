@@ -378,6 +378,8 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[Ponder](https://github.com/Quinnod345/ponder)**: Zero-dependency Node.js CLI, skill, and append-only JSONL review ledger (`.ponder/<slug>/ledger.jsonl`) for Claude Code, Codex, Cursor, Gemini CLI, and OpenClaw that persists unit inventories (`units.json`), graded findings (`findings.json`), and four-role deliberation notes on disk across context compactions, blocking completion (`exit 2`) until every declared unit is graded and finding churn converges
 - **[Compass](https://github.com/EdwardBatt/Compass)**: Tiered project memory for coding agents, kept in the repo as plain Markdown: a map routes each task to one capped note and the source, and a CI lint fails when notes rot (dead paths, notes that copy code, hand-edited rules). One config generates the rules for Claude Code, Cursor, Gemini, Antigravity and AGENTS.md
 
+- **[Project Oracle](https://github.com/iruzen-dono/hermes-project-oracle)**: Zero-dependency Python CLI that audits the context file an agent reads — which rules the repository backs, which it contradicts (a `npm run test` that no longer exists), and which are unfalsifiable noise — and generates AGENTS.md / CLAUDE.md when the project has none
+
 ### Development Frameworks
 
 - **[LangGraph](https://langchain-ai.github.io/langgraph/)**: Low-level orchestration framework for context management
