@@ -433,7 +433,7 @@ LangChain 更多文章：
 - **[Sunstone](https://github.com/space-bacon/sunstone-vscode)**：源码可见（BSL 1.1）的 VS Code 扩展，在本机为你打开的文件夹建立索引，并为模型选择器中的任意模型（包括 Copilot 的模型）提供检索这些文件夹的工具；对于你自己的模型服务器，窗口容纳不下的对话轮次和工具结果会被折叠进同一个本地存储，在与问题最相关时取回，并提供一个 recall 工具用于检索这些内容
 - **[OKF Agent Memory](https://github.com/okf-memory/okf-agent-memory)**：基于 Open Knowledge Format v0.2 的 Git 原生编程智能体项目记忆：双记忆设计把行为规则放在常驻文件、把领域知识放进可检索存储（内存 BM25），内置 MCP 服务器；MIT
 
-- **[ctxprune](https://github.com/riceharvest/ctxprune)**：小型 token 分类模型（类似 LLMLingua-2，支持 CPU/ONNX），删除工具输出、日志和文档中的低价值词语，同时保护 ID、路径与数字（`pip install ctxprune`）
+- **[ctxprune](https://github.com/riceharvest/ctxprune)**：面向 Agent 的上下文裁剪。提供 Claude Code、Codex、Hermes 的无损钩子和 MCP 服务器（`uvx ctxprune mcp`），在不丢失内容的前提下压缩日志、JSON/MCP 输出和测试输出；另有小型 CPU/ONNX token 分类模型（类似 LLMLingua-2）用于有损裁剪，保留 ID、路径和数字（`pip install ctxprune`）
 - **[mu](https://github.com/qybaihe/mu)**：基于 pi 的编程智能体，把上下文决策交给小型判定模型：长工具输出逐块判定，只有当前需要的部分进入上下文，其余存档并留指针；上下文超过阈值时，过时的工具结果替换为一行占位；压缩按段落取舍，不写摘要；失败测试日志中完全重复的内容可无损折叠（作者 7 份最大的真实日志共减少 51% 字符）
 - **[akc-cycle](https://github.com/shimo4228/akc-cycle)**：Claude Code 插件，防止配置中的规则与技能不断堆积、逐渐过时；审计技能、规则与智能体定义，为每个文件给出保留、合并或退役的建议及理由，确认前不做任何修改，并将反复出现的建议提升为常驻加载的规则
 - **[contexttax](https://github.com/henrikdukefoss/contexttax)**：按智能体统计编程智能体每次请求都会加载的固定上下文（CLAUDE.md/AGENTS.md 及其 `@` 导入、常驻规则、技能描述、MCP 工具 schema），按 token 从大到小排列，并指出哪些部分可以改为按需加载
