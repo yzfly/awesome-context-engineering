@@ -184,6 +184,7 @@ LangChain 更多文章：
 ### AI 智能体记忆架构：工作记忆与情景存储的分离
 
 - [Agentic Affairs — How AI Agent Memory Architectures Split Working Memory from Episodic Storage](https://agentic-affairs.com/ai-agent-memory-architectures/) — Architectural guide to separating in-context working memory from persistent episodic retrieval in long-running agents.
+
 ## 📑 研究论文
 
 ### 综述论文
