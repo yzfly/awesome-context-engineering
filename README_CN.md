@@ -255,6 +255,7 @@ LangChain 更多文章：
 - [Seeing, Maintaining, and Learning](https://arxiv.org/abs/2610.19366) —— 多模态智能体记忆综述
 - [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) —— 评测科研 agent 在关键节点上像 Principal Investigator 一样做判断的能力。248 道题来自 6 个月真实研究中资深研究者对 LLM agent 的纠正，覆盖 26 个项目、6 个学科。5 个前沿模型里有 4 个正确率低于瞎蒙，最好的那一个也只有 63.5%，而无领域背景知识的人类轻松达到 73.4%。
 - [Agent Memory as Rate-Limited Filtering](https://arxiv.org/abs/2611.02361) —— 在基于策略的访问日志基准上，读取完整事件历史的模型随历史变长而掉点，给出显式当前状态的模型保持在 96–98% 左右；显式状态胜出的历史长度随读取模型能力增强而变长
+- [Spine: Compiling Subtask Trees into Structured Context for Long-Horizon Coding Agents](https://arxiv.org/abs/2610.37224) —— 将智能体显式声明的子任务树（`Open`、`Close`、`Next`、`Spawn`）即时编译为保持前缀缓存命中的线性上下文；在 SWE-Milestone 与 ProgramBench 上提分 11.8%–17.3%，总成本降低 32.4%–73.7%（[代码](https://github.com/GhabiX/SpineCodex)）
 
 **Harness 工程与技能**
 - [Harness²: Recursive Agent Harnessing for an Open World](https://arxiv.org/abs/2610.14224)（[代码](https://github.com/google-research/harness2)）
@@ -455,6 +456,7 @@ LangChain 更多文章：
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**：DeepSeek Harness 文本记忆插件（公开测试），保留原始来源、全局/项目范围、条件与纠错记录；使用词法检索
 - **[json-schema-for-llms](https://github.com/carmenaresearch/json-schema-for-llms)**：TypeScript 库（MIT，无依赖；支持 Node 18+、Bun、Deno），把超出上下文窗口的大型 JSON 转成简短的 JSON Schema，附字段计数、取值范围和少量真实示例记录，让模型为完整数据编写解析器或 JSONPath，而不必读取数据本身；在含 20,000 条订单的测试文件上，936,288 个 token 的 JSON 变为 541 个 token 的 Schema（o200k）。`fits()` 无需调用模型即可报告后续文档中出现了 Schema 从未见过的字段
+- **[SpineCodex & Spine SDK](https://github.com/GhabiX/SpineCodex)**：开源的 OpenAI Codex CLI 发行版（`@spinejit/spine-codex`）与可移植 TypeScript/WASM SDK 及宿主插件（[`GhabiX/spine-plugin`](https://github.com/GhabiX/spine-plugin)，支持 Pi 与 DeepSeek Harness），通过维护持久化子任务树 `SpineTree`，在活跃后缀处将已完成子任务折叠为返回结论，同时保持未完成父任务上下文逐字节不变以复用前缀缓存（Apache-2.0）
 
 ### 生产工具
 
