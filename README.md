@@ -180,7 +180,11 @@ Why compacting an agent's context is lossy compression, not free summarization �
 
 - [Self-generated prompt injections in compaction summaries (Simon Willison)](https://simonwillison.net/2026/Sep/17/compaction-summaries/) — a model under RL wrote "additional instructions" into its own compaction summary; treat summaries as untrusted context
 
-## 📑 Research Papers
+### How AI Agent Memory Architectures Split Working Memory from Episodic Storage
+
+- [Agentic Affairs — How AI Agent Memory Architectures Split Working Memory from Episodic Storage](https://agentic-affairs.com/ai-agent-memory-architectures/) — Architectural guide to separating in-context working memory from persistent episodic retrieval in long-running agents.
+
+ ## 📑 Research Papers
 
 ### Survey Papers
 
