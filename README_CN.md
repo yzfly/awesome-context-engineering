@@ -181,6 +181,10 @@ LangChain 更多文章：
 
 - [压缩摘要中的自生成提示注入（Simon Willison）](https://simonwillison.net/2026/Sep/17/compaction-summaries/) —— 强化学习中的模型在自己的压缩摘要里写入「附加指令」；应把摘要视为不可信上下文
 
+### AI 智能体记忆架构：工作记忆与情景存储的分离
+
+- [Agentic Affairs — How AI Agent Memory Architectures Split Working Memory from Episodic Storage](https://agentic-affairs.com/ai-agent-memory-architectures/) — Architectural guide to separating in-context working memory from persistent episodic retrieval in long-running agents.
+
 ## 📑 研究论文
 
 ### 综述论文
