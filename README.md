@@ -258,6 +258,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - [Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory](https://arxiv.org/abs/2610.19366) — survey of multimodal agent memory
 - [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) — 248 Principal-Investigator-level judgment calls drawn from senior researchers' corrections of LLM agents over 6 months of real research; at medium reasoning effort, giving models the project record makes every model worse ([code](https://github.com/AutoResearch-Factory/SciPIvot))
 - [Agent Memory as Rate-Limited Filtering](https://arxiv.org/abs/2611.02361) — on a policy-based access-log benchmark, models reading the full event history lose accuracy as it grows while models given an explicit current state stay near 96–98%; the history length where explicit state wins grows with the reader model's capability
+- [Spine: Compiling Subtask Trees into Structured Context for Long-Horizon Coding Agents](https://arxiv.org/abs/2610.37224) — agent-declared subtask trees (`Open`, `Close`, `Next`, `Spawn`) compiled just-in-time into prefix-cache-preserving linear context; +11.8%–17.3% score and 32.4%–73.7% lower cost on SWE-Milestone and ProgramBench ([code](https://github.com/GhabiX/SpineCodex))
 
 **Harness engineering & skills**
 - [Harness²: Recursive Agent Harnessing for an Open World](https://arxiv.org/abs/2610.14224) ([code](https://github.com/google-research/harness2))
@@ -457,6 +458,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**: Public-beta DeepSeek Harness text-memory plugin with original-source references, project/global scope, conditions and correction history; lexical recall
 - **[json-schema-for-llms](https://github.com/carmenaresearch/json-schema-for-llms)**: TypeScript library (MIT, no dependencies; Node 18+, Bun, Deno) that turns JSON too large for the context window into a short JSON Schema with field counts, value ranges and a few real example records, so the model writes a parser or JSONPath for the full data instead of reading it; on a test file of 20,000 orders, 936,288 tokens of JSON became a 541-token schema (o200k). `fits()` reports when a later document has fields the schema has never seen, without a model call
+- **[SpineCodex & Spine SDK](https://github.com/GhabiX/SpineCodex)**: Open-source OpenAI Codex CLI distribution (`@spinejit/spine-codex`) and portable TypeScript/WASM SDK + host plugins ([`GhabiX/spine-plugin`](https://github.com/GhabiX/spine-plugin) for Pi and DeepSeek Harness) that maintain a persistent `SpineTree`, folding completed subtasks into returned memories at the active suffix while keeping unfinished parent context byte-for-byte intact for prompt-cache reuse (Apache-2.0)
 
 ### Production Tools
 
