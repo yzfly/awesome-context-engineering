@@ -468,6 +468,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay)**: Records the context an agent actually sent, turn by turn, and replays it offline
 - **[Praxix](https://praxix.app)**: Commercial macOS app for Claude Code that curates per-session context: pick exactly which skills, rules, and references each session loads (presets, per-project defaults, a lean CLAUDE.md), and see that context before a token is spent
 - **[Aident Loadout](https://aident.ai/)**: Hosted MCP server, CLI and Skill for agent tool context: agents search actions by intent and fetch the live schema only for the action they run, can start from 400+ expert-built Skills, and never see raw API keys (credentials stay in Aident Vault, outside the model context)
+- **[Sharpen](https://github.com/melthond/sharpen)**: Claude Code plugin that builds each prompt's context from the conversation, the codebase and the installed skills, agents and MCP tools, and shows the rewritten prompt for approval before it runs
 
 ## ðŸ’¡ Expert Insights
 
