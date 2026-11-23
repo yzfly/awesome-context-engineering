@@ -106,6 +106,7 @@ Context工程是对大语言模型(LLM)信息负载的系统性优化。它包�
 - [Effective harnesses for long-running agents（Anthropic）](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) —— 用初始化智能体、进度文件和 git 历史，让每个新的上下文窗口都能接着上一个继续工作
 - [12 Factor Agents（HumanLayer）](https://www.humanlayer.dev/blog/12-factor-agents) —— 自己掌控提示词与上下文窗口，显式管理执行状态，让智能体可暂停、可恢复
 - [Why Context Alone Isn't Enough for Enterprise AI Agents（Chain of Thought 播客）](https://chainofthought.show/podcast/75-why-context-alone-isnt-enough-for-enterprise-ai-agents-wisdomai-cpo-kapil-chhabra/) —— 访谈 WisdomAI 首席产品官：如何在上下文漂移时持续维护共享的业务定义，以及一个先拆解问题、再验证并修复答案的 harness；附完整文字稿与章节
+- [Harness Engineering 驭缰工程学习档案（deusyu）](https://github.com/deusyu/harness-engineering) —— 中文学习档案：「仓库即记录系统」「AGENTS.md 是地图不是手册」等概念笔记，Anthropic、Fowler、LangChain、Cursor、Lilian Weng 等 40 篇 harness 一手文章的全文中译，以及 79 篇文章的深度摘要索引（截至 2026-11-22）
 
 ### LangChain Context工程
 **智能体的Context工程**

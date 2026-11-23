@@ -106,6 +106,7 @@ Key insights from building a production AI agent:
 - [Effective harnesses for long-running agents (Anthropic)](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) — an initializer agent plus progress files and git history so each new context window can pick up where the last one stopped
 - [12 Factor Agents (HumanLayer)](https://www.humanlayer.dev/blog/12-factor-agents) — own your prompts and context window, keep execution state explicit, and make agents pausable and resumable
 - [Why Context Alone Isn't Enough for Enterprise AI Agents (Chain of Thought podcast)](https://chainofthought.show/podcast/75-why-context-alone-isnt-enough-for-enterprise-ai-agents-wisdomai-cpo-kapil-chhabra/) — interview with WisdomAI's CPO on keeping shared business definitions current as context drifts, and a harness that decomposes the question, then verifies and repairs the answer; full transcript and chapters
+- [Harness Engineering Study Archive (deusyu)](https://github.com/deusyu/harness-engineering) — Chinese study archive: concept notes on context delivery via repo-as-record and map-style `AGENTS.md`, 40 full Chinese translations of harness write-ups (Anthropic, Fowler, LangChain, Cursor, Lilian Weng) and a 79-article summary index (as of 2026-11-22)
 
 
 ### LangChain Context Engineering
