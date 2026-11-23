@@ -374,6 +374,7 @@ LangChain 更多文章：
 - **[TokenRip](https://tokenrip.com)**：通过 MCP 连接的托管共享工作区；Claude Code、Codex、Cursor 和 ChatGPT 在开始前读取同一组置顶决策，写入带版本和修改原因的文件与任务，让上下文在不同智能体和会话之间延续
 - **[Ponder](https://github.com/Quinnod345/ponder)**：面向 Claude Code、Codex、Cursor、Gemini CLI 与 OpenClaw 的零依赖 Node.js CLI、Agent Skill 与仅追加 JSONL 评审账本（`.ponder/<slug>/ledger.jsonl`），将待审单元清单（`units.json`）、评分结果（`findings.json`）与四角色推演记录持久化到磁盘以跨越上下文压缩，并在覆盖率未达 100% 或结果波动未收敛时拒绝提前结束（`exit 2`）
 - **[Compass](https://github.com/EdwardBatt/Compass)**：以纯 Markdown 存放在仓库中的分层项目记忆：地图把每个任务路由到一条有长度上限的笔记和对应源码；CI lint 在笔记腐化时（失效路径、复制代码的笔记、被手改的规则文件）直接报错。一份配置即可生成 Claude Code、Cursor、Gemini、Antigravity 和 AGENTS.md 的规则
+- **[ApeMind](https://apemind.ai/)**：企业级 RAG、知识库与 AI Agent 上下文检索平台，融合向量、全文、知识图谱与多模态检索，支持 MinerU / Mistral OCR / LlamaParse 文档解析、外部 MCP 工具集成、版本化问答集评测与私有化部署（开源内核：[ApeRAG](https://github.com/apecloud/ApeRAG)）
 
 ### 开发框架
 
