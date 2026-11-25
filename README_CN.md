@@ -455,6 +455,7 @@ LangChain 更多文章：
 
 - **[SoloPup Memory](https://github.com/OakcoderX/solopup-memory)**：DeepSeek Harness 文本记忆插件（公开测试），保留原始来源、全局/项目范围、条件与纠错记录；使用词法检索
 - **[json-schema-for-llms](https://github.com/carmenaresearch/json-schema-for-llms)**：TypeScript 库（MIT，无依赖；支持 Node 18+、Bun、Deno），把超出上下文窗口的大型 JSON 转成简短的 JSON Schema，附字段计数、取值范围和少量真实示例记录，让模型为完整数据编写解析器或 JSONPath，而不必读取数据本身；在含 20,000 条订单的测试文件上，936,288 个 token 的 JSON 变为 541 个 token 的 Schema（o200k）。`fits()` 无需调用模型即可报告后续文档中出现了 Schema 从未见过的字段
+- **[QuoteMem](https://github.com/edsml-jz2321/QuoteMem)**：AI 智能体长期记忆服务（MIT），在本机运行，调用用户选择的对话和向量模型服务。每条记忆是一句简短陈述，用 UTF-8 字节区间绑定到它出自的原话；更新写入新版本，旧版本保留并标为已替换；遗忘是「准备 + 确认」两步调用，留下墓碑，审核步骤会检查它；每个审核决定连同当时比较的已有记忆一起保存。Claude Code、Codex CLI、Cursor、OpenCode、Gemini CLI、Cline、goose、OpenClaw 和 DSH 的插件共用一个本地服务，任何 MCP 客户端也能使用它的记忆工具（`npx -y quotemem mcp`）
 
 ### 生产工具
 
