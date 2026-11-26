@@ -394,6 +394,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[Beads](https://github.com/gastownhall/beads)** ⭐28.2k: A memory upgrade for coding agents — a git-backed issue/task graph the agent reads instead of long markdown plans
 - **[ai-memory](https://github.com/akitaonrails/ai-memory)** ⭐13.1k: Long-term memory for coding-agent CLIs that also enables handoff between agent vendors
 - **[Engram](https://github.com/Gentleman-Programming/engram)** ⭐7.6k: Agent-agnostic persistent memory in one Go binary (SQLite + FTS5) with MCP server, HTTP API, CLI and TUI
+- **[Helix Foundry](https://github.com/HelixDB/helix-foundry)** ⭐2.2k: Turns a company's databases, SaaS tools and documents into one ontology that agents query over MCP, with a source behind every fact
 - **[dsh-context](https://github.com/bowenliang123/dsh-context)** ⭐3.5k: DeepSeek Harness plugin for context insight — dashboard, browser and sidebar for context statistics and composition
 - **[agent-beacon](https://github.com/Asymptote-Labs/agent-beacon)** ⭐2.7k: Cross-harness, self-improving memory layer for AI agents
 - **[billion-context](https://github.com/ranxianglei/billion-context)** ⭐2.5k: Context-compression plugin for month-long single sessions on small (≈100K) context windows
