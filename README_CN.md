@@ -325,6 +325,7 @@ LangChain 更多文章：
 - **[durable-harness](https://github.com/vercel-labs/durable-harness)**：在 Vercel Workflow 上持久运行 Claude Code、Codex、OpenCode、Pi 或 fx，记录每一步模型/工具调用，崩溃后可续跑（[博客](https://vercel.com/blog/making-every-harness-durable)）
 - **[Raven](https://github.com/EverMind-AI/Raven)**：开源多智能体 harness，把 agent loop 拆成 Memory、Planning、Capability、Action 四个解耦的策略模块，由实验性的 Curator 逐 Agent 改写、验证通过后才安装；Host Agent 把复杂任务规划为 DAG，分派给内置与第三方 Agent
 - **[rulelab](https://github.com/diegoperezg7/rulelab)**：对 AGENTS.md / CLAUDE.md 做逐条消融（leave-one-out）——在真实的 bug 修复任务上分别去掉每条规则运行编码智能体，报告成功率变化（bootstrap 区间）以及每条规则的 token 成本
+- **[Agent Handoff Protocol（AHP）](https://github.com/cheah505-cyber/agent-handoff-protocol)**：MIT、零依赖的交接协议，规定一次编码智能体会话交给下一次的状态——四个核心文件、由单一来源派生因而不易漂移的状态块，以及 12 条机器可判定的门禁和必须变红的负向夹具
 
 ### Context工程系统与工具包
 

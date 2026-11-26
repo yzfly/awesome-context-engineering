@@ -328,6 +328,7 @@ Why compacting an agent's context is lossy compression, not free summarization �
 - **[durable-harness](https://github.com/vercel-labs/durable-harness)**: runs Claude Code, Codex, OpenCode, Pi or fx durably on Vercel Workflow, recording every model/tool step so crashed runs resume ([blog](https://vercel.com/blog/making-every-harness-durable))
 - **[Raven](https://github.com/EverMind-AI/Raven)**: open-source multi-agent harness whose agent loop is split into four decoupled strategy modules (Memory, Planning, Capability, Action) that an experimental Curator rewrites per agent and installs only after verification; its host agent plans a complex task as a DAG and delegates the parts to built-in and third-party agents
 - **[rulelab](https://github.com/diegoperezg7/rulelab)**: leave-one-out ablation of AGENTS.md / CLAUDE.md — runs your coding agent on real bug-fix tasks without each rule and reports the change in success rate (bootstrap interval) and the tokens each rule costs
+- **[Agent Handoff Protocol (AHP)](https://github.com/cheah505-cyber/agent-handoff-protocol)**: an MIT-licensed, dependency-free protocol for the state one coding-agent session hands to the next — four core files, a status block derived so it cannot drift, and 12 machine-checkable gates plus negative fixtures that must turn red
 
 ### Context Engineering Systems & Kits
 
