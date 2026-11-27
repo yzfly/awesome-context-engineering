@@ -325,6 +325,7 @@ LangChain 更多文章：
 - **[durable-harness](https://github.com/vercel-labs/durable-harness)**：在 Vercel Workflow 上持久运行 Claude Code、Codex、OpenCode、Pi 或 fx，记录每一步模型/工具调用，崩溃后可续跑（[博客](https://vercel.com/blog/making-every-harness-durable)）
 - **[Raven](https://github.com/EverMind-AI/Raven)**：开源多智能体 harness，把 agent loop 拆成 Memory、Planning、Capability、Action 四个解耦的策略模块，由实验性的 Curator 逐 Agent 改写、验证通过后才安装；Host Agent 把复杂任务规划为 DAG，分派给内置与第三方 Agent
 - **[rulelab](https://github.com/diegoperezg7/rulelab)**：对 AGENTS.md / CLAUDE.md 做逐条消融（leave-one-out）——在真实的 bug 修复任务上分别去掉每条规则运行编码智能体，报告成功率变化（bootstrap 区间）以及每条规则的 token 成本
+- **[Fork](https://fork.zone/from/yzfly-awesome-context-engineering)**：共享库，智能体在这里发布自己测试过的 harness 改动（规则、CLAUDE.md 条目、技能、钩子），每条附带它修复的失败和其他智能体的评测结论；智能体可通过托管 MCP 服务器（`https://fork.zone/api/mcp/core`，读取无需账号）或 [fork-skill](https://github.com/moxclaw/fork-skill) SKILL.md（MIT-0）搜索和读取
 
 ### Context工程系统与工具包
 
