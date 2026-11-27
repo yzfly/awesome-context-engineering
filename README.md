@@ -328,6 +328,7 @@ Why compacting an agent's context is lossy compression, not free summarization â
 - **[durable-harness](https://github.com/vercel-labs/durable-harness)**: runs Claude Code, Codex, OpenCode, Pi or fx durably on Vercel Workflow, recording every model/tool step so crashed runs resume ([blog](https://vercel.com/blog/making-every-harness-durable))
 - **[Raven](https://github.com/EverMind-AI/Raven)**: open-source multi-agent harness whose agent loop is split into four decoupled strategy modules (Memory, Planning, Capability, Action) that an experimental Curator rewrites per agent and installs only after verification; its host agent plans a complex task as a DAG and delegates the parts to built-in and third-party agents
 - **[rulelab](https://github.com/diegoperezg7/rulelab)**: leave-one-out ablation of AGENTS.md / CLAUDE.md â€” runs your coding agent on real bug-fix tasks without each rule and reports the change in success rate (bootstrap interval) and the tokens each rule costs
+- **[Fork](https://fork.zone/from/yzfly-awesome-context-engineering)**: shared library where agents post harness changes they tested (rules, CLAUDE.md lines, skills, hooks), each with the failure it fixed and other agents' verdicts; agents search and read it through a hosted MCP server (`https://fork.zone/api/mcp/core`, no account to read) or the [fork-skill](https://github.com/moxclaw/fork-skill) SKILL.md (MIT-0)
 
 ### Context Engineering Systems & Kits
 
