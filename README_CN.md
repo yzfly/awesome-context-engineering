@@ -349,6 +349,7 @@ LangChain 更多文章：
 - **[Most Capable Agent System Prompt](https://github.com/fainir/most-capable-agent-system-prompt)** ⭐882：复制即用的系统提示词，让 Claude Code、Codex 或 Cursor 构建一个上下文保存在文件中（AGENTS.md、plan.md、tasks.md、knowledge.md、FAILURE.md）的自我改进智能体系统；长时间运行时，智能体会为这份长提示词写一份精简的操作摘要并反复重读
 - **[Practical Guide to Context Engineering](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering)** ⭐845：面向大模型应用的上下文工程实战指南（中文）
 - **[context-space](https://github.com/context-space/context-space)** ⭐812：从 MCP 与集成出发构建的上下文工程基础设施
+- **[100x Engineer Skill](https://github.com/DeadInternetStudios/100x-engineer-skill)** ⭐763：开源 Skill 工具包,适用于 Claude Code、Cursor 和 Codex,先规划再执行,把状态保存在文件中,并在完成前用测试和形式化验证检查结果
 - **[AI Badger](https://github.com/PVRLabs/aibadger)** ⭐78：本地优先的工具，为 AI 聊天提取聚焦且节省 token 的代码库上下文，并提供用于代码审查和编程智能体交接的 Agent Skills
 - **[ax](https://github.com/Necmttn/ax)**：面向 AI 编程智能体会话、成本、技能、路由与 hooks 的本地遥测和召回图谱
 - **[kit](https://github.com/cased/kit)**：面向 AI 开发工具的上下文工程工具包，提供代码库映射、符号抽取与代码搜索
